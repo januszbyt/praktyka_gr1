@@ -20,9 +20,6 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	public class bilet{
-		
-	}
 	
 	public static void main(String[] args) {
 		launch(args);
