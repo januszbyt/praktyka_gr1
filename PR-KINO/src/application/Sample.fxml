@@ -9,6 +9,6 @@
       <Label text="Label" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <Button mnemonicParsing="false" onMouseClicked="#test" text="Wyswietl" BorderPane.alignment="CENTER" />
+      <Button mnemonicParsing="false" text="Wyswietl" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
