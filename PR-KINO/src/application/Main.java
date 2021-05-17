@@ -22,7 +22,7 @@ public class Main extends Application {
 				System.out.println("SIEMA!");
 			}
 			
-			System.out.println("Mateusz Osikowski dzia³a Bachara");
+			System.out.println("Mateusz Osikowski dzia³a Bachara ol");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
