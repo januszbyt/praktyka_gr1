@@ -22,7 +22,8 @@ public class Main extends Application {
 				System.out.println("SIEMA!");
 			}
 			
-			System.out.println("Mateusz Osikowski dzia�a Bachara oleh");
+			System.out.println("Mateusz Osikowski dzia³a Bachara oleh");
+			System.out.println("Danylo działa");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
