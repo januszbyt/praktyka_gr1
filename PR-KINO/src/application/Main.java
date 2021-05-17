@@ -16,11 +16,7 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			System.out.println("GIT test");
-			System.out.println("GIT TESTOWY");
-			System.out.println("TEST NUMER 3");
-			System.out.println("TEST NUMER 232132132132");
-			System.out.println("TEST NUMER 5");
+			System.out.println("Mateusz Osikowski dzia³a");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
