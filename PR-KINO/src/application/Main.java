@@ -18,6 +18,7 @@ public class Main extends Application {
 			primaryStage.show();
 			System.out.println("GIT test");
 			System.out.println("GIT TESTOWY");
+			System.out.println("WITAM CZY DZIALA?");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
