@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path=""/>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Program Files/OpenJFX/lib/javafx.base.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
