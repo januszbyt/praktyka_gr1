@@ -16,10 +16,6 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			System.out.println("GIT test");
-			System.out.println("GIT TESTOWY");
-			System.out.println("TEST NUMER 3");
-
 			int numer = 2;
 			for(int i=0;i<numer;i++)
 			{
