@@ -16,7 +16,6 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-<<<<<<< HEAD
 			System.out.println("GIT test");
 			System.out.println("GIT TESTOWY");
 			System.out.println("TEST NUMER 3");
@@ -27,9 +26,7 @@ public class Main extends Application {
 				System.out.println("SIEMA!");
 			}
 			
-=======
 			System.out.println("Mateusz Osikowski dzia³a");
->>>>>>> branch 'master' of https://github.com/januszbyt/praktyka_gr1
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
