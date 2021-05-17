@@ -20,7 +20,7 @@ public class Main extends Application {
 			System.out.println("GIT TESTOWY");
 			System.out.println("TEST NUMER 3");
 			System.out.println("TEST NUMER 232132132132");
-			System.out.println("TEST NUMER 4");
+			System.out.println("TEST NUMER 5");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
