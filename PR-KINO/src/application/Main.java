@@ -24,6 +24,7 @@ public class Main extends Application {
 			
 			System.out.println("Mateusz Osikowski działa Bachara oleh");
 			System.out.println("Danylo działad");
+			System.out.println("Nie dziala?");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
