@@ -19,7 +19,8 @@ public void test()
 	{
 	this.body.getId();
 	try {
-		AnchorPane panel = (AnchorPane)FXMLLoader.load(getClass().getResource("./Logowanie/Logowanie.fxml"));
+		AnchorPane panel = (AnchorPane)FXMLLoader.load(getClass().getClassLoader().getResource("./Logowanie/Logowanie.fxml"));
+
 		body.getChildren().removeAll();
 		body.getChildren().setAll(panel);
 
@@ -31,7 +32,7 @@ public void test2()
 {
 	this.body.getId();
 	try {
-		AnchorPane panel = (AnchorPane)FXMLLoader.load(getClass().getResource("./Rejestracja/Rejestracja.fxml"));
+		AnchorPane panel = (AnchorPane)FXMLLoader.load(getClass().getClassLoader().getResource("./Rejestracja/Rejestracja.fxml"));
 		body.getChildren().removeAll();
 		body.getChildren().setAll(panel);
 	} catch (IOException e) {
