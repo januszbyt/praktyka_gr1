@@ -19,7 +19,13 @@ public class Main extends Application {
 			System.out.println("GIT test");
 			System.out.println("GIT TESTOWY");
 			System.out.println("TEST NUMER 3");
-			System.out.println("TEST NUMER 232132132132");
+
+			int numer = 2;
+			for(int i=0;i<numer;i++)
+			{
+				System.out.println("SIEMA");
+			}
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
