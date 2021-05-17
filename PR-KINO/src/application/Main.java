@@ -23,7 +23,7 @@ public class Main extends Application {
 			}
 			
 			System.out.println("Mateusz Osikowski działa Bachara oleh");
-			System.out.println("Danylo działa");
+			System.out.println("Danylo działad");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
