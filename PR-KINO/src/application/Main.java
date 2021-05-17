@@ -23,7 +23,7 @@ public class Main extends Application {
 			int numer = 2;
 			for(int i=0;i<numer;i++)
 			{
-				System.out.println("SIEMA");
+				System.out.println("SIEMA!");
 			}
 			
 		} catch(Exception e) {
