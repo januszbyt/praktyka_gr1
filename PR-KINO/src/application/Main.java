@@ -17,7 +17,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			System.out.println("GIT test");
-			System.out.println("GIT test22222");
+			System.out.println("GIT test2222dd2");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
