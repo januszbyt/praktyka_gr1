@@ -26,11 +26,9 @@ public class Main extends Application {
 			System.out.println("Mateusz Osikowski działa Bachara oleh");
 			System.out.println("Danylo działad");
 			System.out.println("Intelidzej");
-			System.out.println("Intelidzej");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 	
 	public static void main(String[] args) {

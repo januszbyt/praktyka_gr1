@@ -19,12 +19,11 @@ public void test()
 	{
 	this.body.getId();
 	try {
-		AnchorPane panel = (AnchorPane)FXMLLoader.load(getClass().getResource("./logowanie/logowanie.fxml"));
+		AnchorPane panel = (AnchorPane)FXMLLoader.load(getClass().getResource("./Logowanie/Logowanie.fxml"));
 		body.getChildren().removeAll();
 		body.getChildren().setAll(panel);
-		
+
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	}
@@ -36,7 +35,6 @@ public void test2()
 		body.getChildren().removeAll();
 		body.getChildren().setAll(panel);
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 }
