@@ -1,40 +1,26 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-
-import java.io.IOException;
 
 
 public class MainController {
 
 	@FXML public Pane body;
 	@FXML public TextField test;
-	@FXML public  ViewController ViewController;
-
+	@FXML public  ViewController ViewController = new ViewController();;
+	@FXML public controller.Logowanie.LogowanieController LogowanieController;
 	@FXML public void initialize() {
+		ViewController.init(this);
 		System.out.println("MainController init");
-		changeBody();
+		ViewController.changeBody("logcowanie");
 	}
 	public void test(){
-		System.out.println(ViewController.ttt.getText());
-	}
-	public void changeBody(){
-		try {
-			FXMLLoader loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Logowanie/logowanie.fxml"));
-			AnchorPane panel = (AnchorPane)loader.load();
-			ViewController = loader.getController();
-			ViewController.init(this);
-			body.getChildren().removeAll();
-			body.getChildren().setAll(panel);
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		System.out.println(LogowanieController.ttt.getText());
 	}
+
 
 
 }
