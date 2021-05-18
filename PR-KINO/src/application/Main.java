@@ -26,10 +26,6 @@ public class Main extends Application {
 			System.out.println("Danylo działad");
 			System.out.println("Intelidzej");
 
-			System.out.println("Mateusz Maślanka działa");
-			System.out.println("Mateusz Maślanka działa");
-			System.out.println("Mateusz Maślanka działa");
-
 
 		} catch(Exception e) {
 			e.printStackTrace();
