@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
 
@@ -26,6 +25,12 @@ public class Main extends Application {
 			System.out.println("Mateusz Osikowski działa Bachara oleh");
 			System.out.println("Danylo działad");
 			System.out.println("Intelidzej");
+
+			System.out.println("Mateusz Maślanka działa");
+			System.out.println("Mateusz Maślanka działa");
+			System.out.println("Mateusz Maślanka działa");
+
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
