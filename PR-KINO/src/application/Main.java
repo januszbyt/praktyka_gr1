@@ -21,7 +21,7 @@ public class Main extends Application {
 			{
 				System.out.println("SIEMA!");
 			}
-			System.out.println("...");
+			System.out.println("... Kornelia");
 			System.out.println("Mateusz Osikowski działa Bachara oleh");
 			System.out.println("Danylo działad");
 			System.out.println("Intelidzej");
