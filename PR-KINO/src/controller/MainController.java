@@ -14,7 +14,7 @@ public class MainController {
 	@FXML public void initialize() {
 		ViewController.init(this);
 		System.out.println("MainController init");
-		ViewController.changeBody("logcowanie");
+		ViewController.changeBody("logowanie");
 	}
 	public void test(){
 
