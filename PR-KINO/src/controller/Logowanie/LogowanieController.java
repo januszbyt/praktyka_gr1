@@ -14,7 +14,6 @@ public class LogowanieController {
 
 
     public void test(){
-        this.main.Bilet.WypiszImie(this.main.test.getText());
     }
 
 }
