@@ -20,14 +20,10 @@ public class ViewController {
                case"Logowanie": case"logowanie":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Logowanie/logowanie.fxml"));
                    panel = (AnchorPane)loader.load();
-                   this.main.LogowanieController = loader.getController();
-                   this.main.LogowanieController.init(this.main);
                    break;
                case"Rejestracja": case"rejestracja":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Logowanie/Rejestracja.fxml"));
                    panel = (AnchorPane)loader.load();
-                   this.main.RejestracjaController = loader.getController();
-                   this.main.RejestracjaController.init(this.main);
                    break;
                case"ADodatki":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/ADodatki.fxml"));

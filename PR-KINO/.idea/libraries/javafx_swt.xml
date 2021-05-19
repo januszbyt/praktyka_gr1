@@ -9,6 +9,7 @@
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/OpenJFX/lib/javafx.media.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/OpenJFX/lib/javafx.swing.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/OpenJFX/lib/javafx.web.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/JavaLib/mysql-connector.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
