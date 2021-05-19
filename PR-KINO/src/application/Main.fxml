@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <Pane fx:id="body" layoutX="14.0" layoutY="146.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="54.0" layoutY="37.0" mnemonicParsing="false" onAction="#Logowanie" text="Logowanie" />
-      <TextField fx:id="test" layoutX="405.0" layoutY="37.0" />
-      <Button layoutX="173.0" layoutY="37.0" mnemonicParsing="false" onAction="#Rejestracja" text="Rejstracja" />
+      <Pane fx:id="body" layoutY="62.0" prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: red;" />
+      <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false"  text="Logowanie" />
+      <TextField fx:id="test" layoutX="339.0" layoutY="25.0" />
+      <Button layoutX="102.0" layoutY="25.0" mnemonicParsing="false" text="Rejstracja" />
    </children>
 </AnchorPane>
