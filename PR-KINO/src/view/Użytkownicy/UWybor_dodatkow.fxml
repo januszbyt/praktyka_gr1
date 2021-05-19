@@ -8,7 +8,9 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.Użytkownik.URecenzja"
-            prefHeight="400.0" prefWidth="600.0">
-
+            fx:controller="controller.Użytkownik.UWybor_dodatkow"
+            prefHeight="640.0" prefWidth="1000.0">
+    <children>
+        <Label layoutX="150.0" layoutY="142.0" text="Dodatki" />
+    </children>
 </AnchorPane>

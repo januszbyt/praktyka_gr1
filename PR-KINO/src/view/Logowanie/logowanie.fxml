@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.LogowanieController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #CCCCCC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.LogowanieController">
    <children>
-      <Button layoutX="94.0" layoutY="115.0" mnemonicParsing="false" onAction="#test" text="Button" />
-      <TextField fx:id="ttt" layoutX="205.0" layoutY="58.0" />
+      <Button layoutX="172.0" layoutY="308.0" mnemonicParsing="false" onAction="#test" prefHeight="0.0" prefWidth="199.0" text="Button" />
+      <TextField fx:id="ttt" layoutX="329.0" layoutY="159.0" />
+      <Label alignment="CENTER" layoutY="6.0" prefHeight="81.0" prefWidth="1000.0" text="Panel logowania:" textAlignment="CENTER">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ttt1" layoutX="329.0" layoutY="213.0" />
    </children>
 </AnchorPane>

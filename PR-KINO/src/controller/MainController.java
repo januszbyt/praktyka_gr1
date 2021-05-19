@@ -1,25 +1,25 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
 
 
 public class MainController {
 
 	@FXML public Pane body;
-	@FXML public TextField test;
+	@FXML public ComboBox WyborFilmu;
 	@FXML public  ViewController ViewController = new ViewController();;
 	@FXML public controller.Logowanie.LogowanieController LogowanieController;
 	@FXML public controller.Logowanie.RejestracjaController RejestracjaController;
 	@FXML public void initialize() {
 		ViewController.init(this);
 		System.out.println("MainController init");
-		ViewController.changeBody("logowanie");
+		WyborFilmu.getItems().addAll("logowanie", "Rejestracja", "ADodatki", "AUzytkownicy","URecenzja","UWybor_filmu"
+		,"UWybor_miejsca","UWybor_dodatkow");
 	}
-	public void test(){
-
-		System.out.println(LogowanieController.ttt.getText());
+	public void Wybierz(){
+		ViewController.changeBody(WyborFilmu.getValue()+"");
 	}
 
 

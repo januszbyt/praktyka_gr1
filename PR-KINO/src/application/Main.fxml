@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <Pane fx:id="body" layoutY="62.0" prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: red;" />
-      <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false"  text="Logowanie" />
-      <TextField fx:id="test" layoutX="339.0" layoutY="25.0" />
-      <Button layoutX="102.0" layoutY="25.0" mnemonicParsing="false" text="Rejstracja" />
+      <Pane fx:id="body" layoutY="62.0" prefHeight="640.0" prefWidth="1000.0">
+         <opaqueInsets>
+            <Insets top="4.0" />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Pane>
+      <Button defaultButton="true" layoutX="187.0" layoutY="16.0" mnemonicParsing="false" onAction="#Wybierz" text="Button" />
+      <ComboBox fx:id="WyborFilmu" layoutX="14.0" layoutY="16.0" prefHeight="25.0" prefWidth="175.0" promptText="Wybierz okno" visibleRowCount="45" />
+      <Button cancelButton="true" layoutX="933.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Wyloguj" textOverrun="WORD_ELLIPSIS" />
    </children>
 </AnchorPane>

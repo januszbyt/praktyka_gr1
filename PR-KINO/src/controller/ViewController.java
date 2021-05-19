@@ -29,6 +29,32 @@ public class ViewController {
                    this.main.RejestracjaController = loader.getController();
                    this.main.RejestracjaController.init(this.main);
                    break;
+               case"ADodatki":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/ADodatki.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   break;
+               case"AUzytkownicy":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/AUżytkownicy.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   break;
+               case"UWybor_miejsca":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UWybor_miejsca.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   break;
+               case"UWybor_filmu":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UWybor_filmu.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   break;
+               case"URecenzja":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/URecenzja.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   break;
+               case"UWybor_dodatkow":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UWybor_dodatkow.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   break;
+
+
                default:
                    System.err.println("Bład wyboru okna, Nazwa: '"+name+"' nie jest znana");
                    work = false;
