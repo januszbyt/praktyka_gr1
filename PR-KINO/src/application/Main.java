@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import object.Admin_film;
 
 public class Main extends Application {
 	@Override
@@ -23,4 +24,6 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	Admin_film af=new Admin_film();
+
 }
