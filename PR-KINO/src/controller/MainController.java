@@ -11,6 +11,7 @@ public class MainController {
 	@FXML public TextField test;
 	@FXML public  ViewController ViewController = new ViewController();;
 	@FXML public controller.Logowanie.LogowanieController LogowanieController;
+	@FXML public controller.Logowanie.RejestracjaController RejestracjaController;
 	@FXML public void initialize() {
 		ViewController.init(this);
 		System.out.println("MainController init");

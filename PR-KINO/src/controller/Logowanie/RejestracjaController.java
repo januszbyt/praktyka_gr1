@@ -9,7 +9,5 @@ public class RejestracjaController {
         this.main = main;
     }
 
-    public void wypisz(){
-        System.out.println(this.main.Bilet.WypiszImie());
-    }
+
 }
