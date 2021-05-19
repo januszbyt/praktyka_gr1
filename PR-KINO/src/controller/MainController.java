@@ -15,7 +15,7 @@ public class MainController {
 	@FXML public void initialize() {
 		ViewController.init(this);
 		System.out.println("MainController init");
-		WyborFilmu.getItems().addAll("logowanie", "Rejestracja", "ADodatki", "AUzytkownicy","URecenzja","UWybor_filmu"
+		WyborFilmu.getItems().addAll("logowanie", "Rejestracja", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
 		,"UWybor_miejsca","UWybor_dodatkow");
 	}
 	public void Wybierz(){

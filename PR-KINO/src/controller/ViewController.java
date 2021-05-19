@@ -53,7 +53,10 @@ public class ViewController {
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UWybor_dodatkow.fxml"));
                    panel = (AnchorPane)loader.load();
                    break;
-
+               case"AFilmy":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/AFilmy.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   break;
 
                default:
                    System.err.println("Bład wyboru okna, Nazwa: '"+name+"' nie jest znana");

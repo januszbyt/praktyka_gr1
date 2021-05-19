@@ -14,7 +14,7 @@ public class Admin_film {
     private Base64 zdjecie;
 
 
-    public void wpiszDane(String tytul, String gatunek, String dlugosc_filmu, String rezyser, String typ,String kraj, String opis, int rokprod){
+    public void Admin_film(String tytul, String gatunek, String dlugosc_filmu, String rezyser, String typ,String kraj, String opis, int rokprod){
         this.tytul=tytul;
         this.gatunek=gatunek;
         this.dlugosc_filmu=dlugosc_filmu;
@@ -23,6 +23,9 @@ public class Admin_film {
         this.kraj=kraj;
         this.opis=opis;
         this.rokprod=rokprod;
+
+    }
+    public void Afilm(){
 
     }
 
