@@ -11,7 +11,10 @@ public class LogowanieController {
     public void init(MainController main){
         this.main = main;
     }
+
+
     public void test(){
-        System.out.println(this.main.test.getText());
+        this.main.Bilet.WypiszImie(this.main.test.getText());
     }
+
 }
