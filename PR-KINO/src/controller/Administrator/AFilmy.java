@@ -20,7 +20,14 @@ public class AFilmy {
 
     public void wpiszDane() {
         AFilmy af = new AFilmy();
-    System.out.println(t1.getText() + t2.getText() + t3.getText() + t4.getText() + t5.getText() + t6.getText() + t7.getText() + t8.getText());
+    System.out.println(t1.getText());
+    System.out.println(t2.getText());
+        System.out.println(t3.getText());
+        System.out.println(t4.getText());
+        System.out.println(t5.getText());
+        System.out.println(t6.getText());
+        System.out.println(t7.getText());
+        System.out.println(t8.getText());
     }
     public void edytujDane()
     {
@@ -28,9 +35,7 @@ public class AFilmy {
 
     }
 
-    public void wczytajInt(){
 
-    }
 
     public void wyczyscPola(){
         t1.clear();
