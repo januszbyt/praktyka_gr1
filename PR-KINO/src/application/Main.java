@@ -24,6 +24,6 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-	Admin_film af=new Admin_film();
+	Admin_film admin_film=new Admin_film();
 
 }
