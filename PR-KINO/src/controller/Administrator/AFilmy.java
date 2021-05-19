@@ -2,7 +2,6 @@ package controller.Administrator;
 
 import javafx.event.ActionEvent;
 
-import javax.swing.*;
 import java.util.Base64;
 
 public class AFilmy {
