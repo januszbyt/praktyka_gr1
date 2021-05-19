@@ -1,5 +1,8 @@
 package controller.Administrator;
 
+import javafx.event.ActionEvent;
+
+import javax.swing.*;
 import java.util.Base64;
 
 public class AFilmy {
@@ -12,6 +15,7 @@ public class AFilmy {
     private int rokprod;
     private String typ;
     private Base64 zdjecie;
+
     public void wpiszDane(String tytul, String gatunek, String dlugosc_filmu, String rezyser, String kraj, String opis, int rokprod, String typ){
         this.tytul=tytul;
         this.gatunek=gatunek;
@@ -24,17 +28,7 @@ public class AFilmy {
     }
 
 
+    public void wpiszDane(ActionEvent actionEvent) {
 
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 }

@@ -45,10 +45,7 @@ public class Admin_film {
         this.gatunek=gt;
     }
 
-    public String getDlugosc_filmu()
-    {
-        return dlugosc_filmu;
-    }
+    public String getDlugosc_filmu(){ return dlugosc_filmu; }
 
     public void setDlugosc_filmu(String df)
     {
