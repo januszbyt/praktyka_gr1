@@ -12,6 +12,12 @@ import java.sql.Statement;
 
 public class ADodatkiController {
 
+    private String nazwa;
+    private String typ;
+    private int cena;
+    private String ilosc;
+
+
     private MainController main;
 
     @FXML
@@ -59,6 +65,14 @@ public class ADodatkiController {
 
 
     }
+    public void Dodatki( String nazwa,String typ,int cena,String ilosc)
+    {
+        this.nazwa=nazwa;
+        this.typ=typ;
+        this.cena=cena;
+        this.ilosc=ilosc;
+
+    }
 
 
     public void dodajDoBazy() {
@@ -66,7 +80,7 @@ public class ADodatkiController {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://sql11.freemysqlhosting.net/sql11412360", "sql11412360", "MLKI6a5Yh3");
             stmt = con.createStatement();
-            int rs = this.main.stmt.executeUpdate("INSERT INTO `dodatki` (`id`, `nazwa`, `cena`, `ilosc`, `typ`) VALUES (NULL, 'TEST', '8.0', '10', 'cas')");
+            int rs = this.main.stmt.executeUpdate("INSERT INTO `dodatki` ( `nazwa`, `typ` , `cena`, `ilosc`) VALUES ( 't1', 't2', 't3', 't4')");
 
         } catch (Exception e) {
             System.out.println(e);
