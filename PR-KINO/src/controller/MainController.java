@@ -15,8 +15,8 @@ import java.sql.*;
 
 public class MainController {
 
-	public static Connection con;
-	public static Statement stmt;
+	public Connection con;
+	public Statement stmt;
 	@FXML public Pane body;
 	@FXML public ComboBox WyborFilmu;
 	@FXML public  ViewController ViewController = new ViewController();
@@ -79,6 +79,10 @@ public class MainController {
 		}
 		return true;
 	}
+	public void wyloguj(){
+ViewController.changeBody("Logowanie");
+	}
+
 
 
 }
