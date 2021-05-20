@@ -61,7 +61,7 @@ public class MainController {
 		try {
 			PreparedStatement prepStmt = con.prepareStatement(
 					"insert into filmy values (NULL, ?, ?, ?,?,?,?,?,?);");
-			stmt.execute(dlugosc);
+			
 			prepStmt.setString(1, tytul);
 			prepStmt.setString(2, gatunek);
 			prepStmt.setString(3, dlugosc);
