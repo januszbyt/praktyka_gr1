@@ -1,15 +1,12 @@
 package controller.Administrator;
 
 
-import javafx.event.ActionEvent;
+import controller.MainController;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-import java.sql.Connection;
-import java.sql.Statement;
-
-public class AFilmy {
+public class AFilmyController {
     @FXML public TextField t1;
     @FXML public TextField t2;
     @FXML public TextField t3;
@@ -20,10 +17,13 @@ public class AFilmy {
     @FXML public TextField t8;
 
 
-
+    private MainController main;
+    public void init(MainController main){
+        this.main = main;
+    }
 
     public void wpiszDane() {
-        AFilmy af = new AFilmy();
+        AFilmyController af = new AFilmyController();
         System.out.println("INFORMACJE O FILMIE");
         System.out.println("Tytul: " + t1.getText());
         System.out.println("Gatunek: " + t2.getText());
@@ -34,10 +34,11 @@ public class AFilmy {
         System.out.println("Rok produkcji: " + t7.getText());
         System.out.println("Typ: " + t8.getText());
         System.out.println("");
+
     }
     public void edytujDane()
     {
-        AFilmy af2= new AFilmy();
+        AFilmyController af2= new AFilmyController();
 
     }
 
