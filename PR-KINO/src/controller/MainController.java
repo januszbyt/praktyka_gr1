@@ -1,7 +1,13 @@
 package controller;
+import controller.Administrator.ADodatkiController;
+import controller.Administrator.AFilmyController;
+import controller.Administrator.AUżytkownicyController;
 import controller.Logowanie.LogowanieController;
 import controller.Logowanie.RejestracjaController;
 import controller.Użytkownik.URecenzjaController;
+import controller.Użytkownik.UWybor_dodatkowController;
+import controller.Użytkownik.UWybor_filmuController;
+import controller.Użytkownik.UWybor_miejscaController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
@@ -16,7 +22,16 @@ public class MainController {
 	@FXML public  ViewController ViewController = new ViewController();
 	@FXML public LogowanieController LogowanieController;
 	@FXML public RejestracjaController RejestracjaController;
+
+
+	@FXML public ADodatkiController ADodatkiController;
+	@FXML public AFilmyController AFilmyController;
+	@FXML public AUżytkownicyController AUżytkownicyController;
+
 	@FXML public URecenzjaController URecenzjaController;
+	@FXML public UWybor_filmuController UWybor_filmuController;
+	@FXML public UWybor_miejscaController UWybor_miejscaController;
+	@FXML public UWybor_dodatkowController UWybor_dodatkowController;
 
 	@FXML public void initialize() {
 		this.PolaczZBazaDanych();
@@ -33,9 +48,9 @@ public class MainController {
 			Class.forName("com.mysql.jdbc.Driver");
 			con=DriverManager.getConnection("jdbc:mysql://sql11.freemysqlhosting.net/sql11412360","sql11412360","MLKI6a5Yh3");
 			stmt=con.createStatement();
-			ResultSet rs=stmt.executeQuery("select * from filmy");
+		/*	ResultSet rs=stmt.executeQuery("select * from filmy");  jak pobierać dane
 			while(rs.next())
-				System.out.println(rs.getInt(1)+" "+rs.getString(2));
+				System.out.println(rs.getInt(1)+" "+rs.getString(2));*/
 		}catch(Exception e){
 			System.out.println(e);
 		}

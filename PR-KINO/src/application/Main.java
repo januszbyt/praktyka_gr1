@@ -1,12 +1,10 @@
 package application;
 
-import controller.Administrator.AFilmy;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import object.Admin_film;
 
 public class Main extends Application {
 	@Override
