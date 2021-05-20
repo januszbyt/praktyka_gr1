@@ -1,5 +1,4 @@
 package object;
-
 import java.util.Base64;
 
 public class Admin_film {
@@ -14,15 +13,15 @@ public class Admin_film {
     private Base64 zdjecie;
 
 
-    public void Admin_film(String tytul, String gatunek, String dlugosc_filmu, String rezyser, String typ,String kraj, String opis, int rokprod){
+    public void Admin_film(String tytul, String gatunek, String dlugosc_filmu, String rezyser,String kraj, String opis, int rokprod,String typ){
         this.tytul=tytul;
         this.gatunek=gatunek;
         this.dlugosc_filmu=dlugosc_filmu;
         this.rezyser=rezyser;
-        this.typ=typ;
         this.kraj=kraj;
         this.opis=opis;
         this.rokprod=rokprod;
+        this.typ=typ;
 
     }
     public void Admin_film(){ }

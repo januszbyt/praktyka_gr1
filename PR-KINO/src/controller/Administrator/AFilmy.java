@@ -1,12 +1,12 @@
 package controller.Administrator;
 
 
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class AFilmy {
@@ -40,7 +40,6 @@ public class AFilmy {
         AFilmy af2= new AFilmy();
 
     }
-
 
 
     public void wyczyscPola(){
