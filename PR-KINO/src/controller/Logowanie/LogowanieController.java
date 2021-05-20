@@ -5,9 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 public class LogowanieController {
-    private MainController main;
+
     @FXML
     public TextField ttt;
+    private MainController main;
     public void init(MainController main){
         this.main = main;
     }

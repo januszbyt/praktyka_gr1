@@ -20,38 +20,59 @@ public class ViewController {
                case"Logowanie": case"logowanie":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Logowanie/logowanie.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.LogowanieController=loader.getController();
+                   this.main.LogowanieController.init(main);
+
                    break;
                case"Rejestracja": case"rejestracja":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Logowanie/Rejestracja.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.RejestracjaController=loader.getController();
+                   this.main.RejestracjaController.init(main);
                    break;
                case"ADodatki":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/ADodatki.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.ADodatkiController=loader.getController();
+                   this.main.ADodatkiController.init(main);
+
                    break;
                case"AUzytkownicy":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/AUżytkownicy.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.AUżytkownicyController=loader.getController();
+                   this.main.AUżytkownicyController.init(main);
                    break;
                case"UWybor_miejsca":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UWybor_miejsca.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.UWybor_miejscaController=loader.getController();
+                   this.main.UWybor_miejscaController.init(main);
                    break;
+
                case"UWybor_filmu":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UWybor_filmu.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.UWybor_filmuController=loader.getController();
+                   this.main.UWybor_filmuController.init(main);
                    break;
                case"URecenzja":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/URecenzja.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.URecenzjaController =loader.getController();
+                   this.main.URecenzjaController.init(main);
                    break;
                case"UWybor_dodatkow":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UWybor_dodatkow.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.UWybor_dodatkowController=loader.getController();
+                   this.main.UWybor_dodatkowController.init(main);
                    break;
                case"AFilmy":
                    loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/AFilmy.fxml"));
                    panel = (AnchorPane)loader.load();
+                   this.main.AFilmyController=loader.getController();
+                   this.main.AFilmyController.init(main);
                    break;
 
                default:

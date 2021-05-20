@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AFilmy">
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AFilmyController">
    <children>
       <Button layoutX="479.0" layoutY="442.0" mnemonicParsing="false" onAction="#wpiszDane" text="Wyswietl" />
       <TextField fx:id="t1" layoutX="530.0" layoutY="91.0" />
