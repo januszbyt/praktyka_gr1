@@ -7,4 +7,5 @@ public class AUżytkownicyController {
     public void init(MainController main){
         this.main = main;
     }
+    
 }

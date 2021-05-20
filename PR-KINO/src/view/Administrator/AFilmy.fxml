@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AFilmyController">
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AFilmyController">
    <children>
       <Button layoutX="479.0" layoutY="442.0" mnemonicParsing="false" onAction="#wpiszDane" text="Wyswietl" />
       <TextField fx:id="t1" layoutX="530.0" layoutY="91.0" />
@@ -61,5 +64,6 @@
          </font>
       </Label>
       <Button layoutX="579.0" layoutY="442.0" mnemonicParsing="false" onAction="#wyczyscPola" text="Wyczyść" />
+      <Button layoutX="354.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajDoBazy" text="Dodaj do bazy" />
    </children>
 </AnchorPane>
