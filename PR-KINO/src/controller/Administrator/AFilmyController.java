@@ -5,11 +5,11 @@ import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 
 import java.sql.Connection;
@@ -26,20 +26,34 @@ public class AFilmyController {
     @FXML public TextArea t6;
     @FXML public TextField t7;
     @FXML public TextField t8;
-    @FXML public TableView tableView;
-    @FXML public void initialize(){
+    @FXML public TableView<Admin_film> tableView;
+    @FXML private TableColumn<Admin_film, String> tytulColumn;
+    @FXML private TableColumn<Admin_film, String> gatunekColumn;
+    @FXML private TableColumn<Admin_film, String> dlugosc_filmu;
+    @FXML private TableColumn<Admin_film, String> rezyser;
+    @FXML private TableColumn<Admin_film, String> kraj;
+    @FXML private TableColumn<Admin_film, String> opis;
+    @FXML private TableColumn<Admin_film, String> rok_produkcji;
+    @FXML private TableColumn<Admin_film, String> typ;
+    ObservableList<Admin_film> data = FXCollections.observableArrayList();
 
-        final ObservableList<Admin_film> data = FXCollections.observableArrayList();
+
+
+    @FXML public void initialize(){
+        tytulColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("tytul"));
+        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
+        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
+        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
+        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
+        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
+
 
 
 
         try{
             ResultSet rs=  this.main.stmt.executeQuery("select * from filmy");
-            int i = 0;
             while(rs.next()){
-                data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rok_produkcji"),rs.getString("typ")));
-                 i++;
-
+               data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rok_produkcji"),rs.getString("typ")));
             }
             tableView.setItems(data);
         }catch(Exception e){
