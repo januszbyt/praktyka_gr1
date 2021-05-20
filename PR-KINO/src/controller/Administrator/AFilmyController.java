@@ -2,6 +2,7 @@ package controller.Administrator;
 
 
 import controller.MainController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -50,11 +51,19 @@ public class AFilmyController {
         t2.clear();
         t3.clear();
         t4.clear();
+        t5.clear();
+        t6.clear();
+        t7.clear();
+        t8.clear();
 
     }
 
 
     public void dodajDoBazy() {
+
+    }
+
+    public void usunZBazy() {
     }
 }
 
