@@ -4,23 +4,23 @@ import java.util.Base64;
 public class Admin_film {
     private String tytul;
     private String gatunek;
-    private String dlugosc_filmu;
+    private int dlugosc;
     private String rezyser;
     private String kraj;
     private String opis;
-    private int rokprod;
+    private int rokprodukcji;
     private String typ;
     private Base64 zdjecie;
 
 
-    public void Admin_film(String tytul, String gatunek, String dlugosc_filmu, String rezyser,String kraj, String opis, int rokprod,String typ){
+    public void Admin_film(String tytul, String gatunek, int dlugosc, String rezyser,String kraj, String opis, int rok_produkcji,String typ){
         this.tytul=tytul;
         this.gatunek=gatunek;
-        this.dlugosc_filmu=dlugosc_filmu;
+        this.dlugosc=dlugosc;
         this.rezyser=rezyser;
         this.kraj=kraj;
         this.opis=opis;
-        this.rokprod=rokprod;
+        this.rokprodukcji=rokprodukcji;
         this.typ=typ;
 
     }
@@ -45,10 +45,10 @@ public class Admin_film {
         this.gatunek=gt;
     }
 
-    public String getDlugosc_filmu(){ return dlugosc_filmu; }
-    public void setDlugosc_filmu(String df)
+    public int getDlugosc(){ return dlugosc; }
+    public void setDlugosc(int df)
     {
-        this.dlugosc_filmu=df;
+        this.dlugosc=df;
     }
 
     public String getRezyser()
@@ -83,7 +83,7 @@ public class Admin_film {
 
     public int getRokprod()
     {
-        return rokprod;
+        return rokprodukcji;
     }
     public void setRokprod(String rp)
     {
@@ -93,7 +93,7 @@ public class Admin_film {
 
 
     public void wypiszDane(){
-        System.out.println(tytul + " " + gatunek + " " + dlugosc_filmu + " " + rezyser + " " + kraj + " " + opis + " " + rokprod + " " + typ);
+        System.out.println(tytul + " " + gatunek + " " + dlugosc + " " + rezyser + " " + kraj + " " + opis + " " + rokprodukcji + " " + typ);
     }
 
 
