@@ -2,14 +2,9 @@ package controller.Administrator;
 
 
 import controller.MainController;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
-import java.sql.*;
-
-import static controller.MainController.stmt;
 
 public class AFilmyController {
     @FXML public TextField t1;
@@ -64,6 +59,7 @@ public class AFilmyController {
     }
 
     public void usunZBazy() {
+
     }
 }
 

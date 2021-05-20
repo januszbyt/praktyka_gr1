@@ -54,6 +54,29 @@ public class MainController {
 		}catch(Exception e){
 			System.out.println(e);
 		}
+
+	}
+
+	public boolean dodajFilm(String tytul, String gatunek, int dlugosc, String rezyser,String kraj, String opis, int rok_produkcji,String typ) {
+		try {
+			PreparedStatement prepStmt = con.prepareStatement(
+					"insert into filmy values (NULL, ?, ?, ?,?,?,?,?,?);");
+
+			prepStmt.setString(1, tytul);
+			prepStmt.setString(2, gatunek);
+			prepStmt.setString(3, String.valueOf(dlugosc));
+			prepStmt.setString(4, rezyser);
+			prepStmt.setString(5, kraj);
+			prepStmt.setString(6, opis);
+			prepStmt.setString(7, String.valueOf(rok_produkcji));
+			prepStmt.setString(8, typ);
+			prepStmt.execute();
+		} catch (SQLException e) {
+			System.err.println("Blad przy wstawianiu filmu");
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 
 
