@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.RejestracjaController">
+   <children>
+      <Label layoutX="240.0" layoutY="332.0" text="AAAAAAAAAAAAAAAAAAA REJESTRACJA" />
+   </children>
+</AnchorPane>
