@@ -61,14 +61,14 @@ public class MainController {
 		try {
 			PreparedStatement prepStmt = con.prepareStatement(
 					"insert into filmy values (NULL, ?, ?, ?,?,?,?,?,?);");
-			
+
 			prepStmt.setString(1, tytul);
 			prepStmt.setString(2, gatunek);
-			prepStmt.setString(3, dlugosc);
+			prepStmt.setString(3, String.valueOf(dlugosc));
 			prepStmt.setString(4, rezyser);
 			prepStmt.setString(5, kraj);
 			prepStmt.setString(6, opis);
-			prepStmt.setString(7, rok_produkcji);
+			prepStmt.setString(7, String.valueOf(rok_produkcji));
 			prepStmt.setString(8, typ);
 			prepStmt.execute();
 		} catch (SQLException e) {
