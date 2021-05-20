@@ -38,4 +38,7 @@ public class ADodatkiController {
         t4.clear();
 
     }
+    public void dodajDoBazy(){
+
+    }
 }

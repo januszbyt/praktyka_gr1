@@ -52,10 +52,7 @@ public class AFilmyController {
         t2.clear();
         t3.clear();
         t4.clear();
-        t5.clear();
-        t6.clear();
-        t7.clear();
-        t8.clear();
+
     }
 
 
