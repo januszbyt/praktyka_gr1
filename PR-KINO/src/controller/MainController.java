@@ -72,7 +72,7 @@ public class MainController {
 			prepStmt.setString(8, typ);
 			prepStmt.execute();
 		} catch (SQLException e) {
-			System.err.println("Blad przy wstawianiu czytelnika");
+			System.err.println("Blad przy wstawianiu filmu");
 			e.printStackTrace();
 			return false;
 		}
