@@ -20,14 +20,16 @@ public class AFilmy {
 
     public void wpiszDane() {
         AFilmy af = new AFilmy();
-    System.out.println(t1.getText());
-    System.out.println(t2.getText());
-        System.out.println(t3.getText());
-        System.out.println(t4.getText());
-        System.out.println(t5.getText());
-        System.out.println(t6.getText());
-        System.out.println(t7.getText());
-        System.out.println(t8.getText());
+        System.out.println("INFORMACJE O FILMIE");
+    System.out.println("Tytul: " + t1.getText());
+    System.out.println("Gatunek: " + t2.getText());
+        System.out.println("Dlugosc filmu: " + t3.getText());
+        System.out.println("Rezyser: " + t4.getText());
+        System.out.println("Kraj: " + t5.getText());
+        System.out.println("Opis: " + t6.getText());
+        System.out.println("Rok produkcji: " + t7.getText());
+        System.out.println("Typ: " + t8.getText());
+        System.out.println("");
     }
     public void edytujDane()
     {
