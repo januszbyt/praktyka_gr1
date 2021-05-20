@@ -6,15 +6,23 @@ import javafx.scene.control.TextField;
 
 public class LogowanieController {
 
-    @FXML
-    public TextField ttt;
+    @FXML public TextField login;
+    @FXML public TextField haslo;
     private MainController main;
     public void init(MainController main){
         this.main = main;
     }
 
 
-    public void test(){
+    @FXML public void initialize(){
+        login.setPromptText("Tutaj wpisz swój login:");
+        haslo.setPromptText("Tutaj wpisz swoje hasło:");
+    }
+    @FXML public void zaloguj(){
+
+    }
+    @FXML public void zarejestruj(){
+
     }
 
 }

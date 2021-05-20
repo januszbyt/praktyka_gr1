@@ -39,6 +39,7 @@ public class MainController {
 		System.out.println("MainController init");
 		WyborFilmu.getItems().addAll("logowanie", "Rejestracja", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
 		,"UWybor_miejsca","UWybor_dodatkow");
+		ViewController.changeBody("logowanie");
 	}
 	public void Wybierz(){
 		ViewController.changeBody(WyborFilmu.getValue()+"");

@@ -3,18 +3,31 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #CCCCCC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.LogowanieController">
    <children>
-      <Button layoutX="172.0" layoutY="308.0" mnemonicParsing="false" onAction="#test" prefHeight="0.0" prefWidth="199.0" text="Button" />
-      <TextField fx:id="ttt" layoutX="329.0" layoutY="159.0" />
-      <Label alignment="CENTER" layoutY="6.0" prefHeight="81.0" prefWidth="1000.0" text="Panel logowania:" textAlignment="CENTER">
+      <Button layoutX="352.0" layoutY="347.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="295.0" text="Zaloguj się " />
+      <TextField fx:id="login" layoutX="315.0" layoutY="200.0" prefHeight="30.0" prefWidth="400.0" />
+      <Label alignment="CENTER" layoutY="6.0" prefHeight="81.0" prefWidth="1000.0" text="Witaj w kinie &quot;Dream&quot;" textAlignment="CENTER" textFill="#891111">
          <font>
             <Font size="55.0" />
          </font>
       </Label>
-      <TextField fx:id="ttt1" layoutX="329.0" layoutY="213.0" />
+      <TextField fx:id="haslo" layoutX="315.0" layoutY="265.0" prefHeight="30.0" prefWidth="400.0" />
+      <Label layoutX="371.0" layoutY="88.0" text="Panel Logowania">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button layoutX="352.0" layoutY="421.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="295.0" text="Rejestracja" />
+      <ImageView fitHeight="82.0" fitWidth="176.0" layoutX="102.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/94261660_1743308579141502_6961707005413163008_n.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
