@@ -1,4 +1,7 @@
 package controller;
+import controller.Logowanie.LogowanieController;
+import controller.Logowanie.RejestracjaController;
+import controller.Użytkownik.URecenzjaController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
@@ -10,7 +13,10 @@ public class MainController {
 	public static Statement stmt;
 	@FXML public Pane body;
 	@FXML public ComboBox WyborFilmu;
-	@FXML public  ViewController ViewController = new ViewController();;
+	@FXML public  ViewController ViewController = new ViewController();
+	@FXML public LogowanieController LogowanieController;
+	@FXML public RejestracjaController RejestracjaController;
+	@FXML public URecenzjaController URecenzjaController;
 
 	@FXML public void initialize() {
 		this.PolaczZBazaDanych();
