@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.sql.Connection;
+import java.sql.Statement;
+
 public class AFilmy {
     @FXML public TextField t1;
     @FXML public TextField t2;
@@ -18,11 +21,12 @@ public class AFilmy {
 
 
 
+
     public void wpiszDane() {
         AFilmy af = new AFilmy();
         System.out.println("INFORMACJE O FILMIE");
-    System.out.println("Tytul: " + t1.getText());
-    System.out.println("Gatunek: " + t2.getText());
+        System.out.println("Tytul: " + t1.getText());
+        System.out.println("Gatunek: " + t2.getText());
         System.out.println("Dlugosc filmu: " + t3.getText());
         System.out.println("Rezyser: " + t4.getText());
         System.out.println("Kraj: " + t5.getText());

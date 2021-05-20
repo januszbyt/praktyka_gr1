@@ -25,9 +25,7 @@ public class Admin_film {
         this.rokprod=rokprod;
 
     }
-    public void Afilm(){
-
-    }
+    public void Admin_film(){ }
 
     public String getTytul()
     {
@@ -83,6 +81,7 @@ public class Admin_film {
         return opis;
     }
     public void setOpis(String op) { this.opis=op; }
+
     public int getRokprod()
     {
         return rokprod;
