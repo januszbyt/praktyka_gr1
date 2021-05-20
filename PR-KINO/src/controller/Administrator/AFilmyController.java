@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 
 import java.sql.*;
 
+import static controller.MainController.stmt;
+
 public class AFilmyController {
     @FXML public TextField t1;
     @FXML public TextField t2;
@@ -39,11 +41,7 @@ public class AFilmyController {
 
 
     }
-    public void edytujDane()
-    {
-        AFilmyController af2= new AFilmyController();
 
-    }
 
 
 
@@ -59,10 +57,7 @@ public class AFilmyController {
     }
 
 
-    public void dodajDoBazy(){
-
+    public void dodajDoBazy() {
     }
-
-
 }
 
