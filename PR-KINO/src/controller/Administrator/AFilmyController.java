@@ -12,10 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class AFilmyController {
     @FXML public TextField t1;
@@ -29,11 +26,11 @@ public class AFilmyController {
     @FXML public TableView<Admin_film> tableView;
     @FXML private TableColumn<Admin_film, String> tytulColumn;
     @FXML private TableColumn<Admin_film, String> gatunekColumn;
-    @FXML private TableColumn<Admin_film, String> dlugosc_filmu;
+    @FXML private TableColumn<Admin_film, String> dlugosc;
     @FXML private TableColumn<Admin_film, String> rezyser;
     @FXML private TableColumn<Admin_film, String> kraj;
     @FXML private TableColumn<Admin_film, String> opis;
-    @FXML private TableColumn<Admin_film, String> rok_produkcji;
+    @FXML private TableColumn<Admin_film, String> rokprodukcji;
     @FXML private TableColumn<Admin_film, String> typ;
     ObservableList<Admin_film> data = FXCollections.observableArrayList();
 
@@ -42,18 +39,18 @@ public class AFilmyController {
     @FXML public void initialize(){
         tytulColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("tytul"));
         gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
-        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
-        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
-        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
-        gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
-
-
+        dlugosc.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("dlugosc"));
+        rezyser.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("rezyser"));
+        kraj.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("kraj"));
+        opis.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("opis"));
+        //rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("rok_produkcji"));
+        typ.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("typ"));
 
 
         try{
             ResultSet rs=  this.main.stmt.executeQuery("select * from filmy");
             while(rs.next()){
-               data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rok_produkcji"),rs.getString("typ")));
+              data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),5555,rs.getString("typ")));
             }
             tableView.setItems(data);
         }catch(Exception e){
@@ -62,8 +59,6 @@ public class AFilmyController {
 
     }
 
-    public static Connection con;
-    public static Statement stmt;
     private MainController main;
     public void init(MainController main){
 
@@ -103,10 +98,7 @@ public class AFilmyController {
 
     public void dodajDoBazy() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://sql11.freemysqlhosting.net/sql11412360", "sql11412360", "MLKI6a5Yh3");
-            stmt = con.createStatement();
-            int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rok_produkcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d',NULL)");
+           int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rok_produkcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d',NULL)");
 
         } catch (Exception e) {
             System.out.println(e);
