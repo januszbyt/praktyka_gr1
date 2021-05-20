@@ -8,19 +8,19 @@ public class Admin_film {
     private String rezyser;
     private String kraj;
     private String opis;
-    private int rokprodukcji;
+    private int rok_produkcji;
     private String typ;
     private Base64 zdjecie;
 
 
-    public Admin_film(String tytul, String gatunek, int dlugosc, String rezyser,String kraj, String opis, int rok_produkcji,String typ){
+    public Admin_film(String tytul, String gatunek, int dlugosc, String rezyser,String kraj, String opis, int rok_produkcji_,String typ){
         this.tytul=tytul;
         this.gatunek=gatunek;
         this.dlugosc=dlugosc;
         this.rezyser=rezyser;
         this.kraj=kraj;
         this.opis=opis;
-        this.rokprodukcji=rokprodukcji;
+        this.rok_produkcji=rok_produkcji_;
         this.typ=typ;
 
     }
@@ -83,7 +83,7 @@ public class Admin_film {
 
     public int getRokprod()
     {
-        return rokprodukcji;
+        return rok_produkcji;
     }
     public void setRokprod(String rp)
     {
@@ -93,7 +93,7 @@ public class Admin_film {
 
 
     public void wypiszDane(){
-        System.out.println(tytul + " " + gatunek + " " + dlugosc + " " + rezyser + " " + kraj + " " + opis + " " + rokprodukcji + " " + typ);
+        System.out.println(tytul + " " + gatunek + " " + dlugosc + " " + rezyser + " " + kraj + " " + opis + " " + rok_produkcji + " " + typ);
     }
 
 

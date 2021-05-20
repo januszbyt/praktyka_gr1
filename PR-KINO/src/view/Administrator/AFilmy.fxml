@@ -73,12 +73,12 @@
         <columns>
           <TableColumn fx:id="tytulColumn" prefWidth="100.0" text="tytul" />
             <TableColumn fx:id="gatunekColumn" prefWidth="63.0" text="gatunek" />
-            <TableColumn prefWidth="90.0" text="dlugosc_filmu" />
-            <TableColumn prefWidth="67.0" text="rezyser" />
-            <TableColumn prefWidth="39.0" text="kraj" />
-            <TableColumn prefWidth="57.0" text="opis" />
-            <TableColumn prefWidth="94.0" text="rok_produkcji" />
-            <TableColumn prefWidth="61.0" text="typ" />
+            <TableColumn fx:id="dlugosc" prefWidth="90.0" text="dlugosc_filmu" />
+            <TableColumn fx:id="rezyser" prefWidth="67.0" text="rezyser" />
+            <TableColumn fx:id="kraj" prefWidth="39.0" text="kraj" />
+            <TableColumn fx:id="opis" prefWidth="57.0" text="opis" />
+            <TableColumn fx:id="rokprodukcji" prefWidth="94.0" text="rok_produkcji" />
+            <TableColumn fx:id="typ" prefWidth="61.0" text="typ" />
         </columns>
          <opaqueInsets>
             <Insets />
