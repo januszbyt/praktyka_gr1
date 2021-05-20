@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.sql.*;
+
 public class AFilmyController {
     @FXML public TextField t1;
     @FXML public TextField t2;
@@ -35,6 +37,7 @@ public class AFilmyController {
         System.out.println("Typ: " + t8.getText());
         System.out.println("");
 
+
     }
     public void edytujDane()
     {
@@ -54,4 +57,12 @@ public class AFilmyController {
         t7.clear();
         t8.clear();
     }
+
+
+    public void dodajDoBazy(){
+
+    }
+
+
 }
+
