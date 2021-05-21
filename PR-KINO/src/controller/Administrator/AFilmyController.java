@@ -2,6 +2,7 @@ package controller.Administrator;
 
 
 import controller.MainController;
+import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -23,7 +24,9 @@ public class AFilmyController {
     @FXML public TextArea t6;
     @FXML public TextField t7;
     @FXML public TextField t8;
+    @FXML public TextField tid;
     @FXML public TableView<Admin_film> tableView;
+    @FXML private TableColumn<Admin_film, Integer> idColumn;
     @FXML private TableColumn<Admin_film, String> tytulColumn;
     @FXML private TableColumn<Admin_film, String> gatunekColumn;
     @FXML private TableColumn<Admin_film, Integer> dlugosc;
@@ -32,11 +35,13 @@ public class AFilmyController {
     @FXML private TableColumn<Admin_film, String> opis;
     @FXML private TableColumn<Admin_film, Integer> rokprodukcji;
     @FXML private TableColumn<Admin_film, String> typ;
+
     ObservableList<Admin_film> data = FXCollections.observableArrayList();
 
 
 
     @FXML public void initialize(){
+        idColumn.setCellValueFactory(new PropertyValueFactory<Admin_film,Integer>("id"));
         tytulColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("tytul"));
         gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
         dlugosc.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("dlugosc"));
@@ -58,7 +63,7 @@ public class AFilmyController {
         try{
             ResultSet rs=  this.main.stmt.executeQuery("select * from filmy");
             while(rs.next()){
-                data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rokprodukcji"),rs.getString("typ")));
+                data.add(new Admin_film(rs.getInt("id"),rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rokprodukcji"),rs.getString("typ")));
             }
             tableView.setItems(data);
         }catch(Exception e){
@@ -98,16 +103,29 @@ public class AFilmyController {
     }
 
     public void dodajDoBazy() {
-        /*try {
-           int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d')");
-
+        try {
+            String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'komedia', '150','paczino','polska','krotki opis','1999','2d')";
+           //System.out.println(query);
+           //query =this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', 150,'paczino','polska','krotki opis',1999,'2d')");
+            this.main.stmt.execute(query);
         } catch (Exception e) {
             System.out.println(e);
-        }*/
+        }
+
+
     }
 
-    public void usunZBazy() {
 
+
+    public void usunZBazy() {
+        try {
+            String query = "DELETE FROM `filmy` WHERE `id`=13";
+            //System.out.println(query);
+            //query =this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', 150,'paczino','polska','krotki opis',1999,'2d')");
+            this.main.stmt.execute(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
 

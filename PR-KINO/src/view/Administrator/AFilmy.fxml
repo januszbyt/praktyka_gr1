@@ -21,6 +21,11 @@
       <TextArea fx:id="t6" layoutX="218.0" layoutY="282.0" prefHeight="48.0" prefWidth="149.0" />
       <TextField fx:id="t7" layoutX="218.0" layoutY="347.0" />
       <TextField fx:id="t8" layoutX="218.0" layoutY="381.0" />
+      <Label layoutX="58.0" layoutY="82.0" text="ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
       <Label layoutX="55.0" layoutY="113.0" prefHeight="25.0" prefWidth="58.0" text="Tytul">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -71,6 +76,7 @@
       <Button layoutX="116.0" layoutY="467.0" mnemonicParsing="false" onAction="#usunZBazy" prefHeight="25.0" prefWidth="85.0" text="Usuń z bazy" />
       <TableView fx:id="tableView" layoutX="406.0" layoutY="107.0" prefWidth="603.0">
         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
           <TableColumn fx:id="tytulColumn" prefWidth="100.0" text="tytul" />
             <TableColumn fx:id="gatunekColumn" prefWidth="63.0" text="gatunek" />
             <TableColumn fx:id="dlugosc" prefWidth="90.0" text="dlugosc_filmu" />
@@ -87,5 +93,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <TextField fx:id="tid" layoutX="218.0" layoutY="82.0" prefHeight="25.0" prefWidth="41.0" />
    </children>
 </AnchorPane>
