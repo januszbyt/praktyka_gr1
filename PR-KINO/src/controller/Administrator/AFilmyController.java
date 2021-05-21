@@ -30,7 +30,7 @@ public class AFilmyController {
     @FXML private TableColumn<Admin_film, String> rezyser;
     @FXML private TableColumn<Admin_film, String> kraj;
     @FXML private TableColumn<Admin_film, String> opis;
-    @FXML private TableColumn<Admin_film, String> rokprodukcji;
+    @FXML private TableColumn<Admin_film, Integer> rokprodukcji;
     @FXML private TableColumn<Admin_film, String> typ;
     ObservableList<Admin_film> data = FXCollections.observableArrayList();
 
@@ -43,7 +43,7 @@ public class AFilmyController {
         rezyser.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("rezyser"));
         kraj.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("kraj"));
         opis.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("opis"));
-        //rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("rok_produkcji"));
+        rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("rokprodukcji"));
         typ.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("typ"));
 
 
@@ -98,7 +98,7 @@ public class AFilmyController {
 
     public void dodajDoBazy() {
         try {
-           int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rok_produkcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d',NULL)");
+           int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d',NULL)");
 
         } catch (Exception e) {
             System.out.println(e);
