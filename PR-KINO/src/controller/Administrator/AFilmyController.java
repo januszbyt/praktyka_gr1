@@ -43,26 +43,27 @@ public class AFilmyController {
         rezyser.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("rezyser"));
         kraj.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("kraj"));
         opis.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("opis"));
-        rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("rokprodukcji"));
+        //rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("rokprodukcji"));
         typ.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("typ"));
-
-
-        try{
-            ResultSet rs=  this.main.stmt.executeQuery("select * from filmy");
-            while(rs.next()){
-              data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),5555,rs.getString("typ")));
-            }
-            tableView.setItems(data);
-        }catch(Exception e){
-            System.out.println(e);
-        }
 
     }
 
     private MainController main;
     public void init(MainController main){
-
         this.main = main;
+        this.PobierzDane();
+    }
+
+    public void PobierzDane(){
+        try{
+            ResultSet rs=  this.main.stmt.executeQuery("select * from filmy");
+            while(rs.next()){
+                data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),5555,rs.getString("typ")));
+            }
+            tableView.setItems(data);
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
     public void wpiszDane() {
@@ -97,12 +98,12 @@ public class AFilmyController {
     }
 
     public void dodajDoBazy() {
-        try {
+        /*try {
            int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d',NULL)");
 
         } catch (Exception e) {
             System.out.println(e);
-        }
+        }*/
     }
 
     public void usunZBazy() {

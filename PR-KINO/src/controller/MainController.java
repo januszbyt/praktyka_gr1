@@ -58,7 +58,7 @@ public class MainController {
 
 	}
 
-	public boolean dodajFilm(String tytul, String gatunek, int dlugosc, String rezyser,String kraj, String opis, int rok_produkcji,String typ) {
+	/*public boolean dodajFilm(String tytul, String gatunek, int dlugosc, String rezyser,String kraj, String opis, int rok_produkcji,String typ) {
 		try {
 			PreparedStatement prepStmt = con.prepareStatement(
 					"insert into filmy values (NULL, ?, ?, ?,?,?,?,?,?);");
@@ -78,7 +78,7 @@ public class MainController {
 			return false;
 		}
 		return true;
-	}
+	}*/
 	public void wyloguj(){
 ViewController.changeBody("Logowanie");
 	}
