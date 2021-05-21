@@ -36,7 +36,7 @@ public class Admin_film {
 
     }
     */
-    public void Admin_film(){ }
+    public Admin_film(){ }
 
     public String getTytul()
     {
@@ -90,11 +90,11 @@ public class Admin_film {
     }
     public void setOpis(String op) { this.opis=op; }
 
-    public int getRokprod()
+    public int getRokprodukcji()
     {
         return rokprodukcji;
     }
-    public void setRokprod(Integer rp)
+    public void setRokprodukcji(Integer rp)
     {
         this.rokprodukcji=rp;
     }
