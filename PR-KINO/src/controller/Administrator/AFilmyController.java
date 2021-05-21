@@ -26,7 +26,7 @@ public class AFilmyController {
     @FXML public TableView<Admin_film> tableView;
     @FXML private TableColumn<Admin_film, String> tytulColumn;
     @FXML private TableColumn<Admin_film, String> gatunekColumn;
-    @FXML private TableColumn<Admin_film, String> dlugosc;
+    @FXML private TableColumn<Admin_film, Integer> dlugosc;
     @FXML private TableColumn<Admin_film, String> rezyser;
     @FXML private TableColumn<Admin_film, String> kraj;
     @FXML private TableColumn<Admin_film, String> opis;
@@ -39,7 +39,7 @@ public class AFilmyController {
     @FXML public void initialize(){
         tytulColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("tytul"));
         gatunekColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("gatunek"));
-        dlugosc.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("dlugosc"));
+        dlugosc.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("dlugosc"));
         rezyser.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("rezyser"));
         kraj.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("kraj"));
         opis.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("opis"));
@@ -99,7 +99,7 @@ public class AFilmyController {
 
     public void dodajDoBazy() {
         /*try {
-           int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d',NULL)");
+           int rs = this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', '150','paczino','polska','krotki opis','1999','2d')");
 
         } catch (Exception e) {
             System.out.println(e);

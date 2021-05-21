@@ -4,19 +4,19 @@ import java.util.Base64;
 public class Admin_film {
     private String tytul;
     private String gatunek;
-    private int dlugosc;
+    private Integer dlugosc;
     private String rezyser;
     private String kraj;
     private String opis;
-    private int rokprodukcji;
+    private Integer rokprodukcji;
     private String typ;
     private Base64 zdjecie;
 
-    public Admin_film(String tytul, String gatunek, int dlugosc, String rezyser, String kraj, String opis, int rokprodukcji, String typ) {
+    public Admin_film(String tytul, String gatunek, Integer dlugosc, String rezyser, String kraj, String opis, Integer rokprodukcji, String typ) {
     }
 
 
-    public void Admin_film(String tytul, String gatunek, int dlugosc, String rezyser,String kraj, String opis, int rokprodukcji,String typ){
+    public void Admin_film(String tytul, String gatunek, Integer dlugosc, String rezyser,String kraj, String opis, Integer rokprodukcji,String typ){
         this.tytul=tytul;
         this.gatunek=gatunek;
         this.dlugosc=dlugosc;
@@ -49,10 +49,7 @@ public class Admin_film {
     }
 
     public int getDlugosc(){ return dlugosc; }
-    public void setDlugosc(int df)
-    {
-        this.dlugosc=df;
-    }
+    public void setDlugosc(Integer df)    {  this.dlugosc=df;   }
 
     public String getRezyser()
     {
@@ -88,7 +85,7 @@ public class Admin_film {
     {
         return rokprodukcji;
     }
-    public void setRokprod(int rp)
+    public void setRokprod(Integer rp)
     {
         this.rokprodukcji=rp;
     }
