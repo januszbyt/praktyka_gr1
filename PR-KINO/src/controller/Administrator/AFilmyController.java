@@ -91,6 +91,7 @@ public class AFilmyController {
 
 
     public void wyczyscPola(){
+        tid.clear();
         t1.clear();
         t2.clear();
         t3.clear();
@@ -120,8 +121,6 @@ public class AFilmyController {
     public void usunZBazy() {
         try {
             String query = "DELETE FROM `filmy` WHERE `id`=13";
-            //System.out.println(query);
-            //query =this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', 150,'paczino','polska','krotki opis',1999,'2d')");
             this.main.stmt.execute(query);
         } catch (Exception e) {
             System.out.println(e);
