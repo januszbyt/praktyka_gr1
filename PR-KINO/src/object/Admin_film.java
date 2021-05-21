@@ -13,6 +13,14 @@ public class Admin_film {
     private Base64 zdjecie;
 
     public Admin_film(String tytul, String gatunek, Integer dlugosc, String rezyser, String kraj, String opis, Integer rokprodukcji, String typ) {
+        this.tytul=tytul;
+        this.gatunek=gatunek;
+        this.dlugosc=dlugosc;
+        this.rezyser=rezyser;
+        this.kraj=kraj;
+        this.opis=opis;
+        this.rokprodukcji=rokprodukcji;
+        this.typ=typ;
     }
 
 
