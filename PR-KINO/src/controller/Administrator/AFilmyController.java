@@ -45,12 +45,12 @@ public class AFilmyController {
         opis.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("opis"));
         rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("rokprodukcji"));
         typ.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("typ"));
-
     }
 
     private MainController main;
     public void init(MainController main){
         this.main = main;
+
         this.PobierzDane();
     }
 
