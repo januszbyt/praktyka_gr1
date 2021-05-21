@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.RejestracjaController">
    <children>
-      <Label layoutX="240.0" layoutY="332.0" text="AAAAAAAAAAAAAAAAAAA REJESTRACJA" />
+      <TextField fx:id="nazwisko" layoutX="172.0" layoutY="158.0" />
+      <Label layoutX="410.0" layoutY="37.0" text="Rejestracja">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="imie" layoutX="171.0" layoutY="110.0" />
+      <TextField fx:id="pesel" layoutX="172.0" layoutY="205.0" />
+      <TextField fx:id="adres_email" layoutX="172.0" layoutY="255.0" />
+      <Label layoutX="68.0" layoutY="109.0" text="Imię">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="64.0" layoutY="157.0" text="Nazwisko">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="254.0" text="Adres-email">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="208.0" prefHeight="27.0" prefWidth="49.0" text="Pesel">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="58.0" layoutY="319.0" mnemonicParsing="false" onAction="#zarejestruj" prefHeight="26.0" prefWidth="352.0" text="Zarejestruj" />
+      <Label layoutX="126.0" layoutY="392.0" />
+      <Label layoutX="58.0" layoutY="364.0" text="Proszę czekać! Trwa weryfikacja, oczekiwanie na potwierdzenie..." textFill="#940d0d" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="410.0" text="Sprawdz swoją pocztę :) " textFill="#911111" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="login" layoutX="586.0" layoutY="145.0" />
+      <PasswordField fx:id="haslo" layoutX="585.0" layoutY="196.0" />
+      <PasswordField fx:id="potwierdzonehaslo" layoutX="586.0" layoutY="242.0" />
+      <Label layoutX="490.0" layoutY="149.0" text="Login" />
+      <Label layoutX="490.0" layoutY="200.0" text="Hasło" />
+      <Label layoutX="490.0" layoutY="246.0" text="Potwierdz hasło" />
+      <Label layoutX="532.0" layoutY="79.0" text="Dane logowania:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button disable="true" layoutX="605.0" layoutY="365.0" mnemonicParsing="false" onAction="#przejdz_dalej" prefHeight="26.0" prefWidth="164.0" text="Przejdz dalej" />
+      <Label fx:id="komunikat_rozne_hasla" layoutX="755.0" layoutY="246.0" text="Hasła nie są identyczne!" textFill="#9e0707" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
