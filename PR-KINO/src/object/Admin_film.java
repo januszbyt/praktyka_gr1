@@ -23,7 +23,7 @@ public class Admin_film {
         this.typ=typ;
     }
 
-
+/*
     public void Admin_film(String tytul, String gatunek, Integer dlugosc, String rezyser,String kraj, String opis, Integer rokprodukcji,String typ){
         this.tytul=tytul;
         this.gatunek=gatunek;
@@ -35,6 +35,7 @@ public class Admin_film {
         this.typ=typ;
 
     }
+    */
     public void Admin_film(){ }
 
     public String getTytul()

@@ -43,7 +43,7 @@ public class AFilmyController {
         rezyser.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("rezyser"));
         kraj.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("kraj"));
         opis.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("opis"));
-        //rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("rokprodukcji"));
+        rokprodukcji.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("rokprodukcji"));
         typ.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("typ"));
 
     }
@@ -58,7 +58,7 @@ public class AFilmyController {
         try{
             ResultSet rs=  this.main.stmt.executeQuery("select * from filmy");
             while(rs.next()){
-                data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),5555,rs.getString("typ")));
+                data.add(new Admin_film(rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rokprodukcji"),rs.getString("typ")));
             }
             tableView.setItems(data);
         }catch(Exception e){
