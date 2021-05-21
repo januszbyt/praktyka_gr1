@@ -2,6 +2,7 @@ package object;
 import java.util.Base64;
 
 public class Admin_film {
+    private Integer id;
     private String tytul;
     private String gatunek;
     private Integer dlugosc;
@@ -12,7 +13,8 @@ public class Admin_film {
     private String typ;
     private Base64 zdjecie;
 
-    public Admin_film(String tytul, String gatunek, Integer dlugosc, String rezyser, String kraj, String opis, Integer rokprodukcji, String typ) {
+    public Admin_film(Integer id,String tytul, String gatunek, Integer dlugosc, String rezyser, String kraj, String opis, Integer rokprodukcji, String typ) {
+        this.id=id;
         this.tytul=tytul;
         this.gatunek=gatunek;
         this.dlugosc=dlugosc;
@@ -37,6 +39,9 @@ public class Admin_film {
     }
     */
     public Admin_film(){ }
+
+    public Integer getId(){ return id;}
+    public void setId(Integer id1) { this.id=id1;}
 
     public String getTytul()
     {
@@ -102,7 +107,7 @@ public class Admin_film {
 
 
     public void wypiszDane(){
-        System.out.println(tytul + " " + gatunek + " " + dlugosc + " " + rezyser + " " + kraj + " " + opis + " " + rokprodukcji + " " + typ);
+        System.out.println(id + " " + tytul + " " + gatunek + " " + dlugosc + " " + rezyser + " " + kraj + " " + opis + " " + rokprodukcji + " " + typ);
     }
 
 
