@@ -2,7 +2,6 @@ package controller.Administrator;
 
 
 import controller.MainController;
-import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 
 import java.sql.ResultSet;
+import java.sql.RowId;
+import java.sql.SQLException;
 
 public class AFilmyController {
     @FXML public TextField t1;
@@ -66,6 +67,7 @@ public class AFilmyController {
                 data.add(new Admin_film(rs.getInt("id"),rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rokprodukcji"),rs.getString("typ")));
             }
             tableView.setItems(data);
+
         }catch(Exception e){
             System.out.println(e);
         }
@@ -73,7 +75,9 @@ public class AFilmyController {
 
     public void wpiszDane() {
         AFilmyController af = new AFilmyController();
+        /*
         System.out.println("INFORMACJE O FILMIE");
+        System.out.println("ID: " + tid.getText());
         System.out.println("Tytul: " + t1.getText());
         System.out.println("Gatunek: " + t2.getText());
         System.out.println("Dlugosc filmu: " + t3.getText());
@@ -83,6 +87,21 @@ public class AFilmyController {
         System.out.println("Rok produkcji: " + t7.getText());
         System.out.println("Typ: " + t8.getText());
         System.out.println("");
+        */
+
+        Integer s = idColumn.getCellData(0); //ustawia textbox id na 1 wiersz idcolumn
+        String s1= tytulColumn.getCellData(0);
+        tid.setText(s.toString()); // wyswietla id 1 filmu
+        t1.setText(s1); // wyswietla tytul 1 filmu;
+
+        //t1.setText(tytulColumn.getText());
+        t2.setText(gatunekColumn.getText());
+        t3.setText(dlugosc.getText());
+        t4.setText(rezyser.getText());
+        t5.setText(kraj.getText());
+        t6.setText(opis.getText());
+        t7.setText(rokprodukcji.getText());
+        t8.setText(typ.getText());
 
 
     }
@@ -101,14 +120,24 @@ public class AFilmyController {
         t7.clear();
         t8.clear();
 
+
     }
 
     public void dodajDoBazy() {
         try {
-            String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'komedia', '150','paczino','polska','krotki opis','1999','2d')";
-           //System.out.println(query);
-           //query =this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', 150,'paczino','polska','krotki opis',1999,'2d')");
+            Integer ID = Integer.valueOf(tid.getText());
+            String Tytul = t1.getText();
+            String Gatunek = t2.getText();
+            Integer Dlugosc_filmu = Integer.valueOf(t3.getText());
+            String Rezyser = t4.getText();
+            String Kraj = t5.getText();
+            String Opis = t6.getText();
+            Integer Rok_produkcji = Integer.valueOf(t7.getText());
+            String Typ = t8.getText();
+
+            String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES ('"+ID+"','"+Tytul+"','"+Gatunek+"','"+Dlugosc_filmu+"','"+Rezyser+"','"+Kraj+"','"+Opis+"','"+Rok_produkcji+"','"+Typ+"')";
             this.main.stmt.execute(query);
+            System.out.println("Pomyślnie dodano film o ID: "+ ID);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -117,14 +146,19 @@ public class AFilmyController {
     }
 
 
-
     public void usunZBazy() {
+        Integer Id = Integer.valueOf(tid.getText());
         try {
-            String query = "DELETE FROM `filmy` WHERE `id`=13";
+            String query = "DELETE FROM `filmy` WHERE `id`= '"+Id+"'";
             this.main.stmt.execute(query);
+            System.out.println("Pomyślnie usunięto film o ID: "+Id);
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public void odswiez(){
+
     }
 }
 
