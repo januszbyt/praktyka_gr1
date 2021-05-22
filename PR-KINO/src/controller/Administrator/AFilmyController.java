@@ -89,19 +89,21 @@ public class AFilmyController {
         System.out.println("");
         */
 
-        Integer s = idColumn.getCellData(0); //ustawia textbox id na 1 wiersz idcolumn
-        String s1= tytulColumn.getCellData(0);
-        tid.setText(s.toString()); // wyswietla id 1 filmu
-        t1.setText(s1); // wyswietla tytul 1 filmu;
+        //Integer s = idColumn.getCellData(0); //ustawia textbox id na 1 wiersz idcolumn
+        //String s1= tytulColumn.getCellData(0);
+        //tid.setText(s.toString()); // wyswietla id 1 filmu
+        //t1.setText(s1); // wyswietla tytul 1 filmu;
 
-        //t1.setText(tytulColumn.getText());
-        t2.setText(gatunekColumn.getText());
-        t3.setText(dlugosc.getText());
-        t4.setText(rezyser.getText());
-        t5.setText(kraj.getText());
-        t6.setText(opis.getText());
-        t7.setText(rokprodukcji.getText());
-        t8.setText(typ.getText());
+
+            tid.setText(String.valueOf(idColumn.getCellData(tid.getLength())));
+            t1.setText(tytulColumn.getCellData(t1.getLength()));
+            t2.setText(gatunekColumn.getCellData(t2.getLength()));
+            t3.setText(String.valueOf(dlugosc.getCellData(t3.getLength())));
+            t4.setText(rezyser.getCellData(t4.getLength()));
+            t5.setText(kraj.getCellData(t5.getLength()));
+            t6.setText(opis.getCellData(t6.getLength()));
+            t7.setText(String.valueOf(rokprodukcji.getCellData(t7.getLength())));
+            t8.setText(typ.getCellData(t8.getLength()));
 
 
     }
