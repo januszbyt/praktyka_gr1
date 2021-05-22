@@ -66,6 +66,7 @@ public class AFilmyController {
                 data.add(new Admin_film(rs.getInt("id"),rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rokprodukcji"),rs.getString("typ")));
             }
             tableView.setItems(data);
+
         }catch(Exception e){
             System.out.println(e);
         }
@@ -74,6 +75,7 @@ public class AFilmyController {
     public void wpiszDane() {
         AFilmyController af = new AFilmyController();
         System.out.println("INFORMACJE O FILMIE");
+        System.out.println("ID: " + tid.getText());
         System.out.println("Tytul: " + t1.getText());
         System.out.println("Gatunek: " + t2.getText());
         System.out.println("Dlugosc filmu: " + t3.getText());
@@ -101,14 +103,26 @@ public class AFilmyController {
         t7.clear();
         t8.clear();
 
+
     }
 
     public void dodajDoBazy() {
         try {
-            String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'komedia', '150','paczino','polska','krotki opis','1999','2d')";
+            String ID = tid.getText();
+            String Tytul = t1.getText();
+            String Gatunek = t2.getText();
+            Integer Dlugosc_filmu = Integer.valueOf(t3.getText());
+            String Rezyser = t4.getText();
+            String Kraj = t5.getText();
+            String Opis = t6.getText();
+            Integer Rok_produkcji = Integer.valueOf(t7.getText());
+            String Typ = t8.getText();
+
+            String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES ('"+ID+"','"+Tytul+"','"+Gatunek+"','"+Dlugosc_filmu+"','"+Rezyser+"','"+Kraj+"','"+Opis+"','"+Rok_produkcji+"','"+Typ+"')";
            //System.out.println(query);
            //query =this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', 150,'paczino','polska','krotki opis',1999,'2d')");
             this.main.stmt.execute(query);
+            System.out.println("Pomyślnie dodano film o ID: "+ ID);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -119,9 +133,11 @@ public class AFilmyController {
 
 
     public void usunZBazy() {
+        String Id = tid.getText();
         try {
-            String query = "DELETE FROM `filmy` WHERE `id`=13";
+            String query = "DELETE FROM `filmy` WHERE `id`= '"+Id+"'";
             this.main.stmt.execute(query);
+            System.out.println("Pomyślnie usunięto film od ID: "+Id);
         } catch (Exception e) {
             System.out.println(e);
         }
