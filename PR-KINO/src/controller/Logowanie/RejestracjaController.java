@@ -1,7 +1,9 @@
 package controller.Logowanie;
 
 import controller.MainController;
+import controller.ViewController;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -14,6 +16,7 @@ import java.util.Properties;
 
 public class RejestracjaController {
     private MainController main;
+
     @FXML public TextField imie;
     @FXML public TextField nazwisko;
     @FXML public TextField pesel;
@@ -22,9 +25,21 @@ public class RejestracjaController {
     @FXML public PasswordField haslo;
     @FXML public PasswordField potwierdzonehaslo;
     @FXML public Label komunikat_rozne_hasla;
+    @FXML public  Label prosze_czekac;
+    @FXML public Button przejdz_dalej;
 
 
 
+    @FXML public void initialize(){
+        imie.setPromptText("Wpisz swoje imię");
+        nazwisko.setPromptText("Wpisz swoje nazwisko");
+        pesel.setPromptText("Wpisz swój pesel");
+     adres_email.setPromptText("Wpisz swój adres-email");
+     login.setPromptText("Wpisz swój login");
+     haslo.setPromptText("Wpisz swoje nowe hasło ");
+     potwierdzonehaslo.setPromptText("Potwierdz swoje hasło");
+
+    }
     public void init(MainController main) {
         this.main = main;
     }
@@ -37,7 +52,7 @@ public class RejestracjaController {
         String Haslo = haslo.getText();
         String HasloPotwierdzone = potwierdzonehaslo.getText();
         System.out.println(HasloPotwierdzone+" "+Haslo);
-       /* if(HasloPotwierdzone!=Haslo){
+        /*if(HasloPotwierdzone!=Haslo){
             komunikat_rozne_hasla.setVisible(true);
             return;
         }
@@ -50,7 +65,7 @@ public class RejestracjaController {
          String SQL_Insert= "INSERT INTO `uzytkownicy` (`login`,`haslo`, `imie`, `nazwisko`, `pesel`, `email`, `potwierdzony_email`) VALUES ('"+Login+"', '"+Haslo+"', '"+Imie+"', '"+Nazwisko+"', '"+Pesel+"', '"+Adres_email+"', 'false' )";
          try{
             this.main.stmt.execute(SQL_Insert);
-             SendEmail(Adres_email, "Potwierdzenie emaila", "ffdersgvrd");
+             SendEmail(Adres_email, "Potwierdzenie emaila", "www.praktyki.efennec.pl?id="+Adres_email);
 
 
 
@@ -60,10 +75,13 @@ public class RejestracjaController {
             System.err.println(E);
         }
 
-
+prosze_czekac.setVisible(true);
 
     }
-    public void przejdz_dalej(){}
+    public void przejdz_dalej(){
+        przejdz_dalej.setVisible(true);
+        main.ViewController.changeBody("UWybor_filmuController");
+    }
 
 
 
