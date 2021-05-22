@@ -14,6 +14,7 @@ import object.Admin_film;
 
 import java.sql.ResultSet;
 import java.sql.RowId;
+import java.sql.SQLException;
 
 public class AFilmyController {
     @FXML public TextField t1;
@@ -135,8 +136,6 @@ public class AFilmyController {
             String Typ = t8.getText();
 
             String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES ('"+ID+"','"+Tytul+"','"+Gatunek+"','"+Dlugosc_filmu+"','"+Rezyser+"','"+Kraj+"','"+Opis+"','"+Rok_produkcji+"','"+Typ+"')";
-           //System.out.println(query);
-           //query =this.main.stmt.executeUpdate("INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES (NULL, 'TEST', 'testowy', 'komedia', 150,'paczino','polska','krotki opis',1999,'2d')");
             this.main.stmt.execute(query);
             System.out.println("Pomyślnie dodano film o ID: "+ ID);
         } catch (Exception e) {
