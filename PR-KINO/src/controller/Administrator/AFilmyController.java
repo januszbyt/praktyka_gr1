@@ -94,20 +94,20 @@ public class AFilmyController {
         //tid.setText(s.toString()); // wyswietla id 1 filmu
         //t1.setText(s1); // wyswietla tytul 1 filmu;
 
-
-            tid.setText(String.valueOf(idColumn.getCellData(tid.getLength())));
-            t1.setText(tytulColumn.getCellData(t1.getLength()));
-            t2.setText(gatunekColumn.getCellData(t2.getLength()));
-            t3.setText(String.valueOf(dlugosc.getCellData(t3.getLength())));
-            t4.setText(rezyser.getCellData(t4.getLength()));
-            t5.setText(kraj.getCellData(t5.getLength()));
-            t6.setText(opis.getCellData(t6.getLength()));
-            t7.setText(String.valueOf(rokprodukcji.getCellData(t7.getLength())));
-            t8.setText(typ.getCellData(t8.getLength()));
-
+        //dziala ale czyta 1 rekord do przodu zamiast id=1 czyta id=2 choc kliknieto 1
+            if(tableView.getSelectionModel().getSelectedItem() != null) {
+                tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId())));
+                t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()));
+                t2.setText(gatunekColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()));
+                t3.setText(String.valueOf(dlugosc.getCellData(tableView.getSelectionModel().getSelectedItem().getId())));
+                t4.setText(rezyser.getCellData(tableView.getSelectionModel().getSelectedItem().getId()));
+                t5.setText(kraj.getCellData(tableView.getSelectionModel().getSelectedItem().getId()));
+                t6.setText(opis.getCellData(tableView.getSelectionModel().getSelectedItem().getId()));
+                t7.setText(String.valueOf(rokprodukcji.getCellData(tableView.getSelectionModel().getSelectedItem().getId())));
+                t8.setText(typ.getCellData(tableView.getSelectionModel().getSelectedItem().getId()));
+            }
 
     }
-
 
 
 
