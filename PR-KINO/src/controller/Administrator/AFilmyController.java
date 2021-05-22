@@ -2,7 +2,6 @@ package controller.Administrator;
 
 
 import controller.MainController;
-import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 
 import java.sql.ResultSet;
+import java.sql.RowId;
 
 public class AFilmyController {
     @FXML public TextField t1;
@@ -74,6 +74,7 @@ public class AFilmyController {
 
     public void wpiszDane() {
         AFilmyController af = new AFilmyController();
+        /*
         System.out.println("INFORMACJE O FILMIE");
         System.out.println("ID: " + tid.getText());
         System.out.println("Tytul: " + t1.getText());
@@ -85,6 +86,21 @@ public class AFilmyController {
         System.out.println("Rok produkcji: " + t7.getText());
         System.out.println("Typ: " + t8.getText());
         System.out.println("");
+        */
+
+        Integer s = idColumn.getCellData(0); //ustawia textbox id na 1 wiersz idcolumn
+        String s1= tytulColumn.getCellData(0);
+        tid.setText(s.toString()); // wyswietla id 1 filmu
+        t1.setText(s1); // wyswietla tytul 1 filmu;
+
+        //t1.setText(tytulColumn.getText());
+        t2.setText(gatunekColumn.getText());
+        t3.setText(dlugosc.getText());
+        t4.setText(rezyser.getText());
+        t5.setText(kraj.getText());
+        t6.setText(opis.getText());
+        t7.setText(rokprodukcji.getText());
+        t8.setText(typ.getText());
 
 
     }
@@ -108,7 +124,7 @@ public class AFilmyController {
 
     public void dodajDoBazy() {
         try {
-            String ID = tid.getText();
+            Integer ID = Integer.valueOf(tid.getText());
             String Tytul = t1.getText();
             String Gatunek = t2.getText();
             Integer Dlugosc_filmu = Integer.valueOf(t3.getText());
@@ -131,16 +147,19 @@ public class AFilmyController {
     }
 
 
-
     public void usunZBazy() {
-        String Id = tid.getText();
+        Integer Id = Integer.valueOf(tid.getText());
         try {
             String query = "DELETE FROM `filmy` WHERE `id`= '"+Id+"'";
             this.main.stmt.execute(query);
-            System.out.println("Pomyślnie usunięto film od ID: "+Id);
+            System.out.println("Pomyślnie usunięto film o ID: "+Id);
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public void odswiez(){
+
     }
 }
 
