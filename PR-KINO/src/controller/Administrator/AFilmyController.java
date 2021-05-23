@@ -121,8 +121,6 @@ public class AFilmyController {
         t6.clear();
         t7.clear();
         t8.clear();
-
-
     }
 
     public void dodajDoBazy() {
@@ -145,6 +143,7 @@ public class AFilmyController {
         }
 
 
+
     }
 
 
@@ -158,6 +157,10 @@ public class AFilmyController {
             System.out.println(e);
         }
     }
+
+    //UPDATE nazwaTabeli
+    //SET kolumna1 = "nowa wartość", kolumna2 = "nowa wartość"
+    //WHERE id = "1"; --warunek logiczny do jednoznacznej identyfikacji danyc
 
     public void odswiez(){
 
