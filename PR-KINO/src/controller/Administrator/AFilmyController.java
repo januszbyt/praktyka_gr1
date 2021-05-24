@@ -94,7 +94,7 @@ public class AFilmyController {
         //tid.setText(s.toString()); // wyswietla id 1 filmu
         //t1.setText(s1); // wyswietla tytul 1 filmu;
 
-        //dziala ale czyta 1 rekord do przodu zamiast id=1 czyta id=2 choc kliknieto 1
+
             if(tableView.getSelectionModel().getSelectedItem() != null) {
                 tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
                 t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
