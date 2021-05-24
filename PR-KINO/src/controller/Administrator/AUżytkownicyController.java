@@ -87,14 +87,15 @@ public class AUżytkownicyController {
         }
 
     public void wyswietlDane() {
-        if(tableView.getSelectionModel().getSelectedItem() != null) {
-            tid.setText(String.valueOf((idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1))));
-            t1.setText(loginColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-            t2.setText(hasloColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-            t3.setText(imieColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-            t4.setText(nazwiskoColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-            t5.setText(peselColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-            t6.setText(emailColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+
+            if(tableView.getSelectionModel().getSelectedItem() != null){
+            tid.setText(String.valueOf((idColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))));
+            t1.setText(loginColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t2.setText(hasloColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t3.setText(imieColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t4.setText(nazwiskoColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t5.setText(peselColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t6.setText(emailColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
         }
     }
 }
