@@ -1,6 +1,7 @@
 package controller.Administrator;
 
 import controller.MainController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -50,5 +51,14 @@ public class AUżytkownicyController {
     public void init(MainController main){
         this.main = main;
     }
-    
+
+    public void wyczysc() {
+        tid.clear();
+        t1.clear();
+        t2.clear();
+        t3.clear();
+        t4.clear();
+        t5.clear();
+        t6.clear();
+    }
 }
