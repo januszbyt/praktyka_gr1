@@ -1,7 +1,8 @@
 package controller.Administrator;
 
 import controller.MainController;
-import javafx.event.ActionEvent;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -20,14 +21,6 @@ public class AUżytkownicyController {
     @FXML public TextField t6;
     @FXML public TextField tid;
     @FXML public TableView<Uzytkownicy> tableView;
-
-    /*private Integer id;
-    private String login;
-    private String haslo;
-    private String imie;
-    private String nazwisko;
-    private String pesel;
-    private String email;*/
     @FXML private TableColumn<Uzytkownicy, Integer> idColumn;
     @FXML private TableColumn<Uzytkownicy, String> loginColumn;
     @FXML private TableColumn<Uzytkownicy, String> hasloColumn;
@@ -35,6 +28,7 @@ public class AUżytkownicyController {
     @FXML private TableColumn<Uzytkownicy, String> nazwiskoColumn;
     @FXML private TableColumn<Uzytkownicy, String> peselColumn;
     @FXML private TableColumn<Uzytkownicy, String> emailColumn;
+    ObservableList<Uzytkownicy> data = FXCollections.observableArrayList();
 
     @FXML public void initialize(){
         idColumn.setCellValueFactory(new PropertyValueFactory<Uzytkownicy,Integer>("id"));
