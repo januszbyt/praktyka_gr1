@@ -1,7 +1,6 @@
 package controller.Logowanie;
 
 import controller.MainController;
-import controller.ViewController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -52,14 +51,14 @@ public class RejestracjaController {
         String Haslo = haslo.getText();
         String HasloPotwierdzone = potwierdzonehaslo.getText();
         System.out.println(HasloPotwierdzone+" "+Haslo);
-        /*if(HasloPotwierdzone!=Haslo){
+        if(HasloPotwierdzone!=Haslo){
             komunikat_rozne_hasla.setVisible(true);
             return;
         }
         else
         {
             komunikat_rozne_hasla.setVisible(false);
-        }*/
+        }
 
 
          String SQL_Insert= "INSERT INTO `uzytkownicy` (`login`,`haslo`, `imie`, `nazwisko`, `pesel`, `email`, `potwierdzony_email`) VALUES ('"+Login+"', '"+Haslo+"', '"+Imie+"', '"+Nazwisko+"', '"+Pesel+"', '"+Adres_email+"', 'false' )";
