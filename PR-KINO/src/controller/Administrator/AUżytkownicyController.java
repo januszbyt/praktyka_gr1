@@ -8,7 +8,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import object.Admin_film;
 import object.Uzytkownicy;
 
 import java.sql.ResultSet;
@@ -73,11 +72,29 @@ public class AUżytkownicyController {
     }
 
     public void dodajDoBazy() {
+
     }
 
     public void usunZBazy() {
-    }
+            Integer Id = Integer.valueOf(tid.getText());
+            try {
+                String query = "DELETE FROM `uzytkownicy` WHERE `id`= '"+Id+"'";
+                this.main.stmt.execute(query);
+                System.out.println("Pomyślnie usunięto uzytkownika o ID: "+Id);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
 
     public void wyswietlDane() {
+        if(tableView.getSelectionModel().getSelectedItem() != null) {
+            tid.setText(String.valueOf((idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1))));
+            t1.setText(loginColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+            t2.setText(hasloColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+            t3.setText(imieColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+            t4.setText(nazwiskoColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+            t5.setText(peselColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+            t6.setText(emailColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+        }
     }
 }
