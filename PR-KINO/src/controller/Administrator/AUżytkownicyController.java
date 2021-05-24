@@ -61,4 +61,10 @@ public class AUżytkownicyController {
         t5.clear();
         t6.clear();
     }
+
+    public void dodajDoBazy() {
+    }
+
+    public void usunZBazy() {
+    }
 }
