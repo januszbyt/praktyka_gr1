@@ -1,16 +1,25 @@
 package controller.Logowanie;
 
 import controller.MainController;
+import controller.ViewController;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Paint;
+import javafx.util.Duration;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Properties;
+import java.util.regex.Pattern;
 
 
 public class RejestracjaController {
@@ -21,12 +30,22 @@ public class RejestracjaController {
     @FXML public TextField pesel;
     @FXML public TextField adres_email;
     @FXML public TextField login;
+    @FXML public Label label_imie;
+    @FXML public Label label_nazwisko;
+    @FXML public Label label_pesel;
+    @FXML public Label label_email;
+    @FXML public Label label_login;
+    @FXML public Label label_haslo;
+    @FXML public Label label_potwierdz_haslo;
     @FXML public PasswordField haslo;
     @FXML public PasswordField potwierdzonehaslo;
     @FXML public Label komunikat_rozne_hasla;
     @FXML public  Label prosze_czekac;
+    @FXML public Label sprawdz_poczte;
     @FXML public Button przejdz_dalej;
-
+    @FXML public Button button_zarejestruj;
+    @FXML public Label popraw_dane;
+    Timeline timeline;
 
 
     @FXML public void initialize(){
@@ -50,23 +69,93 @@ public class RejestracjaController {
         String Login = login.getText();
         String Haslo = haslo.getText();
         String HasloPotwierdzone = potwierdzonehaslo.getText();
-        System.out.println(HasloPotwierdzone+" "+Haslo);
-        if(HasloPotwierdzone!=Haslo){
-            komunikat_rozne_hasla.setVisible(true);
-            return;
+      try {
+            if (HasloPotwierdzone.equals(Haslo) == false) {
+                komunikat_rozne_hasla.setVisible(true);
+                popraw_dane.setVisible(true);
+            } else {
+                komunikat_rozne_hasla.setVisible(false);
+            }
+        } catch(Exception a){}
+        popraw_dane.setVisible(false);
+        Pattern imieP = Pattern.compile("[A-Za-zÓóŻżĄąĘęŚśĆćŃń]{2,40}");
+        if(imieP.matcher(Imie).matches() == false){
+            popraw_dane.setVisible(true);
+            label_imie.setTextFill(Paint.valueOf("red"));
         }
         else
         {
-            komunikat_rozne_hasla.setVisible(false);
+            label_imie.setTextFill(Paint.valueOf("white"));
         }
 
+        Pattern nazwiskoP = Pattern.compile("[A-Za-zÓóŻżĄąĘęŚśĆćŃń]{2,40}");
+        if(nazwiskoP.matcher(Nazwisko).matches() == false){
+            popraw_dane.setVisible(true);
+            label_nazwisko.setTextFill(Paint.valueOf("red"));
+        }
+        else
+        {
+            label_nazwisko.setTextFill(Paint.valueOf("white"));
+        }
 
+        Pattern peselP = Pattern.compile("[0-9]{11}");
+        if(peselP.matcher(Pesel).matches() == false){
+            popraw_dane.setVisible(true);
+            label_pesel.setTextFill(Paint.valueOf("red"));
+        }
+        else
+        {
+            label_pesel.setTextFill(Paint.valueOf("white"));
+        }
+
+        Pattern adresP = Pattern.compile("[A-Za-zĄąĘęŻżÓóŚśĆćŃń/.]{2,40}@[A-Za-zĄąĘęŻżÓóŚśĆćŃń0-9]{1,}\\.[A-Za-zĄąĘęŻżÓóŚśĆćŃń0-9]{1,}");
+        if(adresP.matcher(Adres_email).matches() == false){
+            popraw_dane.setVisible(true);
+            label_email.setTextFill(Paint.valueOf("red"));
+        }
+        else
+        {
+            label_email.setTextFill(Paint.valueOf("white"));
+        }
+
+        Pattern loginP = Pattern.compile("[A-Za-zÓóŻżĄąĘęŚśĆćŃń]{2,40}");
+        if(loginP.matcher(Login).matches() == false){
+            popraw_dane.setVisible(true);
+            label_login.setTextFill(Paint.valueOf("red"));
+        }
+        else
+        {
+            label_login.setTextFill(Paint.valueOf("white"));
+        }
+
+        Pattern hasloP = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\_\\+\\-\\=])(?=.*[A-Z])(?!.*\\s).{8,}");
+        if(hasloP.matcher(Haslo).matches() == false){
+            popraw_dane.setVisible(true);
+            label_haslo.setTextFill(Paint.valueOf("red"));
+        }
+        else
+        {
+            label_haslo.setTextFill(Paint.valueOf("white"));
+        }
+
+        Pattern haslo_potwierdzoneP = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\_\\+\\-\\=])(?=.*[A-Z])(?!.*\\s).{8,}");
+        if(haslo_potwierdzoneP.matcher(HasloPotwierdzone).matches() == false){
+            popraw_dane.setVisible(true);
+            label_potwierdz_haslo.setTextFill(Paint.valueOf("red"));
+    }
+        else
+    {
+        label_potwierdz_haslo.setTextFill(Paint.valueOf("white"));
+    }
+
+        if(popraw_dane.isVisible()) {
+            return;
+        }
          String SQL_Insert= "INSERT INTO `uzytkownicy` (`login`,`haslo`, `imie`, `nazwisko`, `pesel`, `email`, `potwierdzony_email`) VALUES ('"+Login+"', '"+Haslo+"', '"+Imie+"', '"+Nazwisko+"', '"+Pesel+"', '"+Adres_email+"', 'false' )";
          try{
             this.main.stmt.execute(SQL_Insert);
-             SendEmail(Adres_email, "Potwierdzenie emaila", "www.praktyki.efennec.pl?id="+Adres_email);
-
-
+            button_zarejestruj.setDisable(true);
+            SendEmail(Adres_email, "Potwierdzenie emaila", "www.praktyki.efennec.pl?id="+Adres_email);
 
         }
         catch(Exception E)
@@ -74,12 +163,47 @@ public class RejestracjaController {
             System.err.println(E);
         }
 
-prosze_czekac.setVisible(true);
+        prosze_czekac.setVisible(true);
+         sprawdz_poczte.setVisible(true);
+
+
+        KeyFrame rotate = new KeyFrame(
+                Duration.seconds(2),
+                event -> {
+
+                    String SGL_zap= "select potwierdzony_email from uzytkownicy where login='" + Login + "' and haslo='" + Haslo + "'";
+                    try {
+                        ResultSet wynik = this.main.stmt.executeQuery(SGL_zap);
+                        wynik.next();
+                        String dostep = wynik.getString("potwierdzony_email");
+
+                        if(dostep.equals("true")){
+                            przejdz_dalej.setDisable(false);
+
+                            sprawdz_poczte.setVisible(false);
+                            prosze_czekac.setVisible(false);
+                            timeline.stop();
+                        }
+
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
+
+                }
+        );
+        timeline = new Timeline(
+                rotate
+        );
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+
+
+
 
     }
     public void przejdz_dalej(){
         przejdz_dalej.setVisible(true);
-        main.ViewController.changeBody("UWybor_filmuController");
+        main.ViewController.changeBody("WyborOkienekUzyt");
     }
 
 

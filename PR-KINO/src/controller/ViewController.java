@@ -74,6 +74,18 @@ public class ViewController {
                    this.main.AFilmyController=loader.getController();
                    this.main.AFilmyController.init(main);
                    break;
+               case"WyborOkienekUzyt":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Logowanie/WyborOkienekUzyt.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   this.main.WyborOkienekUzytControler=loader.getController();
+                   this.main.WyborOkienekUzytControler.init(main);
+                   break;
+               case"WyborOkienekAdmin":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Logowanie/WyborOkienekAdmin.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   this.main.WyborOkienekAdminControler=loader.getController();
+                   this.main.WyborOkienekAdminControler.init(main);
+                   break;
 
                default:
                    System.err.println("Bład wyboru okna, Nazwa: '"+name+"' nie jest znana");
