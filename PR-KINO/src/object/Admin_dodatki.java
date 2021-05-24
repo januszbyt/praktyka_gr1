@@ -12,7 +12,7 @@ public class Admin_dodatki {
         this.cena = cena;
         this.ilosc = ilosc;
     }
-    public  Admin_dodatki(){ }
+    public  Admin_dodatki(int id, String nazwa, String typ, int cena, int ilosc){ }
     public String getnazwa(){return nazwa;}
     public void setnazwa(String nz){this.nazwa=nz;}
     public String gettyp()

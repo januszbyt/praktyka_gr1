@@ -49,20 +49,36 @@ public class ADodatkiController {
     @FXML
     private TableColumn<Admin_dodatki, Integer> ilosc;
 
-
+    ObservableList<Admin_dodatki> data = FXCollections.observableArrayList();
     public static Connection con;
     public static Statement stmt;
+    @FXML public void initialize(){
+        idColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki,Integer>("id"));
+        nazwaColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, String>("nazwa"));
+        typColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, String>("typ"));
+        cena.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Integer>("cena"));
+        ilosc.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Integer>("ilosc"));
+
+    }
 
     public void wpiszDane() {
+        /*
         ADodatkiController af = new ADodatkiController();
         System.out.println("INFORMACJE O DODATKU");
         System.out.println("Nazwa: " + t1.getText());
         System.out.println("Typ: " + t2.getText());
         System.out.println("Cena: " + t3.getText());
-        System.out.println("Ilość: " + t4.getText());
-        {
-            ADodatkiController af2 = new ADodatkiController();
+        System.out.println("Ilość: " + t4.getText()); */
+        //{
+         //   ADodatkiController af2 = new ADodatkiController();
 
+        //}
+        if (tableView.getSelectionModel().getSelectedItem() != null) {
+            tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
+            t1.setText(nazwaColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1));
+            t2.setText(typColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1));
+            t3.setText(String.valueOf(cena.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
+            t4.setText(String.valueOf(ilosc.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
         }
 
     }
@@ -82,14 +98,20 @@ public class ADodatkiController {
     public void init(MainController main) {
         this.main = main;
 
-        try {
-
-
-        } catch (Exception e) {
+        this.main = main;
+        this.PobierzDane();
+    }
+    public void PobierzDane(){
+        try{
+            ResultSet rs=  this.main.stmt.executeQuery("select * from dodatki");
+            while(rs.next()){
+                data.add(new Admin_dodatki(rs.getInt("id"),rs.getString("nazwa"),rs.getString("typ"),rs.getInt("cena"),rs.getInt("ilosc")));
+            }
+            tableView.setItems(data);
+            System.out.println("INFORMACJE O DODATKU");
+        }catch(Exception e){
             System.out.println(e);
         }
-
-
     }
 
 
@@ -112,13 +134,8 @@ public class ADodatkiController {
             System.out.println(e);
         }
 
-        if (tableView.getSelectionModel().getSelectedItem() != null) {
-            tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
-            t1.setText(nazwaColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1));
-            t2.setText(typColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1));
-            t3.setText(String.valueOf(cena.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
-            t4.setText(String.valueOf(ilosc.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
-        }
+
+
 
     }
         public void usunZBazy()

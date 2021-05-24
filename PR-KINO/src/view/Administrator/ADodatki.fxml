@@ -52,7 +52,7 @@
             <columns>
                 <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
                 <TableColumn fx:id="nazwaColumn" prefWidth="73.19998168945312" text="nazwa" />
-                <TableColumn fx:id="typColumn" prefWidth="73.19998168945312" text="nazwa" />
+                <TableColumn fx:id="typColumn" prefWidth="73.19998168945312" text="typ" />
                 <TableColumn fx:id="cena" prefWidth="77.20001220703125" text="cena" />
                 <TableColumn fx:id="ilosc" prefWidth="94.0" text="ilosc" />
 
@@ -65,9 +65,10 @@
             </columnResizePolicy>
         </TableView>
       <Button layoutX="642.0" layoutY="425.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" text="Dodaj" />
-        <Button layoutX="554.0" layoutY="426.0" mnemonicParsing="false" onAction="#wpiszDane" text="Wyswietl" />
+        <Button layoutX="554.0" layoutY="426.0" mnemonicParsing="false" onAction="#wpiszDane" text="WpiszDane" />
+        <Button layoutX="25.0" layoutY="477.0" mnemonicParsing="false" onAction="#PobierzDane" text="PobierzDane" />
         <Button layoutX="338.0" layoutY="426.0" mnemonicParsing="false" onAction="#dodajDoBazy" text="Dodaj do bazy" />
-      <Button layoutX="309.0" layoutY="188.0" mnemonicParsing="false" onAction="#usunZBazy" text="Usuń z bazy" />
+      <Button layoutX="310.0" layoutY="212.0" mnemonicParsing="false" onAction="#usunZBazy" prefHeight="0.0" prefWidth="80.0" text="Usuń z bazy" />
 
 
     </children>
