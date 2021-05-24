@@ -14,6 +14,7 @@ public class Uzytkownicy {
 
     public Uzytkownicy(Integer id,String login,String haslo,String imie,String nazwisko,String pesel,String email)
     {
+        this.id=id;
         this.login=login;
         this.haslo=haslo;
         this.imie=imie;

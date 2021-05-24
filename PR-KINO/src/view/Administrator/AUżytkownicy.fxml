@@ -56,7 +56,7 @@
       <TextField fx:id="t4" layoutX="174.0" layoutY="281.0" />
       <TextField fx:id="t5" layoutX="174.0" layoutY="320.0" />
       <TextField fx:id="t6" layoutX="174.0" layoutY="353.0" />
-      <TableView layoutX="415.0" layoutY="136.0" prefHeight="245.0" prefWidth="487.0">
+      <TableView fx:id="tableView" layoutX="415.0" layoutY="136.0" prefHeight="245.0" prefWidth="487.0">
         <columns>
           <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
           <TableColumn fx:id="loginColumn" prefWidth="75.0" text="login" />
