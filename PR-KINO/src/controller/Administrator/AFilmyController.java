@@ -4,6 +4,7 @@ package controller.Administrator;
 import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -94,17 +95,17 @@ public class AFilmyController {
         //tid.setText(s.toString()); // wyswietla id 1 filmu
         //t1.setText(s1); // wyswietla tytul 1 filmu;
 
-        //dziala ale czyta 1 rekord do przodu zamiast id=1 czyta id=2 choc kliknieto 1
+
             if(tableView.getSelectionModel().getSelectedItem() != null) {
-                tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
-                t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t2.setText(gatunekColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t3.setText(String.valueOf(dlugosc.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
-                t4.setText(rezyser.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t5.setText(kraj.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t6.setText(opis.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t7.setText(String.valueOf(rokprodukcji.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
-                t8.setText(typ.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+                tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem())));
+                t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t2.setText(gatunekColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t3.setText(String.valueOf(dlugosc.getCellData(tableView.getSelectionModel().getSelectedItem())));
+                t4.setText(rezyser.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t5.setText(kraj.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t6.setText(opis.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t7.setText(String.valueOf(rokprodukcji.getCellData(tableView.getSelectionModel().getSelectedItem())));
+                t8.setText(typ.getCellData(tableView.getSelectionModel().getSelectedItem()));
             }
 
     }
@@ -162,8 +163,24 @@ public class AFilmyController {
     //SET kolumna1 = "nowa wartość", kolumna2 = "nowa wartość"
     //WHERE id = "1"; --warunek logiczny do jednoznacznej identyfikacji danyc
 
-    public void odswiez(){
-
+//EDYTUJ DANE DO POPRAWY
+    public void edytujDane() {
+        Integer id1= Integer.valueOf(tid.getText());
+        String Tytul = t1.getText();
+        String Gatunek = t2.getText();
+        Integer Dlugosc_filmu = Integer.valueOf(t3.getText());
+        String Rezyser = t4.getText();
+        String Kraj = t5.getText();
+        String Opis = t6.getText();
+        Integer Rok_produkcji = Integer.valueOf(t7.getText());
+        String Typ = t8.getText();
+        try {
+            String query = "UPDATE `filmy` SET `tytul`= "+tytulColumn.getText()+", `gatunek` = "+gatunekColumn.getText()+", `dlugosc` = "+dlugosc.getText()+", `rezyser` = "+rezyser.getText()+", `kraj` = "+kraj.getText()+", `opis`= "+opis.getText()+",`rokprodukcji` = "+rokprodukcji.getText()+",`typ`="+typ.getText()+" WHERE `filmy`.`id`='"+id1+"'";
+            this.main.stmt.execute(query);
+            System.out.println("Pomyślnie edytowano film o ID: "+ id1);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
 

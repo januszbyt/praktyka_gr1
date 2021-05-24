@@ -31,12 +31,12 @@
          </cursor></Button>
       <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="283.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/logowanie.png" />
+            <Image url="@../../../images/rejestracja.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="283.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/rejestracja.png" />
+            <Image url="@../../../images/logowanie.png" />
          </image>
       </ImageView>
       <Label fx:id="komunikat" layoutX="560.0" layoutY="320.0" text="Whoops!, Nie jesteś zarejestrowany :( " textFill="#c90e0e" visible="false">

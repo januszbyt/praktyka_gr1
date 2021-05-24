@@ -4,6 +4,8 @@ import controller.Administrator.AFilmyController;
 import controller.Administrator.AUżytkownicyController;
 import controller.Logowanie.LogowanieController;
 import controller.Logowanie.RejestracjaController;
+import controller.Logowanie.WyborOkienekAdminController;
+import controller.Logowanie.WyborOkienekUzytController;
 import controller.Użytkownik.URecenzjaController;
 import controller.Użytkownik.UWybor_dodatkowController;
 import controller.Użytkownik.UWybor_filmuController;
@@ -22,7 +24,8 @@ public class MainController {
 	@FXML public  ViewController ViewController = new ViewController();
 	@FXML public LogowanieController LogowanieController;
 	@FXML public RejestracjaController RejestracjaController;
-
+	@FXML public WyborOkienekAdminController WyborOkienekAdminControler;
+	@FXML public WyborOkienekUzytController WyborOkienekUzytControler;
 
 	@FXML public ADodatkiController ADodatkiController;
 	@FXML public AFilmyController AFilmyController;
@@ -37,7 +40,7 @@ public class MainController {
 		this.PolaczZBazaDanych();
 		ViewController.init(this);
 		System.out.println("MainController init");
-		WyborFilmu.getItems().addAll("logowanie", "Rejestracja", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
+		WyborFilmu.getItems().addAll("logowanie", "Rejestracja", "WyborOkienekUzyt","WyborOkienekAdmin", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
 		,"UWybor_miejsca","UWybor_dodatkow");
 		ViewController.changeBody("logowanie");
 	}

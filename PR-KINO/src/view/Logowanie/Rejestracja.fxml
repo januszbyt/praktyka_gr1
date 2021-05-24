@@ -10,65 +10,77 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.RejestracjaController">
    <children>
-      <TextField fx:id="nazwisko" layoutX="218.0" layoutY="224.0" prefHeight="25.0" prefWidth="250.0" />
-      <Label layoutX="410.0" layoutY="37.0" style="-fx-text-fill: #fff;" text="Rejestracja">
+      <TextField fx:id="nazwisko" layoutX="230.0" layoutY="215.0" prefHeight="10.0" prefWidth="220.0" />
+      <Label layoutX="377.0" layoutY="28.0" style="-fx-text-fill: #fff;" text="Rejestracja" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="33.0" />
+            <Font size="40.0" />
          </font>
       </Label>
-      <TextField fx:id="imie" layoutX="217.0" layoutY="176.0" prefHeight="25.0" prefWidth="250.0" />
-      <TextField fx:id="pesel" layoutX="218.0" layoutY="271.0" prefHeight="25.0" prefWidth="250.0" />
-      <TextField fx:id="adres_email" layoutX="218.0" layoutY="321.0" prefHeight="25.0" prefWidth="250.0" />
-      <Label layoutX="120.0" layoutY="170.0" text="Imię" textFill="WHITE">
+      <TextField fx:id="imie" layoutX="230.0" layoutY="175.0" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="pesel" layoutX="230.0" layoutY="255.0" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="adres_email" layoutX="230.0" layoutY="295.0" prefHeight="10.0" prefWidth="220.0" />
+      <Label fx:id="label_imie" layoutX="120.0" layoutY="170.0" text="Imię" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font size="20.0" />
          </font>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label layoutX="120.0" layoutY="210.0" text="Nazwisko" textFill="WHITE">
+      <Label fx:id="label_nazwisko" layoutX="120.0" layoutY="215.0" text="Nazwisko" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="114.0" layoutY="320.0" text="Adres-email" textFill="WHITE">
+      <Label fx:id="label_email" layoutX="120.0" layoutY="295.0" text="Adres-email" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="120.0" layoutY="274.0" prefHeight="32.0" prefWidth="53.0" text="Pesel" textFill="WHITE">
+      <Label fx:id="label_pesel" layoutX="120.0" layoutY="255.0" prefHeight="32.0" prefWidth="53.0" text="Pesel" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="104.0" layoutY="385.0" mnemonicParsing="false" onAction="#zarejestruj" prefHeight="26.0" prefWidth="352.0" text="Zarejestruj" />
-      <Label layoutX="126.0" layoutY="392.0" />
-      <Label fx:id="prosze_czekac" layoutX="58.0" layoutY="364.0" text="Proszę czekać! Trwa weryfikacja, oczekiwanie na potwierdzenie..." textFill="#940d0d" visible="false">
+      <Button fx:id="button_zarejestruj" layoutX="318.0" layoutY="383.0" mnemonicParsing="false" onAction="#zarejestruj" prefHeight="32.0" prefWidth="383.0" style="-fx-background-color: #a60000; -fx-border-color: #7f7e7e; -fx-text-fill: #000; -fx-font-weight: bolder;" text="Zarejestruj" />
+      <Label fx:id="popraw_dane" layoutX="410.0" layoutY="339.0" prefHeight="30.0" prefWidth="240.0" text="Popraw zaznaczone dane! " textFill="#ff0606" visible="false">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="prosze_czekac" layoutX="38.0" layoutY="428.0" text="Proszę czekać! Trwa weryfikacja, oczekiwanie na potwierdzenie..." textFill="WHITE" visible="false">
+         <font>
+            <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="410.0" text="Sprawdz swoją pocztę :) " textFill="#911111" visible="false">
+      <Label fx:id="sprawdz_poczte" layoutX="286.0" layoutY="462.0" text="Sprawdz swoją pocztę :) " textFill="WHITE" visible="false">
          <font>
-            <Font size="19.0" />
+            <Font size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="login" layoutX="632.0" layoutY="211.0" />
-      <PasswordField fx:id="haslo" layoutX="631.0" layoutY="262.0" />
-      <PasswordField fx:id="potwierdzonehaslo" layoutX="632.0" layoutY="308.0" />
-      <Label layoutX="536.0" layoutY="215.0" text="Login" textFill="WHITE" />
-      <Label layoutX="536.0" layoutY="266.0" text="Hasło" textFill="WHITE" />
-      <Label layoutX="536.0" layoutY="312.0" text="Potwierdz hasło" textFill="WHITE" />
-      <Label layoutX="578.0" layoutY="145.0" text="Dane logowania:" textFill="WHITE">
+      <TextField fx:id="login" layoutX="660.0" layoutY="175.0" prefHeight="10.0" prefWidth="220.0" />
+      <PasswordField fx:id="haslo" layoutX="660.0" layoutY="215.0" prefHeight="10.0" prefWidth="220.0" />
+      <PasswordField fx:id="potwierdzonehaslo" layoutX="660.0" layoutY="255.0" prefHeight="10.0" prefWidth="220.0" />
+      <Label fx:id="label_login" layoutX="510.0" layoutY="170.0" text="Login" textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="label_haslo" layoutX="510.0" layoutY="215.0" text="Hasło" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="label_potwierdz_haslo" layoutX="510.0" layoutY="255.0" text="Potwierdz hasło" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="587.0" layoutY="101.0" text="Dane logowania:" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
          </font>
       </Label>
-      <Button fx:id="przejdz_dalej" disable="true" layoutX="651.0" layoutY="431.0" mnemonicParsing="false" onAction="#przejdz_dalej" prefHeight="26.0" prefWidth="164.0" text="Przejdz dalej" />
-      <Label fx:id="komunikat_rozne_hasla" layoutX="755.0" layoutY="246.0" text="Hasła nie są identyczne!" textFill="#9e0707" visible="false">
+      <Button fx:id="przejdz_dalej" disable="true" layoutX="727.0" layoutY="473.0" mnemonicParsing="false" onAction="#przejdz_dalej" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: #2f6307; -fx-text-fill: #000; -fx-border-color: #7f7e7e; -fx-font-weight: bolder;" text="Przejdz dalej" />
+      <Label fx:id="komunikat_rozne_hasla" layoutX="510.0" layoutY="295.0" text="Hasła nie są identyczne! Spróbuj jeszcze raz.." textFill="#9e0707" visible="false">
          <font>
-            <Font size="16.0" />
+            <Font size="20.0" />
          </font>
       </Label>
    </children>
