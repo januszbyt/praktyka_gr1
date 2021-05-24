@@ -72,7 +72,7 @@
       </TableView>
       <Button layoutX="38.0" layoutY="421.0" mnemonicParsing="false" onAction="#dodajDoBazy" text="Dodaj do bazy" />
       <Button layoutX="143.0" layoutY="421.0" mnemonicParsing="false" onAction="#usunZBazy" text="Usuń z bazy" />
-      <Button layoutX="250.0" layoutY="421.0" mnemonicParsing="false" text="Wyswietl" />
+      <Button layoutX="250.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyswietlDane" text="Wyswietl" />
       <Button layoutX="323.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyczysc" text="Wyczysc" />
    </children>
 </AnchorPane>

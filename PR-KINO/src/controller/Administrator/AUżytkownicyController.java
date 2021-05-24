@@ -67,4 +67,7 @@ public class AUżytkownicyController {
 
     public void usunZBazy() {
     }
+
+    public void wyswietlDane() {
+    }
 }
