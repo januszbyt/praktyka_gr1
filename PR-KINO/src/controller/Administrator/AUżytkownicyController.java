@@ -11,6 +11,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 import object.Uzytkownicy;
 
+import java.sql.ResultSet;
+
 public class AUżytkownicyController {
 
     @FXML public TextField t1;
@@ -44,6 +46,20 @@ public class AUżytkownicyController {
     private MainController main;
     public void init(MainController main){
         this.main = main;
+        this.PobierzDane();
+    }
+
+    public void PobierzDane(){
+        try{
+            ResultSet rs=  this.main.stmt.executeQuery("select * from uzytkownicy");
+            while(rs.next()){
+                data.add(new Uzytkownicy(rs.getInt("id"),rs.getString("login"),rs.getString("haslo"),rs.getString("imie"),rs.getString("nazwisko"),rs.getString("pesel"),rs.getString("email")));
+            }
+            tableView.setItems(data);
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
     public void wyczysc() {
