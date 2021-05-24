@@ -89,23 +89,25 @@ public class AFilmyController {
         System.out.println("");
         */
 
-        Integer s = idColumn.getCellData(0); //ustawia textbox id na 1 wiersz idcolumn
-        String s1= tytulColumn.getCellData(0);
-        tid.setText(s.toString()); // wyswietla id 1 filmu
-        t1.setText(s1); // wyswietla tytul 1 filmu;
+        //Integer s = idColumn.getCellData(0); //ustawia textbox id na 1 wiersz idcolumn
+        //String s1= tytulColumn.getCellData(0);
+        //tid.setText(s.toString()); // wyswietla id 1 filmu
+        //t1.setText(s1); // wyswietla tytul 1 filmu;
 
-        //t1.setText(tytulColumn.getText());
-        t2.setText(gatunekColumn.getText());
-        t3.setText(dlugosc.getText());
-        t4.setText(rezyser.getText());
-        t5.setText(kraj.getText());
-        t6.setText(opis.getText());
-        t7.setText(rokprodukcji.getText());
-        t8.setText(typ.getText());
-
+        //dziala ale czyta 1 rekord do przodu zamiast id=1 czyta id=2 choc kliknieto 1
+            if(tableView.getSelectionModel().getSelectedItem() != null) {
+                tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
+                t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+                t2.setText(gatunekColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+                t3.setText(String.valueOf(dlugosc.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
+                t4.setText(rezyser.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+                t5.setText(kraj.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+                t6.setText(opis.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+                t7.setText(String.valueOf(rokprodukcji.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
+                t8.setText(typ.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+            }
 
     }
-
 
 
 
@@ -119,8 +121,6 @@ public class AFilmyController {
         t6.clear();
         t7.clear();
         t8.clear();
-
-
     }
 
     public void dodajDoBazy() {
@@ -143,6 +143,7 @@ public class AFilmyController {
         }
 
 
+
     }
 
 
@@ -156,6 +157,10 @@ public class AFilmyController {
             System.out.println(e);
         }
     }
+
+    //UPDATE nazwaTabeli
+    //SET kolumna1 = "nowa wartość", kolumna2 = "nowa wartość"
+    //WHERE id = "1"; --warunek logiczny do jednoznacznej identyfikacji danyc
 
     public void odswiez(){
 
