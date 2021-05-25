@@ -162,8 +162,25 @@ public class AFilmyController {
     //SET kolumna1 = "nowa wartość", kolumna2 = "nowa wartość"
     //WHERE id = "1"; --warunek logiczny do jednoznacznej identyfikacji danyc
 
-    public void odswiez(){
-
+    //EDYTUJ DANE DO POPRAWY
+    public void edytujDane() {
+        Integer id1= Integer.valueOf(tid.getText());
+        String Tytul = t1.getText();
+        String Gatunek = t2.getText();
+        Integer Dlugosc_filmu = Integer.valueOf(t3.getText());
+        String Rezyser = t4.getText();
+        String Kraj = t5.getText();
+        String Opis = t6.getText();
+        Integer Rok_produkcji = Integer.valueOf(t7.getText());
+        String Typ = t8.getText();
+        try {
+            String query = "UPDATE `filmy` SET `tytul`= "+tytulColumn.getText()+", `gatunek` = "+gatunekColumn.getText()+", `dlugosc` = "+dlugosc.getText()+", `rezyser` = "+rezyser.getText()+", `kraj` = "+kraj.getText()+", `opis`= "+opis.getText()+",`rokprodukcji` = "+rokprodukcji.getText()+",`typ`="+typ.getText()+" WHERE `filmy`.`id`='"+id1+"'";
+            this.main.stmt.execute(query);
+            System.out.println("Pomyślnie edytowano film o ID: "+ id1);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
+
 
