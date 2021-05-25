@@ -1,38 +1,48 @@
 package controller.Użytkownik;
 
 import controller.MainController;
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.util.Duration;
+import javafx.scene.layout.AnchorPane;
 
 public class UWybor_miejscaController<Intreger> {
     private MainController main;
+    public AnchorPane buttonsPanel;
     public Label test;
     public int a =0;
     public void init(MainController main) {
         this.main = main;
 
 
-        KeyFrame rotate = new KeyFrame(
-                Duration.millis(0.5),
-                event -> {
-                    this.test.setText(a+++"");
-                }
-        );
-        Timeline timeline = new Timeline(
-                rotate
-        );
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
+        for(int x = 0;x < 10;x++){
+            for(int y = 0;y < 10;y++){
+                Button a = new Button(((x * 10) + y + 1) + "");
+                a.setLayoutX(10 + (x * 40));
+                a.setMinWidth(35);
+                a.setMinHeight(35);
+                a.setLayoutY(10 + (y * 40));
+                EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
+                    public void handle(ActionEvent e)
+                    {
+                       System.out.println(e);
+                    }
+                };
+                a.setOnAction(event);
+                this.buttonsPanel.getChildren().add(a);
+            }
+        }
 
 
 
     }
 
 
+    public void miejsce(){
 
+
+    }
 
 
 }
