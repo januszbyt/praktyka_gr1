@@ -96,15 +96,15 @@ public class AFilmyController {
 
 
             if(tableView.getSelectionModel().getSelectedItem() != null) {
-                tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
-                t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t2.setText(gatunekColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t3.setText(String.valueOf(dlugosc.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
-                t4.setText(rezyser.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t5.setText(kraj.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t6.setText(opis.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
-                t7.setText(String.valueOf(rokprodukcji.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1)));
-                t8.setText(typ.getCellData(tableView.getSelectionModel().getSelectedItem().getId()-1));
+                tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem())));
+                t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t2.setText(gatunekColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t3.setText(String.valueOf(dlugosc.getCellData(tableView.getSelectionModel().getSelectedItem())));
+                t4.setText(rezyser.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t5.setText(kraj.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t6.setText(opis.getCellData(tableView.getSelectionModel().getSelectedItem()));
+                t7.setText(String.valueOf(rokprodukcji.getCellData(tableView.getSelectionModel().getSelectedItem())));
+                t8.setText(typ.getCellData(tableView.getSelectionModel().getSelectedItem()));
             }
 
     }
