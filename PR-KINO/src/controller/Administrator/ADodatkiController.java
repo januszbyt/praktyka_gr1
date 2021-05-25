@@ -73,11 +73,11 @@ public class ADodatkiController {
 
         //}
         if (tableView.getSelectionModel().getSelectedItem() != null) {
-            tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
-            t1.setText(nazwaColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1));
-            t2.setText(typColumn.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1));
-            t3.setText(String.valueOf(cena.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
-            t4.setText(String.valueOf(ilosc.getCellData(tableView.getSelectionModel().getSelectedItem().getId() - 1)));
+            tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem())));
+            t1.setText(nazwaColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t2.setText(typColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t3.setText(String.valueOf(cena.getCellData(tableView.getSelectionModel().getSelectedItem())));
+            t4.setText(String.valueOf(ilosc.getCellData(tableView.getSelectionModel().getSelectedItem())));
         }
 
     }
