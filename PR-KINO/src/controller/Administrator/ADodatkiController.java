@@ -50,8 +50,7 @@ public class ADodatkiController {
     private TableColumn<Admin_dodatki, Integer> ilosc;
 
     ObservableList<Admin_dodatki> data = FXCollections.observableArrayList();
-    public static Connection con;
-    public static Statement stmt;
+
     @FXML public void initialize(){
         idColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki,Integer>("id"));
         nazwaColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, String>("nazwa"));
