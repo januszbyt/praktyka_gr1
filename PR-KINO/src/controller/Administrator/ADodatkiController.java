@@ -107,7 +107,7 @@ public class ADodatkiController {
                 data.add(new Admin_dodatki(rs.getInt("id"),rs.getString("nazwa"),rs.getString("typ"),rs.getInt("cena"),rs.getInt("ilosc")));
             }
             tableView.setItems(data);
-            System.out.println("INFORMACJE O DODATKU");
+            System.out.println("INFORMACJE O DODATdKU");
         }catch(Exception e){
             System.out.println(e);
         }
