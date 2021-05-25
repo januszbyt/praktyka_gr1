@@ -4,7 +4,6 @@ package controller.Administrator;
 import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -163,7 +162,7 @@ public class AFilmyController {
     //SET kolumna1 = "nowa wartość", kolumna2 = "nowa wartość"
     //WHERE id = "1"; --warunek logiczny do jednoznacznej identyfikacji danyc
 
-//EDYTUJ DANE DO POPRAWY
+    //EDYTUJ DANE DO POPRAWY
     public void edytujDane() {
         Integer id1= Integer.valueOf(tid.getText());
         String Tytul = t1.getText();
@@ -183,4 +182,5 @@ public class AFilmyController {
         }
     }
 }
+
 
