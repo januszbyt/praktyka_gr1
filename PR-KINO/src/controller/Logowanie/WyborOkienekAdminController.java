@@ -1,6 +1,7 @@
 package controller.Logowanie;
 
 import controller.MainController;
+import javafx.event.ActionEvent;
 
 public class WyborOkienekAdminController {
     private MainController main;
@@ -15,6 +16,12 @@ main.ViewController.changeBody("AFilmy");
     }
     public void przejscie_do_uzytkownikow(){
         main.ViewController.changeBody("AUzytkownicy");
+    }
+
+    public void powrot() {
+    }
+
+    public void wylogowanie() {
     }
 }
 
