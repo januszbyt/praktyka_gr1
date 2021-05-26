@@ -39,7 +39,7 @@
             <Image url="@../../../images/logowanie.png" />
          </image>
       </ImageView>
-      <Label fx:id="komunikat" layoutX="257.0" layoutY="320.0" prefHeight="30.0" prefWidth="587.0" text="Whoops! Niepoprawne dane, lub nie jesteś zarejestrowany :(" textFill="#bf1212">
+      <Label fx:id="komunikat" layoutX="257.0" layoutY="320.0" prefHeight="30.0" prefWidth="587.0" text="Whoops! Niepoprawne dane, lub nie jesteś zarejestrowany :(" textFill="#bf1212" visible="false">
          <font>
             <Font size="20.0" />
          </font>
