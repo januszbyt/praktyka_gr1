@@ -13,8 +13,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 
 import java.sql.ResultSet;
-import java.sql.RowId;
-import java.sql.SQLException;
 
 public class AFilmyController {
     @FXML public TextField t1;
@@ -161,7 +159,8 @@ public class AFilmyController {
         Integer Rok_produkcji = Integer.valueOf(t7.getText());
         String Typ = t8.getText();
         try {
-            String query = "UPDATE `filmy` SET `tytul`= "+tytulColumn.getText()+", `gatunek` = "+gatunekColumn.getText()+", `dlugosc` = "+dlugosc.getId()+", `rezyser` = "+rezyser.getText()+", `kraj` = "+kraj.getText()+", `opis`= "+opis.getText()+",`rokprodukcji` = "+rokprodukcji.getText()+",`typ`="+typ.getText()+" WHERE `filmy`.`id`='"+id1+"'";
+            String query = "UPDATE `filmy` SET `tytul`= '"+Tytul+"', `gatunek` = '"+Gatunek+"', `dlugosc` = '"+Dlugosc_filmu+"', `rezyser` = '"+Rezyser+"', `kraj` = '"+Kraj+"', `opis`= '"+Opis+"',`rokprodukcji` = '"+Rok_produkcji+"',`typ`='"+Typ+"' WHERE `filmy`.`id`='"+id1+"'";
+            System.out.println(query);
             this.main.stmt.execute(query);
             System.out.println("Pomyślnie edytowano film o ID: "+ id1);
         } catch (Exception e) {
