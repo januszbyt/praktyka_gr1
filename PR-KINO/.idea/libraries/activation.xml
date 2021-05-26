@@ -1,6 +1,9 @@
 <component name="libraryTable">
-  <library name="javafx-swt">
+  <library name="activation">
     <CLASSES>
+      <root url="jar://C:/Program Files/JavaLib/activation.jar!/" />
+      <root url="jar://C:/Program Files/JavaLib/mail.jar!/" />
+      <root url="jar://C:/Program Files/JavaLib/mysql-connector.jar!/" />
       <root url="jar://C:/Program Files/OpenJFX/lib/javafx-swt.jar!/" />
       <root url="jar://C:/Program Files/OpenJFX/lib/javafx.base.jar!/" />
       <root url="jar://C:/Program Files/OpenJFX/lib/javafx.controls.jar!/" />

@@ -28,11 +28,11 @@
          <font>
             <Font size="30.0" />
          </font></Label>
-      <Label alignment="TOP_LEFT" layoutX="68.0" layoutY="276.0" prefHeight="46.0" prefWidth="339.0" text="Zarządanie dodatkami:" textFill="#2b6afc">
+      <Label alignment="TOP_LEFT" layoutX="68.0" layoutY="276.0" prefHeight="46.0" prefWidth="339.0" text="Zarządanie dodatkami:" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font></Label>
-      <Label alignment="TOP_LEFT" layoutX="68.0" layoutY="367.0" prefHeight="46.0" prefWidth="365.0" text="Zarządanie użytkownikami:" textFill="#2b6afc">
+      <Label alignment="TOP_LEFT" layoutX="68.0" layoutY="367.0" prefHeight="46.0" prefWidth="365.0" text="Zarządanie użytkownikami:" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font></Label>

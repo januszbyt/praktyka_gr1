@@ -17,6 +17,7 @@ public class ViewController {
     public void changeBody(String name){
         this.backList.add(name);
         FXMLLoader loader;
+
         AnchorPane panel = null; 
         boolean work = true;
         try {

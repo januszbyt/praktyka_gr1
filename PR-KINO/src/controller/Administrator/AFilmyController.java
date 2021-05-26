@@ -5,14 +5,13 @@ import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 
 import java.sql.ResultSet;
+import java.sql.RowId;
+import java.sql.SQLException;
 
 public class AFilmyController {
     @FXML public TextField t1;
@@ -104,7 +103,7 @@ public class AFilmyController {
 
     public void dodajDoBazy() {
         try {
-            Boolean czyToLiczba;
+
             Integer ID = Integer.valueOf(tid.getText());
             String Tytul = t1.getText();
             String Gatunek = t2.getText();
@@ -114,10 +113,7 @@ public class AFilmyController {
             String Opis = t6.getText();
             Integer Rok_produkcji = Integer.valueOf(t7.getText());
             String Typ = t8.getText();
-           do {
-               czyToLiczba=true;
-               t3.getText();
-           }while(czyToLiczba==false);
+
 
 
             String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES ('"+ID+"','"+Tytul+"','"+Gatunek+"','"+Dlugosc_filmu+"','"+Rezyser+"','"+Kraj+"','"+Opis+"','"+Rok_produkcji+"','"+Typ+"')";
@@ -141,13 +137,12 @@ public class AFilmyController {
         } catch (Exception e) {
             System.out.println(e);
         }
-    }
+   }
 
     //UPDATE nazwaTabeli
     //SET kolumna1 = "nowa wartość", kolumna2 = "nowa wartość"
     //WHERE id = "1"; --warunek logiczny do jednoznacznej identyfikacji danyc
 
-    //EDYTUJ DANE DO POPRAWY
     public void edytujDane() {
         Integer id1= Integer.valueOf((tid.getText()));
         String Tytul = t1.getText();
@@ -158,15 +153,17 @@ public class AFilmyController {
         String Opis = t6.getText();
         Integer Rok_produkcji = Integer.valueOf(t7.getText());
         String Typ = t8.getText();
+
         try {
             String query = "UPDATE `filmy` SET `tytul`= '"+Tytul+"', `gatunek` = '"+Gatunek+"', `dlugosc` = '"+Dlugosc_filmu+"', `rezyser` = '"+Rezyser+"', `kraj` = '"+Kraj+"', `opis`= '"+Opis+"',`rokprodukcji` = '"+Rok_produkcji+"',`typ`='"+Typ+"' WHERE `filmy`.`id`='"+id1+"'";
-            System.out.println(query);
             this.main.stmt.execute(query);
+
             System.out.println("Pomyślnie edytowano film o ID: "+ id1);
         } catch (Exception e) {
             System.out.println(e);
         }
     }
+
 }
 
 

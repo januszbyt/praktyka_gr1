@@ -33,6 +33,9 @@ public class ADodatkiController {
     public TableView<Admin_dodatki> tableView;
     @FXML
     public TextField t5;
+    @FXML public TextField tid;
+    @FXML
+    private TableColumn<Admin_dodatki, String> idColumn;
     @FXML
     private TableColumn<Admin_dodatki, String> nazwaColumn;
     @FXML
@@ -45,6 +48,7 @@ public class ADodatkiController {
 
     @FXML
     public void initialize() {
+        idColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki,String>("Id"));
         nazwaColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, String>("Nazwa"));
         typColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, String>("Typ"));
         cenaColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Double>("Cena"));
@@ -58,10 +62,6 @@ public class ADodatkiController {
         System.out.println("Typ: " + t2.getText());
         System.out.println("Cena: " + t3.getText());
         System.out.println("Ilość: " + t4.getText());
-        {
-            ADodatkiController af2 = new ADodatkiController();
-
-        }
 
     }
 
@@ -82,7 +82,7 @@ public class ADodatkiController {
         try {
             ResultSet rs = this.main.stmt.executeQuery("select * from dodatki");
             while (rs.next()) {
-                data.add(new Admin_dodatki(rs.getInt(1), rs.getString("Nazwa"), rs.getString("Typ"), rs.getDouble("Cena"), rs.getInt("Ilosc")));
+                data.add(new Admin_dodatki(rs.getInt("Id"), rs.getString("Nazwa"), rs.getString("Typ"), rs.getDouble("Cena"), rs.getInt("Ilosc")));
             }
             tableView.setItems(data);
 
@@ -113,7 +113,7 @@ public class ADodatkiController {
         try {
             String nazwa = t1.getText();
             String typ = t2.getText();
-            Integer cena = Integer.valueOf(t3.getText());
+            Double cena = Double.valueOf(t3.getText());
             Integer ilosc = Integer.valueOf(t4.getText());
 
             int rs = this.main.stmt.executeUpdate("INSERT INTO `dodatki` ( `id`,`nazwa`, `typ` , `cena`, `ilosc`) VALUES ( NULL ,'" + nazwa + "', '" + typ + "','" + cena + "', '" + ilosc + "')");
@@ -131,6 +131,23 @@ public class ADodatkiController {
             String query = "DELETE FROM `dodatki` WHERE `nazwa`= '" + delete + "'";
             this.main.stmt.execute(query);
             System.out.println("Pomyślnie usunięto Dodatek o nazwie: " + delete);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+
+    public void edytujDane() {
+        String nazwa = t1.getText();
+        String typ = t2.getText();
+        Double cena = Double.valueOf(t3.getText());
+        Integer ilosc = Integer.valueOf(t4.getText());
+        Integer id1= Integer.valueOf((tid.getText()));
+        try {
+            String query = "UPDATE `dodatki` SET `nazwa` = '"+nazwa+"', `cena` = '"+cena+"', `ilosc` = '"+ilosc+"', `typ` = '"+typ+"' WHERE `dodatki`.`id`='"+id1+"'";
+            System.out.println(query);
+            this.main.stmt.execute(query);
+            System.out.println("Pomyślnie edytowano film o ID: " + id1);
         } catch (Exception e) {
             System.out.println(e);
         }
