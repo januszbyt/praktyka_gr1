@@ -45,6 +45,7 @@ public class RejestracjaController {
     @FXML public Button przejdz_dalej;
     @FXML public Button button_zarejestruj;
     @FXML public Label popraw_dane;
+    @FXML public Label wymagania;
     Timeline timeline;
 
 
@@ -118,7 +119,7 @@ public class RejestracjaController {
             label_email.setTextFill(Paint.valueOf("white"));
         }
 
-        Pattern loginP = Pattern.compile("[A-Za-zÓóŻżĄąĘęŚśĆćŃń]{2,40}");
+        Pattern loginP = Pattern.compile("[A-Za-zÓóŻżĄąĘęŚśĆćŃń0-9_-]{2,40}]");
         if(loginP.matcher(Login).matches() == false){
             popraw_dane.setVisible(true);
             label_login.setTextFill(Paint.valueOf("red"));
@@ -238,5 +239,12 @@ public class RejestracjaController {
 
 
         }catch (MessagingException mex) {mex.printStackTrace();}
+    }
+
+    public void wimie(){
+        wymagania.setText("Wymagania: same litery");
+    }
+    public void wemail(){
+        wymagania.setText("Wymagania: same litadasdsadsadery");
     }
 }

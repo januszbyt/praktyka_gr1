@@ -13,6 +13,7 @@ public class ViewController {
     }
     public void changeBody(String name){
         FXMLLoader loader;
+
         AnchorPane panel = null; 
         boolean work = true;
         try {
