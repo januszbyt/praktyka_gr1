@@ -71,9 +71,6 @@ public class AUżytkownicyController {
         t6.clear();
     }
 
-    public void dodajDoBazy() {
-
-    }
 
     public void usunZBazy() {
             Integer Id = Integer.valueOf(tid.getText());
