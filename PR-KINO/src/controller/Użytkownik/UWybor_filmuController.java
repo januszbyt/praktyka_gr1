@@ -17,8 +17,7 @@ public class UWybor_filmuController<topBtn> {
         this.main = main;
     }
     public void initialize() {
-
-
+        
 
         String url = "http://83437-254797-raikfcquaxqncofqfm.stackpathdns.com/17167-home_default/obrazek-obrazki-19paz.jpg";
         Image image = new Image(url, 100, 100, false, true);
