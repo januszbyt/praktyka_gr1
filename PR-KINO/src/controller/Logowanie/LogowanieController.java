@@ -36,10 +36,10 @@ public class LogowanieController {
             rsA.next();
             int dostepA = rsA.getInt("ile");
             if (dostepU == 1) {
-                main.ViewController.changeBody("UWybor_filmu");
+                main.ViewController.changeBody("WyborOkienekUzyt");
             }
             else if ( dostepA == 1){
-                main.ViewController.changeBody("AFilmy");
+                main.ViewController.changeBody("WyborOkienekAdmin");
             }
             else
             {

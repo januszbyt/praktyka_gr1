@@ -119,7 +119,7 @@ public class RejestracjaController {
             label_email.setTextFill(Paint.valueOf("white"));
         }
 
-        Pattern loginP = Pattern.compile("[A-Za-zÓóŻżĄąĘęŚśĆćŃń0-9_-]{2,40}]");
+        Pattern loginP = Pattern.compile("[A-Za-zÓóŻżĄąĘęŚśĆćŃń0-9/_/-]{2,40}");
         if(loginP.matcher(Login).matches() == false){
             popraw_dane.setVisible(true);
             label_login.setTextFill(Paint.valueOf("red"));
@@ -166,7 +166,7 @@ public class RejestracjaController {
 
         prosze_czekac.setVisible(true);
          sprawdz_poczte.setVisible(true);
-
+    wymagania.setVisible(false);
 
         KeyFrame rotate = new KeyFrame(
                 Duration.seconds(2),
@@ -206,6 +206,12 @@ public class RejestracjaController {
         przejdz_dalej.setVisible(true);
         main.ViewController.changeBody("WyborOkienekUzyt");
     }
+    public void reset(){
+        main.ViewController.changeBody("Rejestracja");
+    }
+    public  void powrot(){
+        main.ViewController.changeBody("Logowanie");
+    }
 
 
 
@@ -244,7 +250,23 @@ public class RejestracjaController {
     public void wimie(){
         wymagania.setText("Wymagania: same litery");
     }
-    public void wemail(){
-        wymagania.setText("Wymagania: same litadasdsadsadery");
+    public void wnazwisko(){
+        wymagania.setText("Wymagania: same litery");
     }
+    public void wpesel(){
+        wymagania.setText("Wymagania: 11 cyfer");
+    }
+    public void wemail(){
+        wymagania.setText("Wymagania: poprawna składnia adresu");
+    }
+    public void wlogin(){
+        wymagania.setText("Wymagania: litery i cyfry i znaki: _ -");
+    }
+    public void whaslo(){
+        wymagania.setText("Wymagania: minimum: 8 znaków,jedna mała i  duża litera, znak specjalny, liczba; ");
+    }
+    public void whaslopotwierdzone(){
+        wymagania.setText("");
+    }
+
 }
