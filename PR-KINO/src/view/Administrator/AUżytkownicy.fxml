@@ -8,43 +8,43 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AUżytkownicyController">
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AUżytkownicyController">
    <children>
-      <Label layoutX="436.0" layoutY="47.0" text="Uzytkownicy">
+      <Label layoutX="364.0" layoutY="40.0" text="Modyfikacja Uzytkowników" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="22.0" />
          </font></Label>
-      <Label layoutX="106.0" layoutY="144.0" text="ID">
+      <Label layoutX="106.0" layoutY="144.0" text="ID" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="100.0" layoutY="182.0" text="Login">
+      <Label layoutX="100.0" layoutY="182.0" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="100.0" layoutY="215.0" text="Haslo">
+      <Label layoutX="100.0" layoutY="215.0" text="Haslo" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="103.0" layoutY="246.0" text="Imie">
+      <Label layoutX="103.0" layoutY="246.0" text="Imie" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="84.0" layoutY="281.0" text="Nazwisko">
+      <Label layoutX="84.0" layoutY="281.0" text="Nazwisko" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="101.0" layoutY="320.0" text="Pesel">
+      <Label layoutX="101.0" layoutY="320.0" text="Pesel" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="101.0" layoutY="353.0" text="Email">
+      <Label layoutX="101.0" layoutY="353.0" text="Email" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -70,9 +70,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="202.0" layoutY="421.0" mnemonicParsing="false" onAction="#usunZBazy" text="Usuń z bazy" />
+      <Button layoutX="194.0" layoutY="421.0" mnemonicParsing="false" onAction="#usunZBazy" text="Usuń z bazy" />
       <Button layoutX="37.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyswietlDane" text="Wyswietl" />
-      <Button layoutX="303.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyczysc" text="Wyczysc" />
-      <Button layoutX="114.0" layoutY="421.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="61.0" text="Edytuj" />
+      <Button layoutX="293.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyczysc" text="Wyczysc" />
+      <Button layoutX="113.0" layoutY="421.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="61.0" text="Edytuj" />
    </children>
 </AnchorPane>

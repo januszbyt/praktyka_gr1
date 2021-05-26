@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="517.0" prefWidth="735.0" style="-fx-background-color: #4369ab;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ADodatkiController">
+<AnchorPane prefHeight="517.0" prefWidth="735.0" style="-fx-background-color: #4369ab;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ADodatkiController">
     <children>
         <Label layoutX="232.0" layoutY="43.0" prefHeight="34.0" prefWidth="252.0" text="Modyfikacja Dodatków">
             <font>
@@ -14,7 +18,7 @@
         <TextField fx:id="t2" layoutX="83.0" layoutY="245.0" />
         <TextField fx:id="t3" layoutX="83.0" layoutY="294.0" />
         <TextField fx:id="t4" layoutX="83.0" layoutY="357.0" />
-        <TextField fx:id="t5" layoutX="244.0" layoutY="182.0" promptText="Wpish nazwę " />
+        <TextField fx:id="t5" layoutX="244.0" layoutY="182.0" promptText="Wpisz nazwę " />
         <Button layoutX="130.0" layoutY="427.0" mnemonicParsing="false" onAction="#wyczyscPola" prefHeight="26.0" prefWidth="72.0" text="Wyczyść" />
         <Label layoutX="24.0" layoutY="182.0" text="Nazwa">
             <font>

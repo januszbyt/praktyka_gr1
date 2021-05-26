@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AFilmyController">
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.AFilmyController">
    <children>
-      <Button layoutX="158.0" layoutY="442.0" mnemonicParsing="false" onAction="#wpiszDane" prefHeight="25.0" prefWidth="79.0" text="Wyswietl" />
+      <Button layoutX="153.0" layoutY="443.0" mnemonicParsing="false" onAction="#wpiszDane" prefHeight="25.0" prefWidth="93.0" text="Wyswietl" />
       <TextField fx:id="tid" layoutX="218.0" layoutY="82.0" prefHeight="25.0" prefWidth="41.0" />
       <TextField fx:id="t1" layoutX="218.0" layoutY="113.0" />
       <TextField fx:id="t2" layoutX="218.0" layoutY="145.0" />
@@ -22,52 +22,52 @@
       <TextArea fx:id="t6" layoutX="218.0" layoutY="282.0" prefHeight="48.0" prefWidth="149.0" />
       <TextField fx:id="t7" layoutX="218.0" layoutY="347.0" />
       <TextField fx:id="t8" layoutX="218.0" layoutY="381.0" />
-      <Label layoutX="58.0" layoutY="82.0" text="ID">
+      <Label layoutX="58.0" layoutY="82.0" text="ID" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="55.0" layoutY="113.0" prefHeight="25.0" prefWidth="58.0" text="Tytul">
+      <Label layoutX="55.0" layoutY="113.0" prefHeight="25.0" prefWidth="58.0" text="Tytul" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="54.0" layoutY="146.0" text="Gatunek">
+      <Label layoutX="54.0" layoutY="146.0" text="Gatunek" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="53.0" layoutY="180.0" text="Dlugosc_filmu">
+      <Label layoutX="53.0" layoutY="180.0" text="Dlugosc_filmu" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="53.0" layoutY="216.0" text="Rezyser">
+      <Label layoutX="53.0" layoutY="216.0" text="Rezyser" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="249.0" text="Kraj">
+      <Label layoutX="52.0" layoutY="249.0" text="Kraj" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="51.0" layoutY="294.0" text="Opis">
+      <Label layoutX="51.0" layoutY="294.0" text="Opis" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="50.0" layoutY="347.0" text="Rok_produkcji">
+      <Label layoutX="50.0" layoutY="347.0" text="Rok_produkcji" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="378.0" text="Typ">
+      <Label layoutX="52.0" layoutY="378.0" text="Typ" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="402.0" layoutY="43.0" text="Modyfikacja filmów">
+      <Label layoutX="408.0" layoutY="30.0" text="Modyfikacja filmów" textFill="#e8e3e3">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
@@ -75,8 +75,8 @@
       <Button layoutX="274.0" layoutY="455.0" mnemonicParsing="false" onAction="#wyczyscPola" prefHeight="39.0" prefWidth="93.0" text="Wyczyść" />
       <Button layoutX="34.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajDoBazy" prefHeight="25.0" prefWidth="93.0" text="Dodaj do bazy" />
       <Button layoutX="33.0" layoutY="480.0" mnemonicParsing="false" onAction="#usunZBazy" prefHeight="25.0" prefWidth="93.0" text="Usuń z bazy" />
-      <Button layoutX="160.0" layoutY="480.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="79.0" text="Edytuj" />
-      <TableView fx:id="tableView" layoutX="406.0" layoutY="107.0" prefWidth="603.0">
+      <Button layoutX="153.0" layoutY="482.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="93.0" text="Edytuj" />
+      <TableView fx:id="tableView" layoutX="392.0" layoutY="107.0" prefWidth="603.0">
         <columns>
             <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
           <TableColumn fx:id="tytulColumn" prefWidth="100.0" text="tytul" />

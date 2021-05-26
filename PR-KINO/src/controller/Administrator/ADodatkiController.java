@@ -130,7 +130,7 @@ public class ADodatkiController {
             String delete = t5.getText();
             String query = "DELETE FROM `dodatki` WHERE `nazwa`= '" + delete + "'";
             this.main.stmt.execute(query);
-            System.out.println("Pomyślnie usunięto Dodatek o nazwie: " + delete);
+            System.out.println("Pomyślnie usunięto dodatek o nazwie: " + delete);
         } catch (Exception e) {
             System.out.println(e);
         }
