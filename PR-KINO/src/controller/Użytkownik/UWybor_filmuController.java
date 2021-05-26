@@ -23,7 +23,6 @@ public class UWybor_filmuController<topBtn> {
         String url = "http://83437-254797-raikfcquaxqncofqfm.stackpathdns.com/17167-home_default/obrazek-obrazki-19paz.jpg";
         Image image = new Image(url, 100, 100, false, true);
         button_grid.add(new ImageView(image),0,0);
-
         int indexX =0;
         int indexY =0;
         Button btn = new Button("Button_ ddkdkdddddddddddd0oo0ldl" + indexX);
