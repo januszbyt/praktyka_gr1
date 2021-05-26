@@ -70,8 +70,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="75.0" layoutY="421.0" mnemonicParsing="false" onAction="#usunZBazy" text="Usuń z bazy" />
-      <Button layoutX="186.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyswietlDane" text="Wyswietl" />
-      <Button layoutX="280.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyczysc" text="Wyczysc" />
+      <Button layoutX="202.0" layoutY="421.0" mnemonicParsing="false" onAction="#usunZBazy" text="Usuń z bazy" />
+      <Button layoutX="37.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyswietlDane" text="Wyswietl" />
+      <Button layoutX="303.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyczysc" text="Wyczysc" />
+      <Button layoutX="114.0" layoutY="421.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="61.0" text="Edytuj" />
    </children>
 </AnchorPane>
