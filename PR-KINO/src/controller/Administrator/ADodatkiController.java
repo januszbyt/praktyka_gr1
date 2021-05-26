@@ -62,10 +62,6 @@ public class ADodatkiController {
         System.out.println("Typ: " + t2.getText());
         System.out.println("Cena: " + t3.getText());
         System.out.println("Ilość: " + t4.getText());
-        {
-            ADodatkiController af2 = new ADodatkiController();
-
-        }
 
     }
 
@@ -145,7 +141,7 @@ public class ADodatkiController {
         String nazwa = t1.getText();
         String typ = t2.getText();
         Double cena = Double.valueOf(t3.getText());
-        Integer ilosc = Integer.valueOf(t3.getText());
+        Integer ilosc = Integer.valueOf(t4.getText());
         Integer id1= Integer.valueOf((tid.getText()));
         try {
             String query = "UPDATE `dodatki` SET `nazwa` = '"+nazwa+"', `cena` = '"+cena+"', `ilosc` = '"+ilosc+"', `typ` = '"+typ+"' WHERE `dodatki`.`id`='"+id1+"'";
