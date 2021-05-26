@@ -45,8 +45,11 @@
         <Button layoutX="279.0" layoutY="217.0" mnemonicParsing="false" onAction="#usunZBazy" prefHeight="27.0" prefWidth="78.0" text="Usuń" />
         <Button layoutX="238.0" layoutY="428.0" mnemonicParsing="false" onAction="#wpiszDane" text="Wyswietl" />
         <Button layoutX="15.0" layoutY="427.0" mnemonicParsing="false" onAction="#dodajDoBazy" text="Dodaj do bazy" />
+        <TextField fx:id="tid" layoutX="243.0" layoutY="276.0" prefHeight="26.0" prefWidth="149.0" />
+        <Button layoutX="280.0" layoutY="311.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="79.0" text="Edytuj" />
         <TableView fx:id="tableView" layoutX="407.0" layoutY="159.0" prefHeight="236.0" prefWidth="314.0">
             <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="nazwaColumn" prefWidth="75.0" text="Nazwa" />
                 <TableColumn fx:id="typColumn" prefWidth="75.0" text="Typ" />
                 <TableColumn fx:id="cenaColumn" prefWidth="75.0" text="Cena" />
