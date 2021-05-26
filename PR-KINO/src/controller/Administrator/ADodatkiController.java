@@ -56,13 +56,19 @@ public class ADodatkiController {
     }
 
     public void wpiszDane() {
+        if(tableView.getSelectionModel().getSelectedItem() != null) {
+            tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem())));
+            t1.setText(nazwaColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t2.setText(typColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
+            t3.setText(String.valueOf(Double.valueOf(cenaColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))));
+            t4.setText(String.valueOf(iloscColumn.getCellData(tableView.getSelectionModel().getSelectedItem())));
         ADodatkiController af = new ADodatkiController();
         System.out.println("INFORMACJE O DODATKU");
         System.out.println("Nazwa: " + t1.getText());
         System.out.println("Typ: " + t2.getText());
         System.out.println("Cena: " + t3.getText());
         System.out.println("Ilość: " + t4.getText());
-
+        }
     }
 
     public void wyczyscPola() {
