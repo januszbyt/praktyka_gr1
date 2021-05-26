@@ -17,6 +17,6 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor></Pane>
       <ComboBox fx:id="WyborFilmu" layoutY="2.0" prefHeight="25.0" prefWidth="175.0" promptText="Wybierz okno" visibleRowCount="45" />
-      <Button defaultButton="true" layoutX="164.0" layoutY="2.0" mnemonicParsing="false" onAction="#Wybierz" text="Wybierz" />
+      <Button defaultButton="true" layoutX="181.0" layoutY="2.0" mnemonicParsing="false" onAction="#Wybierz" text="Wybierz" />
    </children>
 </AnchorPane>
