@@ -95,4 +95,22 @@ public class AUżytkownicyController {
             t6.setText(emailColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
         }
     }
+    public void edytujDane() {
+        Integer id1= Integer.valueOf((tid.getText()));
+        String Login = t1.getText();
+        String Haslo = t2.getText();
+        String Imie = (t3.getText());
+        String Nazwisko = t4.getText();
+        String Pesel = t5.getText();
+        String Email = t6.getText();
+
+        try {
+            String query = "UPDATE `uzytkownicy` SET `login`= '"+Login+"', `haslo` = '"+Haslo+"', `imie` = '"+Imie+"', `nazwisko` = '"+Nazwisko+"', `pesel` = '"+Pesel+"', `email`= '"+Email+"' WHERE `uzytkownicy`.`id`='"+id1+"'";
+            this.main.stmt.execute(query);
+
+            System.out.println("Pomyślnie edytowano użytkownika o ID: "+ id1);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 }

@@ -23,6 +23,7 @@ public class AFilmyController {
     @FXML public TextField t7;
     @FXML public TextField t8;
     @FXML public TextField tid;
+
     @FXML public TableView<Admin_film> tableView;
     @FXML private TableColumn<Admin_film, Integer> idColumn;
     @FXML private TableColumn<Admin_film, String> tytulColumn;

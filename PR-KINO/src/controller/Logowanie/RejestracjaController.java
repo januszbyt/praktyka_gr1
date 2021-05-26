@@ -254,7 +254,7 @@ public class RejestracjaController {
         wymagania.setText("Wymagania: same litery");
     }
     public void wpesel(){
-        wymagania.setText("Wymagania: 11 cyfer");
+        wymagania.setText("Wymagania: 11 cyfr");
     }
     public void wemail(){
         wymagania.setText("Wymagania: poprawna składnia adresu");
