@@ -75,26 +75,7 @@ public class AFilmyController {
 
     public void wpiszDane() {
         AFilmyController af = new AFilmyController();
-        /*
-        System.out.println("INFORMACJE O FILMIE");
-        System.out.println("ID: " + tid.getText());
-        System.out.println("Tytul: " + t1.getText());
-        System.out.println("Gatunek: " + t2.getText());
-        System.out.println("Dlugosc filmu: " + t3.getText());
-        System.out.println("Rezyser: " + t4.getText());
-        System.out.println("Kraj: " + t5.getText());
-        System.out.println("Opis: " + t6.getText());
-        System.out.println("Rok produkcji: " + t7.getText());
-        System.out.println("Typ: " + t8.getText());
-        System.out.println("");
-        */
-
-        //Integer s = idColumn.getCellData(0); //ustawia textbox id na 1 wiersz idcolumn
-        //String s1= tytulColumn.getCellData(0);
-        //tid.setText(s.toString()); // wyswietla id 1 filmu
-        //t1.setText(s1); // wyswietla tytul 1 filmu;
-
-
+        
             if(tableView.getSelectionModel().getSelectedItem() != null) {
                 tid.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem())));
                 t1.setText(tytulColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
@@ -125,6 +106,7 @@ public class AFilmyController {
 
     public void dodajDoBazy() {
         try {
+            Boolean czyToLiczba;
             Integer ID = Integer.valueOf(tid.getText());
             String Tytul = t1.getText();
             String Gatunek = t2.getText();
@@ -134,6 +116,11 @@ public class AFilmyController {
             String Opis = t6.getText();
             Integer Rok_produkcji = Integer.valueOf(t7.getText());
             String Typ = t8.getText();
+           do {
+               czyToLiczba=true;
+               t3.getText();
+           }while(czyToLiczba==false);
+
 
             String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES ('"+ID+"','"+Tytul+"','"+Gatunek+"','"+Dlugosc_filmu+"','"+Rezyser+"','"+Kraj+"','"+Opis+"','"+Rok_produkcji+"','"+Typ+"')";
             this.main.stmt.execute(query);
