@@ -4,14 +4,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ViewController {
     private MainController main;
+    private String lastPanel;
+    private ArrayList backList = new ArrayList();
     public void init(MainController main){
         System.out.println("ViewController init");
         this.main = main;
     }
     public void changeBody(String name){
+        this.backList.add(name);
         FXMLLoader loader;
         AnchorPane panel = null; 
         boolean work = true;
@@ -102,7 +106,10 @@ public class ViewController {
             e.printStackTrace();
         }
     }
-
+    public void back(){
+        int a =this.backList.size() -2;
+        this.changeBody((String) this.backList.get(a));
+    }
 
 
 }
