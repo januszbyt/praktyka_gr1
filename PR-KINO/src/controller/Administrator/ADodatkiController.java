@@ -79,7 +79,7 @@ public class ADodatkiController {
 
     }
     public void exit() {
-        main.ViewController.changeBody("Logowanie");
+        main.ViewController.changeBody("WyborOkienekAdmin");
     }
     public void init(MainController main) {
         this.main = main;
