@@ -14,6 +14,7 @@ import controller.Użytkownik.UWybor_miejscaController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
+import object.Bilet;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,6 +22,7 @@ import java.sql.Statement;
 
 public class MainController {
 
+	public Bilet bilet  = new Bilet();
 	public Connection con;
 	public Statement stmt;
 	@FXML public Pane body;
@@ -42,6 +44,8 @@ public class MainController {
 
 	@FXML public controller.Użytkownik.UWybur_seansuController UWybur_seansuController;
 	@FXML public controller.Administrator.ASeansuController ASeansuController;
+
+
 
 	@FXML public void initialize() {
 		this.PolaczZBazaDanych();
