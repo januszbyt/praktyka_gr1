@@ -81,6 +81,7 @@ public class ADodatkiController {
     public void exit() {
         main.ViewController.changeBody("WyborOkienekAdmin");
     }
+
     public void init(MainController main) {
         this.main = main;
         this.PobierzDane();
