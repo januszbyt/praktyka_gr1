@@ -78,7 +78,9 @@ public class ADodatkiController {
         t4.clear();
 
     }
-
+    public void exit() {
+        main.ViewController.changeBody("Logowanie");
+    }
     public void init(MainController main) {
         this.main = main;
         this.PobierzDane();
