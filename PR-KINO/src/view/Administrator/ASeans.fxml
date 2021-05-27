@@ -8,45 +8,49 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ASeansuController">
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ASeansuController">
    <children>
-      <Label layoutX="99.0" layoutY="163.0" text="ID">
+      <Label layoutX="99.0" layoutY="163.0" text="ID" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="200.0" text="Data">
+      <Label layoutX="98.0" layoutY="200.0" text="Data" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="236.0" text="Wersja">
+      <Label layoutX="97.0" layoutY="236.0" text="Wersja" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="280.0" text="Typ">
+      <Label layoutX="98.0" layoutY="280.0" text="Typ" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="329.0" text="idSali">
+      <Label layoutX="98.0" layoutY="329.0" text="idSali" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="96.0" layoutY="373.0" text="idFilmu">
+      <Label layoutX="96.0" layoutY="373.0" text="idFilmu" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="42.0" />
-      <TextField layoutX="163.0" layoutY="200.0" />
-      <TextField layoutX="163.0" layoutY="236.0" />
-      <TextField layoutX="163.0" layoutY="280.0" />
-      <TextField layoutX="163.0" layoutY="329.0" />
-      <TextField layoutX="163.0" layoutY="373.0" />
+      <Label layoutX="386.0" layoutY="57.0" text="Dodawanie seansów" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="63.0" promptText="wpisz id" />
+      <TextField layoutX="163.0" layoutY="200.0" promptText="wpisz date" />
+      <TextField layoutX="163.0" layoutY="236.0" promptText="wpisz wersje" />
+      <TextField layoutX="163.0" layoutY="280.0" promptText="wpisz typ" />
+      <TextField layoutX="163.0" layoutY="329.0" promptText="wpisz idsali" />
+      <TextField layoutX="163.0" layoutY="373.0" promptText="wpisz idfilmu" />
       <TableView layoutX="455.0" layoutY="186.0" prefHeight="213.0" prefWidth="411.0">
         <columns>
           <TableColumn prefWidth="75.0" text="id" />
@@ -60,13 +64,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Label layoutX="386.0" layoutY="57.0" text="Dodawanie seansów">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Button layoutX="86.0" layoutY="442.0" mnemonicParsing="false" text="Dodaj seans" />
-      <Button layoutX="197.0" layoutY="442.0" mnemonicParsing="false" text="Edytuj seans" />
-      <Button layoutX="312.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Wyczyść" />
+      <Button layoutX="76.0" layoutY="442.0" mnemonicParsing="false" text="Dodaj seans" />
+      <Button layoutX="184.0" layoutY="442.0" mnemonicParsing="false" text="Edytuj seans" />
+      <Button layoutX="299.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Wyczyść" />
+      <Button layoutX="814.0" layoutY="32.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
    </children>
 </AnchorPane>
