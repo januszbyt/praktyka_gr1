@@ -1,6 +1,11 @@
 package controller.Administrator;
 
 import controller.MainController;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
+import java.sql.ResultSet;
 
 public class ASeansuController {
     private MainController main;
@@ -8,4 +13,10 @@ public class ASeansuController {
     public void init(MainController main) {
         this.main = main;
     }
-}
+
+    }
+
+
+
+
+

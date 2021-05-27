@@ -69,7 +69,7 @@
       <Button layoutX="324.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Wyczyść" />
       <Button layoutX="814.0" layoutY="32.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
       <Button layoutX="238.0" layoutY="442.0" mnemonicParsing="false" text="Wyświetl" />
-      <TableView layoutX="615.0" layoutY="420.0" prefHeight="200.0" prefWidth="149.0">
+      <TableView fx:id="tableview" layoutX="615.0" layoutY="420.0" prefHeight="200.0" prefWidth="149.0">
         <columns>
           <TableColumn fx:id="idfilm" prefWidth="75.0" text="id filmu" />
           <TableColumn fx:id="tytulcolumn" prefWidth="75.0" text="tytul" />
