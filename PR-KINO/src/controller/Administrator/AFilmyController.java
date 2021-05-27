@@ -171,7 +171,7 @@ public class AFilmyController {
     }
 
     public void powrotButton() {
-            main.ViewController.changeBody("./view/Logowanie/WyborOkienekAdmin.fxml");
+            main.ViewController.changeBody("view//WyborOkienekAdmin.fxml");
         }
 }
 

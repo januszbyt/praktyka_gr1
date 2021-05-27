@@ -68,5 +68,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="842.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
     </children>
 </AnchorPane>
