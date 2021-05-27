@@ -95,6 +95,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="898.0" layoutY="21.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
+      <Button fx:id="powrot" layoutX="898.0" layoutY="21.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
    </children>
 </AnchorPane>
