@@ -1,4 +1,5 @@
 package controller;
+
 import controller.Administrator.ADodatkiController;
 import controller.Administrator.AFilmyController;
 import controller.Administrator.AUżytkownicyController;
@@ -13,7 +14,10 @@ import controller.Użytkownik.UWybor_miejscaController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class MainController {
 
@@ -36,12 +40,15 @@ public class MainController {
 	@FXML public UWybor_miejscaController UWybor_miejscaController;
 	@FXML public UWybor_dodatkowController UWybor_dodatkowController;
 
+	@FXML public controller.Użytkownik.UWybur_seansuController UWybur_seansuController;
+	@FXML public controller.Administrator.ASeansuController ASeansuController;
+
 	@FXML public void initialize() {
 		this.PolaczZBazaDanych();
 		ViewController.init(this);
 		System.out.println("MainController init");
 		WyborFilmu.getItems().addAll("logowanie", "Rejestracja", "WyborOkienekUzyt","WyborOkienekAdmin", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
-		,"UWybor_miejsca","UWybor_dodatkow");
+		,"UWybor_miejsca","UWybor_dodatkow","USeansu","ASeansu");
 		ViewController.changeBody("logowanie");
 	}
 	public void Wybierz(){

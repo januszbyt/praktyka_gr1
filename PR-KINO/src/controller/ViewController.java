@@ -91,6 +91,19 @@ public class ViewController {
                    this.main.WyborOkienekAdminControler=loader.getController();
                    this.main.WyborOkienekAdminControler.init(main);
                    break;
+               case"ASeansu":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Administrator/ASeans.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   this.main.ASeansuController=loader.getController();
+                   this.main.ASeansuController.init(main);
+                   break;
+               case"USeansu":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/WWybur_seansu.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   this.main.UWybur_seansuController=loader.getController();
+                   this.main.UWybur_seansuController.init(main);
+                   break;
+
 
                default:
                    System.err.println("Bład wyboru okna, Nazwa: '"+name+"' nie jest znana");
