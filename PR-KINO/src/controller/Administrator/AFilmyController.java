@@ -2,11 +2,15 @@ package controller.Administrator;
 
 
 import controller.MainController;
+import controller.ViewController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import object.Admin_film;
 
 import java.sql.ResultSet;
@@ -165,6 +169,9 @@ public class AFilmyController {
         }
     }
 
+    public void powrotButton() {
+
+    }
 }
 
 
