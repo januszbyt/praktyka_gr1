@@ -8,50 +8,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="517.0" prefWidth="735.0" style="-fx-background-color: #4369ab;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ADodatkiController">
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ADodatkiController">
     <children>
-        <Label layoutX="232.0" layoutY="43.0" prefHeight="34.0" prefWidth="252.0" text="Modyfikacja Dodatków">
+        <Label layoutX="368.0" layoutY="51.0" prefHeight="34.0" prefWidth="252.0" text="Modyfikacja Dodatków" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="23.0" />
             </font></Label>
-        <TextField fx:id="t1" layoutX="83.0" layoutY="183.0" />
-        <TextField fx:id="t2" layoutX="83.0" layoutY="245.0" />
-        <TextField fx:id="t3" layoutX="83.0" layoutY="294.0" />
-        <TextField fx:id="t4" layoutX="83.0" layoutY="357.0" />
-        <TextField fx:id="t5" layoutX="244.0" layoutY="182.0" promptText="Wpisz nazwę " />
-        <Button layoutX="130.0" layoutY="427.0" mnemonicParsing="false" onAction="#wyczyscPola" prefHeight="26.0" prefWidth="72.0" text="Wyczyść" />
-        <Label layoutX="24.0" layoutY="182.0" text="Nazwa">
+        <TextField fx:id="t1" layoutX="134.0" layoutY="175.0" />
+        <TextField fx:id="t2" layoutX="134.0" layoutY="237.0" />
+        <TextField fx:id="t3" layoutX="134.0" layoutY="286.0" />
+        <TextField fx:id="t4" layoutX="134.0" layoutY="349.0" />
+        <TextField fx:id="t5" layoutX="295.0" layoutY="174.0" promptText="Wpisz nazwę " />
+        <Button layoutX="206.0" layoutY="428.0" mnemonicParsing="false" onAction="#wyczyscPola" prefHeight="26.0" prefWidth="72.0" text="Wyczyść" />
+        <Label layoutX="75.0" layoutY="174.0" text="Nazwa" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
         </Label>
-        <Label layoutX="46.0" layoutY="245.0" text="Typ">
+        <Label layoutX="97.0" layoutY="237.0" text="Typ" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
         </Label>
-        <Label layoutX="31.0" layoutY="293.0" text="Cena">
+        <Label layoutX="82.0" layoutY="285.0" text="Cena" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
         </Label>
-        <Label layoutX="34.0" layoutY="352.0" prefHeight="34.0" prefWidth="54.0" text="Ilość">
+        <Label layoutX="85.0" layoutY="344.0" prefHeight="34.0" prefWidth="54.0" text="Ilość" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
         </Label>
-        <Label layoutX="83.0" layoutY="145.0" text="Dodać dodatek">
+        <Label layoutX="134.0" layoutY="137.0" text="Dodać dodatek" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Label>
-        <Button layoutX="329.0" layoutY="426.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" text="Dodaj" />
-        <Button layoutX="279.0" layoutY="217.0" mnemonicParsing="false" onAction="#usunZBazy" prefHeight="27.0" prefWidth="78.0" text="Usuń" />
-        <Button layoutX="238.0" layoutY="428.0" mnemonicParsing="false" onAction="#wpiszDane" text="Wyswietl" />
-        <Button layoutX="15.0" layoutY="427.0" mnemonicParsing="false" onAction="#dodajDoBazy" text="Dodaj do bazy" />
-        <TextField fx:id="tid" layoutX="243.0" layoutY="276.0" prefHeight="26.0" prefWidth="149.0" />
-        <Button layoutX="280.0" layoutY="311.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="79.0" text="Edytuj" />
-        <TableView fx:id="tableView" layoutX="407.0" layoutY="159.0" prefHeight="236.0" prefWidth="314.0">
+        <Button layoutX="405.0" layoutY="427.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" text="Dodaj" />
+        <Button layoutX="330.0" layoutY="209.0" mnemonicParsing="false" onAction="#usunZBazy" prefHeight="27.0" prefWidth="78.0" text="Usuń" />
+        <Button layoutX="314.0" layoutY="429.0" mnemonicParsing="false" onAction="#wpiszDane" text="Wyswietl" />
+        <Button layoutX="91.0" layoutY="428.0" mnemonicParsing="false" onAction="#dodajDoBazy" text="Dodaj do bazy" />
+        <TextField fx:id="tid" layoutX="294.0" layoutY="268.0" prefHeight="26.0" prefWidth="149.0" />
+        <Button layoutX="331.0" layoutY="303.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="79.0" text="Edytuj" />
+        <TableView fx:id="tableView" layoutX="546.0" layoutY="167.0" prefHeight="287.0" prefWidth="421.0">
             <columns>
                 <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="nazwaColumn" prefWidth="75.0" text="Nazwa" />
@@ -63,7 +63,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <Label layoutX="259.0" layoutY="145.0" text="Usuń dodatek">
+      <Label layoutX="310.0" layoutY="137.0" text="Usuń dodatek" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
