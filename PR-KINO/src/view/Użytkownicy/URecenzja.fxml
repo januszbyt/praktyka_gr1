@@ -10,12 +10,12 @@
    <children>
       <Rating layoutX="412.0" layoutY="231.0" />
       <TextField layoutX="259.0" layoutY="334.0" prefHeight="178.0" prefWidth="519.0" />
-      <Label layoutX="371.0" layoutY="144.0" prefHeight="86.0" prefWidth="317.0" text="Did you enjoy this movie?">
+      <Label layoutX="360.0" layoutY="144.0" prefHeight="86.0" prefWidth="317.0" text="Jak ci się podobał ten film?">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="353.0" layoutY="284.0" text="Please, leave a comment below">
+      <Label layoutX="342.0" layoutY="284.0" text="Prosimy o pozostawienie komentarza">
          <font>
             <Font size="24.0" />
          </font>

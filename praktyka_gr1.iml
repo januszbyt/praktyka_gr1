@@ -12,5 +12,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="controlsfx-11.0.3" level="project" />
     <orderEntry type="library" name="controlsfx-11.0.31" level="project" />
+    <orderEntry type="library" name="mail" level="project" />
   </component>
 </module>
