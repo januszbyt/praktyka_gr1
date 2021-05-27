@@ -74,6 +74,6 @@
       <Button layoutX="37.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyswietlDane" text="Wyswietl" />
       <Button layoutX="293.0" layoutY="421.0" mnemonicParsing="false" onAction="#wyczysc" text="Wyczysc" />
       <Button layoutX="113.0" layoutY="421.0" mnemonicParsing="false" onAction="#edytujDane" prefHeight="25.0" prefWidth="61.0" text="Edytuj" />
-      <Button layoutX="866.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
+      <Button fx:id="powrot" layoutX="866.0" layoutY="28.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
    </children>
 </AnchorPane>
