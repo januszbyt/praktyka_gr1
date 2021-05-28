@@ -6,17 +6,10 @@ public class Bilet {
     private Double cena;
     private String typplatnosci;
     private String typznizki;
-    private Integer idseansu;
     private Integer idmiejsce;
-
-    public Bilet(Integer idbilet,Double cena,String typplatnosci,String typznizki,String Imie_kupujacego,Integer idseansu,Integer idmiejsce){
-        this.idbilet=idbilet;
-        this.cena=cena;
-        this.typplatnosci=typplatnosci;
-        this.typznizki=typznizki;
-        this.Imie_kupujacego=Imie_kupujacego;
-        this.idseansu=idseansu;
-        this.idmiejsce=idmiejsce;
+    private Integer idseansu;
+    private Integer idFilmu;
+    public Bilet(){
     }
 
 
@@ -61,5 +54,10 @@ public class Bilet {
     }
     public void setIdmiejsce(Integer idm){ this.idmiejsce=idm; }
 
+    public Integer getIdFilm()
+    {
+        return idFilmu;
+    }
+    public void setIdFilm(Integer idm){ this.idFilmu=idm; }
 
 }
