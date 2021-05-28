@@ -53,7 +53,17 @@ public class ADodatkiController {
         typColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, String>("Typ"));
         cenaColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Double>("Cena"));
         iloscColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Integer>("Ilosc"));
+        t1.setPromptText("Wpisz nazwę dodatku");
+        t2.setPromptText("Wpisz typ dodatku");
+        t3.setPromptText("Wpisz cene dodatku");
+        t4.setPromptText("Wpisz ilość dodatku");
+        t5.setPromptText("Wpisz nazwę dodatku");
+
     }
+
+
+
+
 
     public void wpiszDane() {
         if(tableView.getSelectionModel().getSelectedItem() != null) {
@@ -126,6 +136,7 @@ public class ADodatkiController {
 
             int rs = this.main.stmt.executeUpdate("INSERT INTO `dodatki` ( `id`,`nazwa`, `typ` , `cena`, `ilosc`) VALUES ( NULL ,'" + nazwa + "', '" + typ + "','" + cena + "', '" + ilosc + "')");
             System.out.println("Pomyślnie dodano Dodatek  ");
+            odswiez();`
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -139,6 +150,7 @@ public class ADodatkiController {
             String query = "DELETE FROM `dodatki` WHERE `nazwa`= '" + delete + "'";
             this.main.stmt.execute(query);
             System.out.println("Pomyślnie usunięto dodatek o nazwie: " + delete);
+            odswiez();
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -156,8 +168,16 @@ public class ADodatkiController {
             System.out.println(query);
             this.main.stmt.execute(query);
             System.out.println("Pomyślnie edytowano film o ID: " + id1);
+            odswiez();
         } catch (Exception e) {
             System.out.println(e);
         }
     }
+
+    public void odswiez(){
+        data.clear();
+        PobierzDane();
+
+    }
+
 }

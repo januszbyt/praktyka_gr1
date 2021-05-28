@@ -13,6 +13,9 @@ main.ViewController.changeBody("URecenzja");
     public void przejscie_do_zakupu(){
         main.ViewController.changeBody("UWybor_filmu");
     }
+    public void wyloguj(){
+        main.ViewController.changeBody("Logowanie");
+    }
 
 
 }

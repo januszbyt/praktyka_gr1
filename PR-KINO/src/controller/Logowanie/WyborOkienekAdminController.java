@@ -26,6 +26,5 @@ public class WyborOkienekAdminController {
         main.ViewController.changeBody("Logowanie");
     }
 
-    public void powrot() {
-    }
+
 }
