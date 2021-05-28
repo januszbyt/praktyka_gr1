@@ -136,7 +136,7 @@ public class ADodatkiController {
 
             int rs = this.main.stmt.executeUpdate("INSERT INTO `dodatki` ( `id`,`nazwa`, `typ` , `cena`, `ilosc`) VALUES ( NULL ,'" + nazwa + "', '" + typ + "','" + cena + "', '" + ilosc + "')");
             System.out.println("Pomyślnie dodano Dodatek  ");
-            odswiez();`
+            odswiez();
         } catch (Exception e) {
             System.out.println(e);
         }
