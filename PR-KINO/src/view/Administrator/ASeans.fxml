@@ -45,12 +45,12 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="63.0" promptText="wpisz id" />
-      <TextField layoutX="163.0" layoutY="200.0" promptText="wpisz date" />
-      <TextField layoutX="163.0" layoutY="236.0" promptText="wpisz wersje" />
-      <TextField layoutX="163.0" layoutY="280.0" promptText="wpisz typ" />
-      <TextField layoutX="163.0" layoutY="329.0" promptText="wpisz idsali" />
-      <TextField layoutX="163.0" layoutY="373.0" promptText="wpisz idfilmu" />
+      <TextField fx:id="tid" layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="63.0" promptText="wpisz id" />
+      <TextField fx:id="t1" layoutX="163.0" layoutY="200.0" promptText="wpisz date" />
+      <TextField fx:id="t2" layoutX="163.0" layoutY="236.0" promptText="wpisz wersje" />
+      <TextField fx:id="t3" layoutX="163.0" layoutY="280.0" promptText="wpisz typ" />
+      <TextField fx:id="t4" layoutX="163.0" layoutY="329.0" promptText="wpisz idsali" />
+      <TextField fx:id="t5" layoutX="163.0" layoutY="373.0" promptText="wpisz idfilmu" />
       <TableView layoutX="450.0" layoutY="155.0" prefHeight="213.0" prefWidth="411.0">
         <columns>
           <TableColumn prefWidth="75.0" text="id" />
@@ -64,7 +64,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="35.0" layoutY="442.0" mnemonicParsing="false" text="Dodaj seans" />
+      <Button layoutX="35.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" text="Dodaj seans" />
       <Button layoutX="133.0" layoutY="442.0" mnemonicParsing="false" text="Edytuj seans" />
       <Button layoutX="324.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Wyczyść" />
       <Button fx:id="powrot" layoutX="814.0" layoutY="32.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
