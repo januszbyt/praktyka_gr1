@@ -93,7 +93,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="812.0" layoutY="28.0" mnemonicParsing="false" onAction="#powrot" prefHeight="27.2" prefWidth="75.2" style="-fx-background-color: #c91616f0; -fx-border-color: #f06565f0;" text="Powrót" textFill="WHITE">
+      <Button layoutX="811.0" layoutY="28.0" mnemonicParsing="false" onAction="#powrot" prefHeight="27.2" prefWidth="75.2" style="-fx-background-color: #c91616f0; -fx-border-color: #f06565f0;" text="Powrot" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
