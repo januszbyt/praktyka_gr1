@@ -124,7 +124,9 @@ public class AFilmyController {
 
             String query = "INSERT INTO `filmy` (`id`, `tytul`, `gatunek`, `dlugosc`, `rezyser`, `kraj`,`opis`,`rokprodukcji`,`typ`) VALUES ('"+ID+"','"+Tytul+"','"+Gatunek+"','"+Dlugosc_filmu+"','"+Rezyser+"','"+Kraj+"','"+Opis+"','"+Rok_produkcji+"','"+Typ+"')";
             this.main.stmt.execute(query);
+            odswiez();
             System.out.println("Pomyślnie dodano film o ID: "+ ID);
+
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -139,7 +141,9 @@ public class AFilmyController {
         try {
             String query = "DELETE FROM `filmy` WHERE `id`= '"+Id+"'";
             this.main.stmt.execute(query);
+            odswiez();
             System.out.println("Pomyślnie usunięto film o ID: "+Id);
+
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -163,7 +167,7 @@ public class AFilmyController {
         try {
             String query = "UPDATE `filmy` SET `tytul`= '"+Tytul+"', `gatunek` = '"+Gatunek+"', `dlugosc` = '"+Dlugosc_filmu+"', `rezyser` = '"+Rezyser+"', `kraj` = '"+Kraj+"', `opis`= '"+Opis+"',`rokprodukcji` = '"+Rok_produkcji+"',`typ`='"+Typ+"' WHERE `filmy`.`id`='"+id1+"'";
             this.main.stmt.execute(query);
-
+            odswiez();
             System.out.println("Pomyślnie edytowano film o ID: "+ id1);
         } catch (Exception e) {
             System.out.println(e);
@@ -173,6 +177,10 @@ public class AFilmyController {
     public void powrotButton() {
             main.ViewController.changeBody("WyborOkienekAdmin");
         }
+    public void odswiez(){
+        data.clear();
+        PobierzDane();
+    }
 }
 
 

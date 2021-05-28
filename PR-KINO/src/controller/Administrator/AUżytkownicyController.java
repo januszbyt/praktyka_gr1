@@ -78,6 +78,7 @@ public class AUżytkownicyController {
             try {
                 String query = "DELETE FROM `uzytkownicy` WHERE `id`= '"+Id+"'";
                 this.main.stmt.execute(query);
+                odswiez();
                 System.out.println("Pomyślnie usunięto uzytkownika o ID: "+Id);
             } catch (Exception e) {
                 System.out.println(e);
@@ -108,7 +109,7 @@ public class AUżytkownicyController {
         try {
             String query = "UPDATE `uzytkownicy` SET `login`= '"+Login+"', `haslo` = '"+Haslo+"', `imie` = '"+Imie+"', `nazwisko` = '"+Nazwisko+"', `pesel` = '"+Pesel+"', `email`= '"+Email+"' WHERE `uzytkownicy`.`id`='"+id1+"'";
             this.main.stmt.execute(query);
-
+            odswiez();
             System.out.println("Pomyślnie edytowano użytkownika o ID: "+ id1);
         } catch (Exception e) {
             System.out.println(e);
@@ -117,5 +118,9 @@ public class AUżytkownicyController {
 
     public void powrotButton() {
         main.ViewController.changeBody("WyborOkienekAdmin");
+    }
+    public void odswiez(){
+        data.clear();
+        PobierzDane();
     }
 }
