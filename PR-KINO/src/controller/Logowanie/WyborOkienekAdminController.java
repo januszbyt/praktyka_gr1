@@ -21,6 +21,9 @@ public class WyborOkienekAdminController {
     public void przejscie_do_uzytkownikow() {
         main.ViewController.changeBody("AUzytkownicy");
     }
+    public void przejscie_do_seansow(){
+        main.ViewController.changeBody("ASeansu");
+    }
 
     public void wylogowanie() {
         main.ViewController.changeBody("Logowanie");
