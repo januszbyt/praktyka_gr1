@@ -53,6 +53,8 @@ public class ADodatkiController {
         typColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, String>("Typ"));
         cenaColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Double>("Cena"));
         iloscColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Integer>("Ilosc"));
+
+
         t1.setPromptText("Wpisz nazwę dodatku");
         t2.setPromptText("Wpisz typ dodatku");
         t3.setPromptText("Wpisz cene dodatku");
@@ -72,6 +74,7 @@ public class ADodatkiController {
             t2.setText(typColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
             t3.setText(String.valueOf(Double.valueOf(cenaColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))));
             t4.setText(String.valueOf(iloscColumn.getCellData(tableView.getSelectionModel().getSelectedItem())));
+            t5.setText(nazwaColumn.getCellData(tableView.getSelectionModel().getSelectedItem()));
         ADodatkiController af = new ADodatkiController();
         System.out.println("INFORMACJE O DODATKU");
         System.out.println("Nazwa: " + t1.getText());
@@ -90,6 +93,9 @@ public class ADodatkiController {
     }
     public void exit() {
         main.ViewController.changeBody("WyborOkienekAdmin");
+    }
+    public void ods() {
+        main.ViewController.changeBody("ADodatki");
     }
 
     public void init(MainController main) {
@@ -137,7 +143,7 @@ public class ADodatkiController {
 
             int rs = this.main.stmt.executeUpdate("INSERT INTO `dodatki` ( `id`,`nazwa`, `typ` , `cena`, `ilosc`) VALUES ( NULL ,'" + nazwa + "', '" + typ + "','" + cena + "', '" + ilosc + "')");
             System.out.println("Pomyślnie dodano Dodatek  ");
-            odswiez();`
+            odswiez();
         } catch (Exception e) {
             System.out.println(e);
         }
