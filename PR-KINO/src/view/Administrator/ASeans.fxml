@@ -46,30 +46,30 @@
          </font>
       </Label>
       <TextField fx:id="tid" layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="63.0" promptText="wpisz id" />
-      <TextField fx:id="t1" layoutX="163.0" layoutY="200.0" promptText="wpisz date" />
+      <TextField fx:id="t1" layoutX="163.0" layoutY="200.0" promptText="RRRR-MM-DD" />
       <TextField fx:id="t2" layoutX="163.0" layoutY="236.0" promptText="wpisz wersje" />
       <TextField fx:id="t3" layoutX="163.0" layoutY="280.0" promptText="wpisz typ" />
       <TextField fx:id="t4" layoutX="163.0" layoutY="329.0" promptText="wpisz idsali" />
       <TextField fx:id="t5" layoutX="163.0" layoutY="373.0" promptText="wpisz idfilmu" />
-      <TableView layoutX="450.0" layoutY="155.0" prefHeight="213.0" prefWidth="411.0">
+      <TableView fx:id="tableViewS" layoutX="450.0" layoutY="155.0" prefHeight="213.0" prefWidth="411.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="id" />
-          <TableColumn prefWidth="75.0" text="data" />
-            <TableColumn prefWidth="75.0" text="wersja" />
-            <TableColumn prefWidth="75.0" text="typ" />
-            <TableColumn prefWidth="75.0" text="idsali" />
-            <TableColumn prefWidth="75.0" text="idfilmu" />
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="dataColumn" prefWidth="75.0" text="data" />
+            <TableColumn fx:id="wersjaColumn" prefWidth="75.0" text="wersja" />
+            <TableColumn fx:id="typColumn" prefWidth="75.0" text="typ" />
+            <TableColumn fx:id="idsaliColumn" prefWidth="75.0" text="idsali" />
+            <TableColumn fx:id="idfilmuColumn" prefWidth="75.0" text="idfilmu" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="35.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" text="Dodaj seans" />
-      <Button layoutX="133.0" layoutY="442.0" mnemonicParsing="false" text="Edytuj seans" />
-      <Button layoutX="324.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Wyczyść" />
+      <Button layoutX="72.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" text="Dodaj seans" />
+      <Button layoutX="166.0" layoutY="479.0" mnemonicParsing="false" onAction="#edytuj" text="Edytuj seans" />
+      <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" onAction="#wyczysc" prefHeight="35.0" prefWidth="81.0" text="Wyczyść" />
       <Button fx:id="powrot" layoutX="814.0" layoutY="32.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
-      <Button layoutX="238.0" layoutY="442.0" mnemonicParsing="false" text="Wyświetl" />
-      <TableView fx:id="tableview" layoutX="555.0" layoutY="426.0" prefHeight="200.0" prefWidth="310.0">
+      <Button layoutX="166.0" layoutY="442.0" mnemonicParsing="false" onAction="#wyswietl" prefHeight="25.0" prefWidth="81.0" text="Wyświetl" />
+      <TableView fx:id="tableViewFilm" layoutX="555.0" layoutY="426.0" prefHeight="200.0" prefWidth="310.0">
         <columns>
           <TableColumn fx:id="idfilm" prefWidth="75.0" text="id filmu" />
           <TableColumn fx:id="tytulcolumn" prefWidth="75.0" text="tytul" />
@@ -84,5 +84,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
+      <Button layoutX="70.0" layoutY="479.0" mnemonicParsing="false" onAction="#usunzBazy" prefHeight="25.0" prefWidth="82.0" text="Usuń seans" />
    </children>
 </AnchorPane>

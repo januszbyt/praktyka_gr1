@@ -4,13 +4,13 @@ import java.util.Date;
 
     public class Admin_seans {
         private Integer id;
-        private Date date;
+        private String date;
         private String wersja;
         private String typ;
         private Integer idsali;
         private Integer idfilm;
 
-        public Admin_seans(Integer id, Date date, String wersja, String typ, Integer idsali, Integer idfilm){
+        public Admin_seans(Integer id, String date, String wersja, String typ, Integer idsali, Integer idfilm){
 
             this.id=id;
             this.date=date;
@@ -25,8 +25,8 @@ import java.util.Date;
         public Integer getId(){ return id;}
         public void setId(Integer id2) { this.id=id2;}
 
-        public Date getDate(){ return date;}
-        public void setDate(Date dt) { this.date=dt;}
+        public String getDate(){ return date;}
+        public void setDate(String dt) { this.date=dt;}
 
         public String getWersja(){ return wersja;}
         public void setWersja(String wer) { this.wersja=wer;}
@@ -39,7 +39,6 @@ import java.util.Date;
 
         public Integer getIdfilm(){ return idfilm;}
         public void setIdfilm(Integer fil) { this.idfilm=fil;}
-
 
     }
 
