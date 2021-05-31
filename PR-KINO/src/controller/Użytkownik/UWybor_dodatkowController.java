@@ -23,7 +23,7 @@ public class UWybor_dodatkowController<topBtn> {
     }
 
     public void initialize() {
-        int[] idF = new int[11];
+        int[] idF = new int[47];
         String[] nazwaF = new String[47];
         String[] urlF = new String[47];
         int i = 0;
@@ -42,7 +42,7 @@ public class UWybor_dodatkowController<topBtn> {
             System.out.println(e);
         }
 
-        //System.out.println(urlF[0]);
+
 
         for (int j = 0, k = 0; j < 6; j++)
             for (int l = 0; l < 8; l++, k++) {
@@ -51,7 +51,9 @@ public class UWybor_dodatkowController<topBtn> {
                     if (urlF[k] != null) {
                         Image image = new Image(urlF[k], 100, 100, false, true);
                         button_grid.add(new ImageView(image), l, j);
-                    } else if (nazwaF[k] != null) {
+                        /*(nazwaF[k] != null)*/
+                    } else
+                    {
                         String url = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Brak_obrazka.svg/1024px-Brak_obrazka.svg.png";
                         Image image = new Image(url, 100, 100, false, true);
                         button_grid.add(new ImageView(image), l, j);
