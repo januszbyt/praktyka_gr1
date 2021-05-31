@@ -40,7 +40,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="386.0" layoutY="57.0" text="Dodawanie seansów" textFill="WHITE">
+      <Label layoutX="386.0" layoutY="57.0" text="Modyfikacja seansów" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -64,11 +64,26 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="72.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" text="Dodaj seans" />
-      <Button layoutX="166.0" layoutY="479.0" mnemonicParsing="false" onAction="#edytuj" text="Edytuj seans" />
-      <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" onAction="#wyczysc" prefHeight="35.0" prefWidth="81.0" text="Wyczyść" />
-      <Button fx:id="powrot" layoutX="814.0" layoutY="32.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: red;" text="Powrót" textFill="WHITE" />
-      <Button layoutX="166.0" layoutY="442.0" mnemonicParsing="false" onAction="#wyswietl" prefHeight="25.0" prefWidth="81.0" text="Wyświetl" />
+      <Button layoutX="72.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" style="-fx-border-color: white; -fx-background-color: #187810;" text="Dodaj seans" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="166.0" layoutY="479.0" mnemonicParsing="false" onAction="#edytuj" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Edytuj seans" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" onAction="#wyczysc" prefHeight="35.0" prefWidth="81.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Wyczyść" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="powrot" layoutX="814.0" layoutY="32.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: #b00c17; -fx-border-color: white;" text="Powrót" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="166.0" layoutY="442.0" mnemonicParsing="false" onAction="#wyswietl" prefHeight="25.0" prefWidth="81.0" style="-fx-border-color: white; -fx-background-color: #165be4;" text="Wyświetl" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <TableView fx:id="tableViewFilm" layoutX="555.0" layoutY="426.0" prefHeight="200.0" prefWidth="310.0">
         <columns>
           <TableColumn fx:id="idfilm" prefWidth="75.0" text="id filmu" />
@@ -84,6 +99,9 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="70.0" layoutY="479.0" mnemonicParsing="false" onAction="#usunzBazy" prefHeight="25.0" prefWidth="82.0" text="Usuń seans" />
+      <Button layoutX="70.0" layoutY="479.0" mnemonicParsing="false" onAction="#usunzBazy" prefHeight="25.0" prefWidth="82.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Usuń seans" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>
