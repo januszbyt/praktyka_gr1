@@ -40,6 +40,14 @@ public class AUżytkownicyController {
         nazwiskoColumn.setCellValueFactory(new PropertyValueFactory<Uzytkownicy, String>("nazwisko"));
         peselColumn.setCellValueFactory(new PropertyValueFactory<Uzytkownicy, String>("pesel"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<Uzytkownicy, String>("email"));
+        tid.setPromptText("Wpisz id");
+        t1.setPromptText("Wpisz login");
+        t2.setPromptText("Wpisz hasło");
+        t3.setPromptText("Wpisz imię");
+        t4.setPromptText("Wpisz nazwisko");
+        t5.setPromptText("Wpisz pesel");
+        t5.setPromptText("Wpisz pesel");
+        t6.setPromptText("Wpisz email");
     }
 
 

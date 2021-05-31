@@ -54,7 +54,7 @@ public class ADodatkiController {
         cenaColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Double>("Cena"));
         iloscColumn.setCellValueFactory(new PropertyValueFactory<Admin_dodatki, Integer>("Ilosc"));
 
-
+tid.setPromptText("Wpisz id");
         t1.setPromptText("Wpisz nazwę dodatku");
         t2.setPromptText("Wpisz typ dodatku");
         t3.setPromptText("Wpisz cene dodatku");
