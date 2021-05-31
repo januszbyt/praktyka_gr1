@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 import java.util.Calendar;
 import java.util.Date;
 
-public class ASeansuController {
+public class ASeansuController extends AFilmyController{
     private MainController main;
 
     public void init(MainController main) {
@@ -37,9 +37,8 @@ public class ASeansuController {
     @FXML private TableColumn<Admin_seans, String> wersjaColumn;
     @FXML private TableColumn<Admin_seans, String> typColumn;
     @FXML private TableColumn<Admin_seans, Integer> id_saliColumn;
-    @FXML private TableColumn<Admin_seans, Integer> id_filmuColumn;
+    @FXML private TableColumn<Admin_film, Integer> id_filmuColumn;
     ObservableList<Admin_seans> data = FXCollections.observableArrayList();
-
 
 
     public void powrotButton() {
@@ -52,7 +51,7 @@ public class ASeansuController {
         wersjaColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("wersja"));
         typColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("typ"));
         id_saliColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Integer>("idsali"));
-        id_filmuColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Integer>("idfilmu"));
+        id_filmuColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("idfilm"));
     }
 
 
@@ -109,7 +108,7 @@ public class ASeansuController {
             try {
                 String query = "UPDATE `filmy` SET `start`= '"+Start+"', `wersja` = '"+Wersja+"', `typ` = '"+Typ+"', `id_sali` = '"+IDSali+"', `id_filmu` = '"+IDFilmu+"' WHERE `seanse`.`id`='"+id1+"'";
                 this.main.stmt.execute(query);
-                //odswiez();
+                odswiez();
                 System.out.println("Pomyślnie edytowano seans o ID: "+ id1);
             } catch (Exception e) {
                 System.out.println(e);
@@ -134,8 +133,9 @@ public class ASeansuController {
             t2.setText(String.valueOf(wersjaColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
             t3.setText(typColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem()));
             t4.setText(String.valueOf(id_saliColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
-            t5.setText(String.valueOf(id_filmuColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
+            t5.setText(String.valueOf(id_filmuColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))); // nie moze pobrac id filmu z innej klasy
         }
+
     }
 
     public void usunzBazy() {
