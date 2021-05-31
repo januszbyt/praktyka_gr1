@@ -13,13 +13,15 @@ import object.Admin_film;
 import object.Admin_seans;
 
 import java.sql.ResultSet;
+import java.util.Calendar;
+import java.util.Date;
 
 public class ASeansuController {
     private MainController main;
 
     public void init(MainController main) {
         this.main = main;
-      //  this.PobierzDane();
+       this.PobierzDane();
     }
 
     @FXML public TextField tid;
@@ -29,14 +31,15 @@ public class ASeansuController {
     @FXML public TextField t4;
     @FXML public TextField t5;
 
-    @FXML public TableView<Admin_seans> tableView;
-    @FXML private TableColumn<Admin_seans, Integer> idColumn;
-    @FXML private TableColumn<Admin_seans, String> dataColumn;
+    @FXML public TableView<Admin_seans> tableViewS;
+    @FXML private TableColumn<Admin_seans, Integer> idColumn1;
+    @FXML private TableColumn<Admin_seans, Date> startColumn;
     @FXML private TableColumn<Admin_seans, String> wersjaColumn;
     @FXML private TableColumn<Admin_seans, String> typColumn;
-    @FXML private TableColumn<Admin_seans, Integer> idsaliColumn;
-    @FXML private TableColumn<Admin_seans, Integer> idfilmuColumn;
-    ObservableList<Admin_film> data = FXCollections.observableArrayList();
+    @FXML private TableColumn<Admin_seans, Integer> id_saliColumn;
+    @FXML private TableColumn<Admin_seans, Integer> id_filmuColumn;
+    ObservableList<Admin_seans> data = FXCollections.observableArrayList();
+
 
 
     public void powrotButton() {
@@ -44,30 +47,30 @@ public class ASeansuController {
     }
 
     @FXML public void initialize(){
-        idColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans,Integer>("id"));
-        dataColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("data"));
+        idColumn1.setCellValueFactory(new PropertyValueFactory<Admin_seans,Integer>("id"));
+        startColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Date>("start"));
         wersjaColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("wersja"));
         typColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("typ"));
-        idsaliColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Integer>("idsali"));
-        idfilmuColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Integer>("idfilmu"));
+        id_saliColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Integer>("idsali"));
+        id_filmuColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Integer>("idfilmu"));
     }
 
 
-    /*
+
     public void PobierzDane(){
         try{
             ResultSet rs=  this.main.stmt.executeQuery("select * from seanse");
             while(rs.next()){
-                data.add(new Admin_seans(rs.getInt("id"),rs.getString("data"),rs.getString("wersja"),rs.getString("typ"),rs.getInt("idsali"),rs.getInt("idfilmu")));
+                data.add(new Admin_seans(rs.getInt("id"),rs.getDate("start"),rs.getString("wersja"),rs.getString("typ"),rs.getInt("id_sali"),rs.getInt("id_filmu")));
             }
-            tableView.setItems(data);
+            tableViewS.setItems(data);
 
         }catch(Exception e){
             System.out.println(e);
         }
     }
 
-     */
+
 
 
 
@@ -87,6 +90,7 @@ public class ASeansuController {
 
             String query = "INSERT INTO `seanse` (`id`, `start`, `wersja`,`typ`, `id_sali`, `id_filmu`) VALUES ('"+ID+"','"+Date+"','"+Wersja+"','"+Typ+"','"+IDSali +"','"+IDFilm+"')";
             this.main.stmt.execute(query);
+            odswiez();
             System.out.println("Pomyślnie dodano seans o ID: "+ ID);
 
         } catch (Exception e) {
@@ -113,6 +117,7 @@ public class ASeansuController {
         }
 
     public void wyczysc() {
+
         tid.clear();
         t1.clear();
         t2.clear();
@@ -122,6 +127,15 @@ public class ASeansuController {
     }
 
     public void wyswietl() {
+
+        if(tableViewS.getSelectionModel().getSelectedItem() != null) {
+            tid.setText(String.valueOf(idColumn1.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
+            t1.setText(String.valueOf(startColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
+            t2.setText(String.valueOf(wersjaColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
+            t3.setText(typColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem()));
+            t4.setText(String.valueOf(id_saliColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
+            t5.setText(String.valueOf(id_filmuColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
+        }
     }
 
     public void usunzBazy() {
@@ -129,12 +143,16 @@ public class ASeansuController {
             try {
                 String query = "DELETE FROM `seanse` WHERE `id`= '"+Id+"'";
                 this.main.stmt.execute(query);
-                //odswiez();
+                odswiez();
                 System.out.println("Pomyślnie usunięto seans o ID: "+Id);
 
             } catch (Exception e) {
                 System.out.println(e);
             }
+        }
+        public void odswiez(){
+        data.clear();
+        PobierzDane();
         }
 }
 

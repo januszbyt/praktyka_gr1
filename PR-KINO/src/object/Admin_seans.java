@@ -1,19 +1,19 @@
  package object;
 
-import java.util.Date;
+ import java.sql.Date;
 
-    public class Admin_seans {
+ public class Admin_seans {
         private Integer id;
-        private String date;
+        private Date start;
         private String wersja;
         private String typ;
         private Integer idsali;
         private Integer idfilm;
 
-        public Admin_seans(Integer id, String date, String wersja, String typ, Integer idsali, Integer idfilm){
+        public Admin_seans(Integer id, Date start, String wersja, String typ, Integer idsali, Integer idfilm){
 
             this.id=id;
-            this.date=date;
+            this.start=start;
             this.wersja=wersja;
             this.typ=typ;
             this.idsali=idsali;
@@ -25,8 +25,8 @@ import java.util.Date;
         public Integer getId(){ return id;}
         public void setId(Integer id2) { this.id=id2;}
 
-        public String getDate(){ return date;}
-        public void setDate(String dt) { this.date=dt;}
+        public Date getDate(){ return start;}
+        public void setDate(Date dt) { this.start=dt;}
 
         public String getWersja(){ return wersja;}
         public void setWersja(String wer) { this.wersja=wer;}
