@@ -1,7 +1,14 @@
 <component name="libraryTable">
   <library name="controlsfx-11.0.3">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../controlsfx-11.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/OpenJFX/lib/javafx.web.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

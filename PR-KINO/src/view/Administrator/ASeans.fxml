@@ -51,18 +51,15 @@
       <TextField fx:id="t3" layoutX="163.0" layoutY="280.0" promptText="wpisz typ" />
       <TextField fx:id="t4" layoutX="163.0" layoutY="329.0" promptText="wpisz idsali" />
       <TextField fx:id="t5" layoutX="163.0" layoutY="373.0" promptText="wpisz idfilmu" />
-      <TableView fx:id="tableViewS" layoutX="450.0" layoutY="155.0" prefHeight="213.0" prefWidth="411.0">
+      <TableView fx:id="tableViewS" layoutX="424.0" layoutY="155.0" prefHeight="213.0" prefWidth="501.0">
         <columns>
-          <TableColumn fx:id="idColumn1" prefWidth="75.0" text="id" />
-          <TableColumn fx:id="startColumn" prefWidth="75.0" text="start" />
-            <TableColumn fx:id="wersjaColumn" prefWidth="75.0" text="wersja" />
-            <TableColumn fx:id="typColumn" prefWidth="75.0" text="typ" />
-            <TableColumn fx:id="id_saliColumn" prefWidth="75.0" text="id_sali" />
-            <TableColumn fx:id="id_filmuColumn" prefWidth="75.0" text="id_filmu" />
+          <TableColumn fx:id="idColumn1" prefWidth="42.0" text="id" />
+          <TableColumn fx:id="startColumn" prefWidth="148.0" text="start" />
+            <TableColumn fx:id="wersjaColumn" prefWidth="131.0" text="wersja" />
+            <TableColumn fx:id="typColumn" prefWidth="54.0" text="typ" />
+            <TableColumn fx:id="id_saliColumn" prefWidth="58.0" text="id_sali" />
+            <TableColumn fx:id="id_filmuColumn" prefWidth="67.0" text="id_filmu" />
         </columns>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
       </TableView>
       <Button layoutX="72.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" style="-fx-border-color: white; -fx-background-color: #187810;" text="Dodaj seans" textFill="WHITE">
          <font>
