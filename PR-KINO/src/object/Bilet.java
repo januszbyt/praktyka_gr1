@@ -1,5 +1,8 @@
 package object;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bilet {
     private String Imie_kupujacego;
     private Integer idbilet;
@@ -9,10 +12,13 @@ public class Bilet {
     private Integer idmiejsce;
     private Integer idseansu;
     private Integer idFilmu;
+    private List<wybrane_miejsce> wybraneMiejsca = new ArrayList<wybrane_miejsce>();
     public Bilet(){
     }
 
-
+    public void setWybraneMiejsca(List<wybrane_miejsce> lista){
+        this.wybraneMiejsca = lista;
+    }
     public String WypiszImie(){
         return Imie_kupujacego;
     }
