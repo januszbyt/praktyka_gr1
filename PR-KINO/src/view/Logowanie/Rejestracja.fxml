@@ -16,9 +16,9 @@
             <Font size="40.0" />
          </font>
       </Label>
-      <TextField fx:id="imie" layoutX="230.0" layoutY="175.0" onKeyPressed="#wimie" onMouseClicked="#wimie" onZoom="#wimie" onZoomFinished="#wimie" onZoomStarted="#wimie" prefHeight="10.0" prefWidth="220.0" />
-      <TextField fx:id="pesel" layoutX="230.0" layoutY="255.0" onKeyPressed="#wpesel" onMouseClicked="#wpesel" prefHeight="10.0" prefWidth="220.0" />
-      <TextField fx:id="adres_email" layoutX="230.0" layoutY="295.0" onKeyPressed="#wemail" onMouseClicked="#wemail" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="imie" layoutX="230.0" layoutY="170.0" onKeyPressed="#wimie" onMouseClicked="#wimie" onZoom="#wimie" onZoomFinished="#wimie" onZoomStarted="#wimie" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="pesel" layoutX="230.0" layoutY="260.0" onKeyPressed="#wpesel" onMouseClicked="#wpesel" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="adres_email" layoutX="230.0" layoutY="305.0" onKeyPressed="#wemail" onMouseClicked="#wemail" prefHeight="10.0" prefWidth="220.0" />
       <Label fx:id="label_imie" layoutX="120.0" layoutY="170.0" text="Imię" textFill="WHITE">
          <font>
             <Font size="20.0" />
@@ -27,17 +27,17 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label fx:id="label_nazwisko" layoutX="120.0" layoutY="215.0" text="Nazwisko" textFill="WHITE">
+      <Label fx:id="label_nazwisko" layoutX="120.0" layoutY="215.0" prefHeight="26.0" prefWidth="84.0" text="Nazwisko" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="label_email" layoutX="120.0" layoutY="295.0" text="Adres-email" textFill="WHITE">
+      <Label fx:id="label_email" layoutX="120.0" layoutY="305.0" text="Adres-email" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="label_pesel" layoutX="120.0" layoutY="255.0" prefHeight="32.0" prefWidth="53.0" text="Pesel" textFill="WHITE">
+      <Label fx:id="label_pesel" layoutX="120.0" layoutY="260.0" prefHeight="32.0" prefWidth="53.0" text="Pesel" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
@@ -57,9 +57,9 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="login" layoutX="660.0" layoutY="175.0" onKeyPressed="#wlogin" onMouseClicked="#wlogin" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="login" layoutX="660.0" layoutY="170.0" onKeyPressed="#wlogin" onMouseClicked="#wlogin" prefHeight="10.0" prefWidth="220.0" />
       <PasswordField fx:id="haslo" layoutX="660.0" layoutY="215.0" onKeyPressed="#whaslo" onMouseClicked="#whaslo" prefHeight="10.0" prefWidth="220.0" />
-      <PasswordField fx:id="potwierdzonehaslo" layoutX="660.0" layoutY="255.0" onKeyPressed="#whaslopotwierdzone" onMouseClicked="#whaslopotwierdzone" prefHeight="10.0" prefWidth="220.0" />
+      <PasswordField fx:id="potwierdzonehaslo" layoutX="660.0" layoutY="260.0" onKeyPressed="#whaslopotwierdzone" onMouseClicked="#whaslopotwierdzone" prefHeight="10.0" prefWidth="220.0" />
       <Label fx:id="label_login" layoutX="510.0" layoutY="170.0" text="Login" textFill="WHITE">
          <font>
             <Font size="20.0" />
@@ -68,7 +68,7 @@
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label fx:id="label_potwierdz_haslo" layoutX="510.0" layoutY="255.0" text="Potwierdz hasło" textFill="WHITE">
+      <Label fx:id="label_potwierdz_haslo" layoutX="510.0" layoutY="260.0" text="Potwierdz hasło" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font></Label>

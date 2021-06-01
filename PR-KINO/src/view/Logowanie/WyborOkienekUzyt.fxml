@@ -7,19 +7,19 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.WyborOkienekUzytController">
    <children>
-      <Label layoutX="296.0" layoutY="41.0" text="Wybierz działanie:" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="310.0" layoutY="40.0" text="Wybierz działanie:" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="55.0" />
+            <Font size="45.0" />
          </font>
       </Label>
       <Label layoutX="122.0" layoutY="165.0" text="Ocenianie filmu" textFill="WHITE">
          <font>
-            <Font size="33.0" />
+            <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="635.0" layoutY="165.0" text="Zakup biletów" textFill="WHITE">
+      <Label layoutX="585.0" layoutY="165.0" text="Zakup biletów" textFill="WHITE">
          <font>
-            <Font size="33.0" />
+            <Font size="30.0" />
          </font>
       </Label>
       <Button layoutX="75.0" layoutY="240.0" mnemonicParsing="false" onAction="#przejscie_do_recenzji" prefHeight="60.0" prefWidth="320.0" style="-fx-background-color: #2b6afc; -fx-border-color: white;" text="Wybierz" textFill="WHITE">
@@ -27,7 +27,7 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="574.0" layoutY="240.0" mnemonicParsing="false" onAction="#przejscie_do_zakupu" prefHeight="60.0" prefWidth="320.0" style="-fx-background-color: #2b6afc; -fx-border-color: white;" text="Wybierz" textFill="WHITE">
+      <Button layoutX="520.0" layoutY="240.0" mnemonicParsing="false" onAction="#przejscie_do_zakupu" prefHeight="60.0" prefWidth="320.0" style="-fx-background-color: #2b6afc; -fx-border-color: white;" text="Wybierz" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
