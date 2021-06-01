@@ -28,7 +28,7 @@
          <font>
             <Font size="30.0" />
          </font></Label>
-      <Label alignment="TOP_LEFT" layoutX="68.0" layoutY="276.0" prefHeight="46.0" prefWidth="339.0" text="Zarządanie dodatkami:" textFill="WHITE">
+      <Label alignment="TOP_LEFT" layoutX="68.0" layoutY="277.0" prefHeight="46.0" prefWidth="339.0" text="Zarządanie dodatkami:" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font></Label>
@@ -41,5 +41,15 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Button fx:id="w_uzytkownikow1" layoutX="443.0" layoutY="457.0" mnemonicParsing="false" onAction="#przejscie_do_seansow" prefHeight="45.0" prefWidth="320.0" style="-fx-background-color: #2b6afc; -fx-border-color: white;" text="Wybierz" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="68.0" layoutY="457.0" text="Zarządzanie seansami" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

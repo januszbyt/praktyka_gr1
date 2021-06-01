@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UWybor_miejscaController">
     <children>
-      <AnchorPane fx:id="buttonsPanel" layoutX="22.0" layoutY="140.0" prefHeight="474.0" prefWidth="561.0" style="-fx-background-color: #343333;" />
+      <AnchorPane fx:id="buttonsPanel" layoutX="22.0" layoutY="140.0" prefHeight="474.0" prefWidth="446.0" style="-fx-background-color: #343333;" />
       <Label layoutX="302.0" layoutY="22.0" text="Wybór miejsca" textFill="#cf2c26">
          <font>
             <Font size="49.0" />
@@ -18,11 +19,30 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <Label layoutX="620.0" layoutY="101.0" text="Typ zniżnki:" textFill="WHITE">
+      <Label contentDisplay="CENTER" layoutX="759.0" layoutY="93.0" text="Zniżki:" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <ComboBox fx:id="znizki" layoutX="620.0" layoutY="147.0" prefHeight="31.0" prefWidth="192.0" />
+      <Label layoutX="608.0" layoutY="528.0" text="Ilość wybranych miejsc:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrool" layoutX="608.0" layoutY="141.0" prefHeight="378.0" prefWidth="377.0">
+         <content>
+            <AnchorPane fx:id="znizki" prefHeight="361.0" prefWidth="358.0" style="-fx-background-color: transparent;" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="ileMiejsc" layoutX="797.0" layoutY="528.0" prefHeight="28.0" prefWidth="85.0" textFill="RED">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" layoutX="608.0" layoutY="562.0" mnemonicParsing="false" onAction="#dalej" prefHeight="71.0" prefWidth="377.0" style="-fx-background-color: #2f6307; -fx-font-weight: bolder; -fx-border-color: #7f7e7e; -fx-text-fill: #000;" text="Przejdz dalej">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
