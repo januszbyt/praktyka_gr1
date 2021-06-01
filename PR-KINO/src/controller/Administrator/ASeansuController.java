@@ -22,6 +22,7 @@ public class ASeansuController extends AFilmyController{
     public void init(MainController main) {
         this.main = main;
        this.PobierzDane();
+       this.PobierzDane2();
     }
 
     @FXML public TextField tid;
@@ -30,7 +31,7 @@ public class ASeansuController extends AFilmyController{
     @FXML public TextField t3;
     @FXML public TextField t4;
     @FXML public TextField t5;
-
+    //tabela seanse
     @FXML public TableView<Admin_seans> tableViewS;
     @FXML private TableColumn<Admin_seans, Integer> idColumn1;
     @FXML private TableColumn<Admin_seans, Date> startColumn;
@@ -40,18 +41,35 @@ public class ASeansuController extends AFilmyController{
     @FXML private TableColumn<Admin_film, Integer> id_filmuColumn;
     ObservableList<Admin_seans> data = FXCollections.observableArrayList();
 
+    //tabela filmy
+    @FXML public TableView<Admin_film> tableView;
+    @FXML private TableColumn<Admin_film, Integer> idColumn;
+    @FXML private TableColumn<Admin_film, String> tytulColumn;
+    @FXML private TableColumn<Admin_film, Integer> dlugosc;
+    ObservableList<Admin_film> data1 = FXCollections.observableArrayList();
+
+
+
 
     public void powrotButton() {
         main.ViewController.changeBody("WyborOkienekAdmin");
     }
 
     @FXML public void initialize(){
+        //tabela z seansami
         idColumn1.setCellValueFactory(new PropertyValueFactory<Admin_seans,Integer>("id"));
         startColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Date>("start"));
         wersjaColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("wersja"));
         typColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("typ"));
         id_saliColumn.setCellValueFactory(new PropertyValueFactory<Admin_seans, Integer>("idsali"));
         id_filmuColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("idfilm"));
+
+        // tabela z filmami
+        idColumn.setCellValueFactory(new PropertyValueFactory<Admin_film,Integer>("id"));
+        tytulColumn.setCellValueFactory(new PropertyValueFactory<Admin_film, String>("tytul"));
+        dlugosc.setCellValueFactory(new PropertyValueFactory<Admin_film, Integer>("dlugosc"));
+
+
     }
 
 
@@ -69,7 +87,18 @@ public class ASeansuController extends AFilmyController{
         }
     }
 
+    public void PobierzDane2(){
+        try{
+            ResultSet rs=  this.main.stmt.executeQuery("select * from filmy");
+            while(rs.next()){
+                data1.add(new Admin_film(rs.getInt("id"),rs.getString("tytul"),rs.getString("gatunek"),rs.getInt("dlugosc"),rs.getString("rezyser"),rs.getString("kraj"),rs.getString("opis"),rs.getInt("rokprodukcji"),rs.getString("typ")));
+            }
+            tableView.setItems(data1);
 
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
 
 
 
