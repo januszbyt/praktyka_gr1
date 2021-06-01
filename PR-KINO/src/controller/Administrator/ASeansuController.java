@@ -11,6 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 import object.Admin_seans;
 
+import javax.swing.*;
 import java.sql.ResultSet;
 import java.util.Date;
 
@@ -117,7 +118,7 @@ public class ASeansuController extends AFilmyController{
             String query = "INSERT INTO `seanse` (`id`, `start`, `wersja`,`typ`, `id_sali`, `id_filmu`) VALUES ('"+ID+"','"+Date+"','"+Wersja+"','"+Typ+"','"+IDSali +"','"+IDFilm+"')";
             this.main.stmt.execute(query);
             odswiez();
-            System.out.println("Pomyślnie dodano seans o ID: "+ ID);
+            JOptionPane.showMessageDialog(null, "Pomyślnie dodano seans");
 
         } catch (Exception e) {
             System.out.println(e);
@@ -136,7 +137,7 @@ public class ASeansuController extends AFilmyController{
                 String query = "UPDATE `filmy` SET `start`= '"+Start+"', `wersja` = '"+Wersja+"', `typ` = '"+Typ+"', `id_sali` = '"+IDSali+"', `id_filmu` = '"+IDFilmu+"' WHERE `seanse`.`id`='"+id1+"'";
                 this.main.stmt.execute(query);
                 odswiez();
-                System.out.println("Pomyślnie edytowano seans o ID: "+ id1);
+                JOptionPane.showMessageDialog(null, "Pomyślnie edytowano seans o ID: "+ id1);
             } catch (Exception e) {
                 System.out.println(e);
             }
@@ -160,7 +161,7 @@ public class ASeansuController extends AFilmyController{
             t2.setText(String.valueOf(wersjaColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
             t3.setText(typColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem()));
             t4.setText(String.valueOf(id_saliColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
-            t5.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))); // nie moze pobrac id filmu z innej klasy
+            t5.setText(String.valueOf(id_filmuColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))); // nie moze pobrac id filmu z innej klasy
         }
 
     }
@@ -171,7 +172,7 @@ public class ASeansuController extends AFilmyController{
                 String query = "DELETE FROM `seanse` WHERE `id`= '"+Id+"'";
                 this.main.stmt.execute(query);
                 odswiez();
-                System.out.println("Pomyślnie usunięto seans o ID: "+Id);
+                JOptionPane.showMessageDialog(null, "Pomyślnie usunięto seans o ID: "+Id);
 
             } catch (Exception e) {
                 System.out.println(e);

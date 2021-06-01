@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_dodatki;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -145,8 +146,9 @@ tid.setPromptText("Wpisz id");
             Integer ilosc = Integer.valueOf(t4.getText());
 
             int rs = this.main.stmt.executeUpdate("INSERT INTO `dodatki` ( `id`,`nazwa`, `typ` , `cena`, `ilosc`) VALUES ( NULL ,'" + nazwa + "', '" + typ + "','" + cena + "', '" + ilosc + "')");
-            System.out.println("Pomyślnie dodano Dodatek  ");
             odswiez();
+            JOptionPane.showMessageDialog(null, "Pomyślnie dodano dodatek");
+
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -159,8 +161,9 @@ tid.setPromptText("Wpisz id");
             String delete = t5.getText();
             String query = "DELETE FROM `dodatki` WHERE `nazwa`= '" + delete + "'";
             this.main.stmt.execute(query);
-            System.out.println("Pomyślnie usunięto dodatek o nazwie: " + delete);
             odswiez();
+            JOptionPane.showMessageDialog(null, "Pomyślnie usunięto dodatek o nazwie: " + delete);
+
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -177,8 +180,8 @@ tid.setPromptText("Wpisz id");
             String query = "UPDATE `dodatki` SET `nazwa` = '"+nazwa+"', `cena` = '"+cena+"', `ilosc` = '"+ilosc+"', `typ` = '"+typ+"' WHERE `dodatki`.`id`='"+id1+"'";
             System.out.println(query);
             this.main.stmt.execute(query);
-            System.out.println("Pomyślnie edytowano film o ID: " + id1);
             odswiez();
+            JOptionPane.showMessageDialog(null, "Pomyślnie edytowano dodatek o ID: " + id1);
         } catch (Exception e) {
             System.out.println(e);
         }

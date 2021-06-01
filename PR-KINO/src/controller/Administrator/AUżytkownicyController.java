@@ -3,7 +3,6 @@ package controller.Administrator;
 import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -11,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import object.Uzytkownicy;
 
+import javax.swing.*;
 import java.sql.ResultSet;
 
 public class AUżytkownicyController {
@@ -87,7 +87,7 @@ public class AUżytkownicyController {
                 String query = "DELETE FROM `uzytkownicy` WHERE `id`= '"+Id+"'";
                 this.main.stmt.execute(query);
                 odswiez();
-                System.out.println("Pomyślnie usunięto uzytkownika o ID: "+Id);
+                JOptionPane.showMessageDialog(null, "Pomyślnie usunięto uzytkownika o ID: "+Id);
             } catch (Exception e) {
                 System.out.println(e);
             }
@@ -118,7 +118,7 @@ public class AUżytkownicyController {
             String query = "UPDATE `uzytkownicy` SET `login`= '"+Login+"', `haslo` = '"+Haslo+"', `imie` = '"+Imie+"', `nazwisko` = '"+Nazwisko+"', `pesel` = '"+Pesel+"', `email`= '"+Email+"' WHERE `uzytkownicy`.`id`='"+id1+"'";
             this.main.stmt.execute(query);
             odswiez();
-            System.out.println("Pomyślnie edytowano użytkownika o ID: "+ id1);
+            JOptionPane.showMessageDialog(null, "Pomyślnie edytowano użytkownika o ID: "+ id1);
         } catch (Exception e) {
             System.out.println(e);
         }

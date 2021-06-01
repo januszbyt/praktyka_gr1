@@ -1,6 +1,5 @@
  package object;
 
- import java.sql.Date;
 
  public class Admin_seans {
         private Integer id;
