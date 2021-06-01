@@ -33,7 +33,7 @@ public class UWybor_filmuController<topBtn> {
                 idF[i] = rs.getInt(1);
                 nazwaF[i] = rs.getString(2);
                 urlF[i] = rs.getString(10);
-                System.out.println(idF[i] + nazwaF[i] + urlF[i]);
+               // System.out.println(idF[i] + nazwaF[i] + urlF[i]);
                 i++;
             }
         } catch (Exception e) {
@@ -45,7 +45,7 @@ public class UWybor_filmuController<topBtn> {
         for (int j = 0, k = 0; j < 6; j++)
             for (int l = 0; l < 8; l++, k++) {
                 try {
-                    System.out.println(urlF[k]);
+                   // System.out.println(urlF[k]);
                     if (urlF[k]!=null){
                         Image image = new Image(urlF[k], 100, 100, false, true);
                         button_grid.add(new ImageView(image), l, j);
