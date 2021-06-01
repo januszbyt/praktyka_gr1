@@ -30,11 +30,11 @@ public class UWybor_dodatkowController<topBtn> {
         int id;
 
         try {
-            ResultSet rs = this.main.stmt.executeQuery("SELECT * from filmy ");
+            ResultSet rs = this.main.stmt.executeQuery("SELECT * from dodatki ");
             while (rs.next()) {
-                idF[i] = rs.getInt("id");
-                nazwaF[i] = rs.getString("Nazwa");
-                urlF[i] = rs.getString("URL");
+                idF[i] = rs.getInt(1);
+                nazwaF[i] = rs.getString(2);
+                urlF[i] = rs.getString(6);
                 System.out.println(idF[i] + nazwaF[i] + urlF[i]);
                 i++;
             }
