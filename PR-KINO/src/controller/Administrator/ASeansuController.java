@@ -3,7 +3,6 @@ package controller.Administrator;
 import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -13,7 +12,6 @@ import object.Admin_film;
 import object.Admin_seans;
 
 import java.sql.ResultSet;
-import java.util.Calendar;
 import java.util.Date;
 
 public class ASeansuController extends AFilmyController{
@@ -78,7 +76,7 @@ public class ASeansuController extends AFilmyController{
         try{
             ResultSet rs=  this.main.stmt.executeQuery("select * from seanse");
             while(rs.next()){
-                data.add(new Admin_seans(rs.getInt("id"),rs.getDate("start"),rs.getString("wersja"),rs.getString("typ"),rs.getInt("id_sali"),rs.getInt("id_filmu")));
+                data.add(new Admin_seans(rs.getInt("id"),rs.getString("start"),rs.getString("wersja"),rs.getString("typ"),rs.getInt("id_sali"),rs.getInt("id_filmu")));
             }
             tableViewS.setItems(data);
 
@@ -162,7 +160,7 @@ public class ASeansuController extends AFilmyController{
             t2.setText(String.valueOf(wersjaColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
             t3.setText(typColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem()));
             t4.setText(String.valueOf(id_saliColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
-            t5.setText(String.valueOf(id_filmuColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))); // nie moze pobrac id filmu z innej klasy
+            t5.setText(String.valueOf(idColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))); // nie moze pobrac id filmu z innej klasy
         }
 
     }
