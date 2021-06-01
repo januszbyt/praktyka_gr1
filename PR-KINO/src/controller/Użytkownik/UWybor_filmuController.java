@@ -43,11 +43,11 @@ public class UWybor_filmuController<topBtn> {
         //System.out.println(urlF[0]);
 
         for (int j = 0, k = 0; j < 6; j++)
-            for (int l = 0; l < 8; l++, k++) {
+            for (int l = 0; l < 5; l++, k++) {
                 try {
                    // System.out.println(urlF[k]);
                     if (urlF[k]!=null){
-                        Image image = new Image(urlF[k], 100, 100, false, true);
+                        Image image = new Image(urlF[k], 150, 150, false, true);
                         button_grid.add(new ImageView(image), l, j);
                     }
                     else if(nazwaF[k]!=null){
