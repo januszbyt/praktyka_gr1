@@ -12,6 +12,7 @@ public class Admin_film {
     private Integer rokprodukcji;
     private String typ;
     private Base64 zdjecie;
+    private String link;
 
     public Admin_film(Integer id,String tytul, String gatunek, Integer dlugosc, String rezyser, String kraj, String opis, Integer rokprodukcji, String typ) {
         this.id=id;
@@ -104,6 +105,8 @@ public class Admin_film {
         this.rokprodukcji=rp;
     }
 
+    public String getLink() { return link;}
+    public void setLink(String link) { this.link=link;}
 
 
     public void wypiszDane(){
