@@ -1,102 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="EclipseModuleManager">
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx.base.jar!/" />
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx.controls.jar!/" />
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx.fxml.jar!/" />
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx.graphics.jar!/" />
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx.media.jar!/" />
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx.swing.jar!/" />
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx.web.jar!/" />
-    <libelement value="jar://C:/Program Files/OpenJFX/lib/javafx-swt.jar!/" />
-    <conelement value="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER" />
-    <src_description expected_position="0">
-      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
-    </src_description>
-  </component>
-  <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/bin" />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="javafx.base.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx.base.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="javafx.controls.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx.controls.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="javafx.fxml.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx.fxml.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="javafx.graphics.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx.graphics.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="javafx.media.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx.media.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="javafx.swing.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx.swing.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="javafx.web.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx.web.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="javafx-swt.jar">
-        <CLASSES>
-          <root url="jar://C:/Program Files/OpenJFX/lib/javafx-swt.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER" level="application" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="javafx-swt" level="project" />
-    <orderEntry type="library" name="activation" level="project" />
-    <orderEntry type="library" name="controlsfx-11.0.3" level="project" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="activation" level="project" />
+    <orderEntry type="library" exported="" name="javafx.web" level="project" />
   </component>
 </module>
