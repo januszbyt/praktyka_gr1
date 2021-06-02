@@ -1,10 +1,15 @@
 package controller.Użytkownik;
 
 import controller.MainController;
+import javafx.css.Size;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
 
 import java.sql.ResultSet;
@@ -43,11 +48,11 @@ public class UWybor_filmuController<topBtn> {
         //System.out.println(urlF[0]);
 
         for (int j = 0, k = 0; j < 6; j++)
-            for (int l = 0; l < 5; l++, k++) {
+            for (int l = 0; l < 6; l++, k++) {
                 try {
                    // System.out.println(urlF[k]);
                     if (urlF[k]!=null){
-                        Image image = new Image(urlF[k], 150, 150, false, true);
+                        Image image = new Image(urlF[k], 140, 140, false, true);
                         button_grid.add(new ImageView(image), l, j);
                     }
                     else if(nazwaF[k]!=null){
@@ -57,7 +62,12 @@ public class UWybor_filmuController<topBtn> {
 
                     }
                     if (nazwaF[k]!=null) {
-                        Button btn = new Button(nazwaF[k]);
+                        Hyperlink btn = new Hyperlink();
+                        btn.setMinSize(140, 140);
+                        btn.setVisible(true);
+                        btn.setBorder(Border.EMPTY)
+                        ;
+
                         /*btn.setOnAction(new EventHandler<ActionEvent>() {
 
 
@@ -68,7 +78,14 @@ public class UWybor_filmuController<topBtn> {
                                             }
                                         }*/
                         button_grid.add(btn, l, j);
+btn.setOnAction(new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent event) {
+        System.out.println("Dziala");
+    }
+});
                     }
+
 
                 } catch (Exception e) {
                 }
