@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="activation" level="project" />
     <orderEntry type="library" exported="" name="javafx.web" level="project" />
+    <orderEntry type="library" name="activation1" level="project" />
   </component>
 </module>
