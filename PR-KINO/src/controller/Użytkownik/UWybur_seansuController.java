@@ -32,7 +32,7 @@ public class UWybur_seansuController {
     }
 //tak
     public void PobierzDane(){
-        Integer id = 5;
+        Integer id = this.main.bilet.getIdFilm();
         try{
             ResultSet rs=  this.main.stmt.executeQuery("select * from seanse where `id`= id");
             while(rs.next()){
