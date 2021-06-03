@@ -77,7 +77,7 @@ public class UWybor_filmuController<topBtn> {
                         GridPane.setHalignment(btn,HPos.LEFT);
                         btn.setBorder(Border.EMPTY);
                         btn.setStyle("-fx-border-color: cf2c26 ;-fx-border-width: 6;-fx-border-radius: 3;");
-btn.setAlignment(Pos.CENTER_RIGHT);
+                        btn.setAlignment(Pos.CENTER_RIGHT);
 
                         /*btn.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -89,12 +89,12 @@ btn.setAlignment(Pos.CENTER_RIGHT);
                                             }
                                         }*/
                         button_grid.add(btn, l, j);
-btn.setOnAction(new EventHandler<ActionEvent>() {
-    @Override
-    public void handle(ActionEvent event) {
-        System.out.println("Dziala");
-    }
-});
+                        btn.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                System.out.println("Dziala");
+                            }
+                        });
                     }
 
 

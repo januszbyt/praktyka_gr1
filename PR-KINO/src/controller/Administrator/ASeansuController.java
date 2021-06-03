@@ -118,7 +118,7 @@ public class ASeansuController extends AFilmyController{
             String query = "INSERT INTO `seanse` (`id`, `start`, `wersja`,`typ`, `id_sali`, `id_filmu`) VALUES ('"+ID+"','"+Date+"','"+Wersja+"','"+Typ+"','"+IDSali +"','"+IDFilm+"')";
             this.main.stmt.execute(query);
             odswiez();
-            JOptionPane.showMessageDialog(null, "Pomyślnie dodano seans");
+            JOptionPane.showMessageDialog(null, "Pomyślnie dodano seans od ID: "+ ID);
 
         } catch (Exception e) {
             System.out.println(e);
@@ -161,7 +161,7 @@ public class ASeansuController extends AFilmyController{
             t2.setText(String.valueOf(wersjaColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
             t3.setText(typColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem()));
             t4.setText(String.valueOf(id_saliColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
-            t5.setText(String.valueOf(id_filmuColumn.getCellData(tableView.getSelectionModel().getSelectedItem()))); // nie moze pobrac id filmu z innej klasy
+            t5.setText(String.valueOf(idColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem().getId()+2))); // nie moze pobrac id filmu z innej klasy
         }
 
     }
