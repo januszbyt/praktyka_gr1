@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -52,10 +53,14 @@ public class UWybur_seansuController {
 
 
     public void wybierzSeans() {
+
         if(tableViewSeans.getSelectionModel().getSelectedItem() != null) {
             startCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
             wersjaCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
             typCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
         }
+        this.main.bilet.setIdseansu( id seansu );
+        this.main.ViewController.changeBody("nazwa kolejnego panelu");
+
     }
 }
