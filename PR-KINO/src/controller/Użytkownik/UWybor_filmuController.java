@@ -89,7 +89,10 @@ public class UWybor_filmuController<topBtn> {
                             @Override
                             public void handle(ActionEvent event) {
                                 System.out.println(idF[finalK]);
-                                
+
+                                main.bilet.setIdFilm(idF[finalK]);
+                                main.ViewController.changeBody("USeansu");
+
 
                             }
                         });
