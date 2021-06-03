@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.concurrent.ThreadLocalRandom;
 
 
+
 public class URecenzjaController {
     @FXML
     public TextField textRecenzja;
@@ -30,7 +31,7 @@ public class URecenzjaController {
         int id_filmu = 0;
         String recenzja = textRecenzja.getText();
         double ocena = rating.getRating();
-        int id = ThreadLocalRandom.current().nextInt();
+        int id = ThreadLocalRandom.current().nextInt(1, 1001);
         String id_uzytkownika_query = "SELECT MAX(id) FROM uzytkownicy";
         String id_filmu_query = "SELECT MAX(id)  FROM filmy";
 
@@ -43,11 +44,10 @@ public class URecenzjaController {
             rsF.next();
             id_filmu = rsF.getInt(1);
 
-
-            /* String query = "INSERT INTO `recencje` (`id`, `id_uzytkownika`, `id_filmu`, `ocena`, `opis`) VALUES ('" + id + "','" + id_uzytkownika + "','" + id_filmu + "','" + ocena + "','" + recenzja + "')";
-*/
+            String query = "INSERT INTO `recencje` (`id`, `id_uzytkownika`, `id_filmu`, `ocena`, `opis`) VALUES ('" + id + "','" + id_uzytkownika + "','" + id_filmu + "','" + ocena + "','" + recenzja + "')";
+            this.main.stmt.executeUpdate(query);
         System.out.println("User " + id_uzytkownika + "has inserted review " + id + "  to database: " + recenzja + " with rating: " + ocena + ", with ID filmu: " + id_filmu);
-
+        textRecenzja.clear();
         }
         catch (SQLException throwables) {
             throwables.printStackTrace();
