@@ -59,7 +59,7 @@ public class UWybur_seansuController {
             wersjaCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
             typCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
         }
-        this.main.bilet.setIdseansu( id seansu );
+        //this.main.bilet.setIdseansu( id seansu );
         this.main.ViewController.changeBody("nazwa kolejnego panelu");
 
     }
