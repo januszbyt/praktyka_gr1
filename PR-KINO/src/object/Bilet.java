@@ -11,7 +11,7 @@ public class Bilet {
     private String typznizki;
     private Integer idmiejsce;
     private Integer idseansu;
-    private Integer idFilmu;
+    private Integer idFilmu=5;
     private List<wybrane_miejsce> wybraneMiejsca = new ArrayList<wybrane_miejsce>();
     public Bilet(){
     }

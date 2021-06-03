@@ -7,14 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UWybur_seansuController">
    <children>
-      <TableView layoutX="259.0" layoutY="138.0" prefHeight="182.0" prefWidth="465.0">
+      <TableView fx:id="tableViewSeans" layoutX="259.0" layoutY="138.0" prefHeight="182.0" prefWidth="465.0">
         <columns>
-          <TableColumn fx:id="startCol" prefWidth="150.0" text="start" />
-            <TableColumn fx:id="wersjaCol" prefWidth="75.0" text="wersja" />
-            <TableColumn fx:id="typCol" prefWidth="75.0" text="typ" />
+          <TableColumn fx:id="startCol" prefWidth="179.0" text="start" />
+            <TableColumn fx:id="wersjaCol" prefWidth="148.0" text="wersja" />
+            <TableColumn fx:id="typCol" prefWidth="137.0" text="typ" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -25,7 +24,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="440.0" layoutY="369.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="90.0" text="Wybierz">
+      <Button layoutX="440.0" layoutY="369.0" mnemonicParsing="false" onAction="#wybierzSeans" prefHeight="38.0" prefWidth="90.0" text="Wybierz">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
