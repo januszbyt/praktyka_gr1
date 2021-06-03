@@ -129,12 +129,12 @@ public class ASeansuController extends AFilmyController{
             Integer id1= Integer.valueOf((tid.getText()));
             String Start = t1.getText();
             String Wersja = t2.getText();
-            Integer Typ = Integer.valueOf(t3.getText());
+            String Typ = t3.getText();
             String IDSali = t4.getText();
             String IDFilmu = t5.getText();
 
             try {
-                String query = "UPDATE `filmy` SET `start`= '"+Start+"', `wersja` = '"+Wersja+"', `typ` = '"+Typ+"', `id_sali` = '"+IDSali+"', `id_filmu` = '"+IDFilmu+"' WHERE `seanse`.`id`='"+id1+"'";
+                String query = "UPDATE `seanse` SET `start`= '"+Start+"', `wersja` = '"+Wersja+"', `typ` = '"+Typ+"', `id_sali` = '"+IDSali+"', `id_filmu` = '"+IDFilmu+"' WHERE `seanse`.`id`='"+id1+"'";
                 this.main.stmt.execute(query);
                 odswiez();
                 JOptionPane.showMessageDialog(null, "Pomyślnie edytowano seans o ID: "+ id1);
