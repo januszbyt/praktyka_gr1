@@ -36,7 +36,7 @@ public class UWybur_seansuController {
     public void PobierzDane(){
         Integer id = this.main.bilet.getIdFilm();
         try{
-            ResultSet rs=  this.main.stmt.executeQuery("select * from seanse where `id_filmu`= "+id);
+            ResultSet rs=  this.main.stmt.executeQuery("select * from seanse where `id_filmu`= "+id+ " and start > now()");
             while(rs.next()){
                 data.add(new Admin_seans(rs.getInt("id"),rs.getString("start"),rs.getString("wersja"),rs.getString("typ"),rs.getInt("id_sali"),rs.getInt("id_filmu")));
             }
