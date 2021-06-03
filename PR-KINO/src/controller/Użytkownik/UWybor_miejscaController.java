@@ -35,7 +35,7 @@ public class UWybor_miejscaController<Intreger> {
 
 
 
-        String sql1= "select * from bilety,zajete_miejsca where bilety.id = zajete_miejsca.id_biletu and id_seansu = 2";
+        String sql1= "select * from bilety,zajete_miejsca where bilety.id = zajete_miejsca.id_biletu and id_seansu = "+ this.main.bilet.getIdseansu();
         try {
             ResultSet wynik = this.main.stmt.executeQuery(sql1);
             while(wynik.next()){
