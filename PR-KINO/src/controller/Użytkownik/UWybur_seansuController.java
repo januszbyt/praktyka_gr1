@@ -30,7 +30,7 @@ public class UWybur_seansuController {
         wersjaCol.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("wersja"));
         typCol.setCellValueFactory(new PropertyValueFactory<Admin_seans, String>("typ"));
     }
-
+//tak
     public void PobierzDane(){
         Integer id = 5;
         try{
