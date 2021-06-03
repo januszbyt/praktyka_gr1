@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ASeansuController">
+   <children>
+      <Label layoutX="99.0" layoutY="163.0" text="ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="200.0" text="Data" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="236.0" text="Wersja" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="280.0" text="Typ" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="329.0" text="idSali" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="373.0" text="idFilmu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="386.0" layoutY="57.0" text="Modyfikacja seansów" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tid" layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="63.0" promptText="wpisz id" />
+      <TextField fx:id="t1" layoutX="163.0" layoutY="200.0" promptText="RRRR-MM-DD  gg:mm:ss" />
+      <TextField fx:id="t2" layoutX="163.0" layoutY="236.0" promptText="wpisz wersje" />
+      <TextField fx:id="t3" layoutX="163.0" layoutY="280.0" promptText="wpisz typ" />
+      <TextField fx:id="t4" layoutX="163.0" layoutY="329.0" promptText="wpisz idsali" />
+      <TextField fx:id="t5" layoutX="163.0" layoutY="373.0" promptText="wpisz idfilmu" />
+      <TableView fx:id="tableViewS" layoutX="424.0" layoutY="155.0" prefHeight="213.0" prefWidth="501.0">
+        <columns>
+          <TableColumn fx:id="idColumn1" prefWidth="42.0" text="id" />
+          <TableColumn fx:id="startColumn" prefWidth="148.0" text="start" />
+            <TableColumn fx:id="wersjaColumn" prefWidth="131.0" text="wersja" />
+            <TableColumn fx:id="typColumn" prefWidth="54.0" text="typ" />
+            <TableColumn fx:id="id_saliColumn" prefWidth="58.0" text="id_sali" />
+            <TableColumn fx:id="id_filmuColumn" prefWidth="67.0" text="id_filmu" />
+        </columns>
+      </TableView>
+      <Button layoutX="72.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" style="-fx-border-color: white; -fx-background-color: #187810;" text="Dodaj seans" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="166.0" layoutY="479.0" mnemonicParsing="false" onAction="#edytuj" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Edytuj seans" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" onAction="#wyczysc" prefHeight="35.0" prefWidth="81.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Wyczyść" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="powrot" layoutX="814.0" layoutY="32.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: #b00c17; -fx-border-color: white;" text="Powrót" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="166.0" layoutY="442.0" mnemonicParsing="false" onAction="#wyswietl" prefHeight="25.0" prefWidth="81.0" style="-fx-border-color: white; -fx-background-color: #165be4;" text="Wyświetl" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="tableView" layoutX="500.0" layoutY="426.0" prefHeight="200.0" prefWidth="398.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="63.0" text="id filmu" />
+          <TableColumn fx:id="tytulColumn" prefWidth="265.0" text="tytul" />
+            <TableColumn fx:id="dlugosc" prefWidth="69.0" text="czas [min]" />
+        </columns>
+      </TableView>
+      <Label layoutX="668.0" layoutY="386.0" text="Filmy" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="70.0" layoutY="479.0" mnemonicParsing="false" onAction="#usunzBazy" prefHeight="25.0" prefWidth="82.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Usuń seans" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
