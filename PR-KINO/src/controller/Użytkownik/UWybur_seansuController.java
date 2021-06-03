@@ -12,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import object.Admin_film;
 import object.Admin_seans;
 
+import javax.swing.*;
 import java.sql.ResultSet;
 
 public class UWybur_seansuController {
@@ -44,6 +45,7 @@ public class UWybur_seansuController {
         }catch(Exception e){
             System.out.println(e);
         }
+
     }
 
     public void init(MainController main) {
@@ -58,9 +60,15 @@ public class UWybur_seansuController {
             startCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
             wersjaCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
             typCol.getCellData(tableViewSeans.getSelectionModel().getSelectedItem());
+            this.main.bilet.setIdseansu(tableViewSeans.getSelectionModel().getSelectedItem().getId());
+            this.main.ViewController.changeBody("UWybor_miejsca");
+        } else {
+            JOptionPane.showMessageDialog(null, "Nie wybrano seansu");
         }
-        this.main.bilet.setIdseansu( id seansu );
-        this.main.ViewController.changeBody("nazwa kolejnego panelu");
+
+
+
 
     }
+
 }

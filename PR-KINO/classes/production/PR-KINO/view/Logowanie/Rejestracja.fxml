@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#wlogin" onMouseClicked="#wlogin" prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.RejestracjaController">
+   <children>
+      <TextField fx:id="nazwisko" layoutX="230.0" layoutY="215.0" onKeyPressed="#wnazwisko" onMouseClicked="#wnazwisko" prefHeight="10.0" prefWidth="220.0" />
+      <Label layoutX="406.0" layoutY="26.0" style="-fx-text-fill: #fff;" text="Rejestracja" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="imie" layoutX="230.0" layoutY="170.0" onKeyPressed="#wimie" onMouseClicked="#wimie" onZoom="#wimie" onZoomFinished="#wimie" onZoomStarted="#wimie" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="pesel" layoutX="230.0" layoutY="260.0" onKeyPressed="#wpesel" onMouseClicked="#wpesel" prefHeight="10.0" prefWidth="220.0" />
+      <TextField fx:id="adres_email" layoutX="230.0" layoutY="305.0" onKeyPressed="#wemail" onMouseClicked="#wemail" prefHeight="10.0" prefWidth="220.0" />
+      <Label fx:id="label_imie" layoutX="120.0" layoutY="170.0" text="Imię" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="label_nazwisko" layoutX="120.0" layoutY="215.0" prefHeight="26.0" prefWidth="84.0" text="Nazwisko" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_email" layoutX="120.0" layoutY="305.0" text="Adres-email" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_pesel" layoutX="120.0" layoutY="260.0" prefHeight="32.0" prefWidth="53.0" text="Pesel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_zarejestruj" layoutX="319.0" layoutY="406.0" mnemonicParsing="false" onAction="#zarejestruj" prefHeight="32.0" prefWidth="383.0" style="-fx-background-color: #a60000; -fx-border-color: #7f7e7e; -fx-text-fill: #000; -fx-font-weight: bolder;" text="Zarejestruj" />
+      <Label fx:id="popraw_dane" layoutX="167.0" layoutY="106.0" prefHeight="34.0" prefWidth="274.0" text="Popraw zaznaczone dane! " textFill="#ff0606" visible="false">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label fx:id="prosze_czekac" layoutX="39.0" layoutY="451.0" text="Proszę czekać! Trwa weryfikacja, oczekiwanie na potwierdzenie..." textFill="WHITE" visible="false">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="sprawdz_poczte" layoutX="287.0" layoutY="485.0" text="Sprawdz swoją pocztę :) " textFill="WHITE" visible="false">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="login" layoutX="660.0" layoutY="170.0" onKeyPressed="#wlogin" onMouseClicked="#wlogin" prefHeight="10.0" prefWidth="220.0" />
+      <PasswordField fx:id="haslo" layoutX="660.0" layoutY="215.0" onKeyPressed="#whaslo" onMouseClicked="#whaslo" prefHeight="10.0" prefWidth="220.0" />
+      <PasswordField fx:id="potwierdzonehaslo" layoutX="660.0" layoutY="260.0" onKeyPressed="#whaslopotwierdzone" onMouseClicked="#whaslopotwierdzone" prefHeight="10.0" prefWidth="220.0" />
+      <Label fx:id="label_login" layoutX="510.0" layoutY="170.0" text="Login" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="label_haslo" layoutX="510.0" layoutY="215.0" text="Hasło" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="label_potwierdz_haslo" layoutX="510.0" layoutY="260.0" text="Potwierdz hasło" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="587.0" layoutY="101.0" text="Dane logowania:" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="przejdz_dalej" disable="true" layoutX="728.0" layoutY="496.0" mnemonicParsing="false" onAction="#przejdz_dalej" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: #2f6307; -fx-text-fill: #000; -fx-border-color: #7f7e7e; -fx-font-weight: bolder;" text="Przejdz dalej" />
+      <Label fx:id="komunikat_rozne_hasla" layoutX="510.0" layoutY="295.0" prefHeight="30.0" prefWidth="413.0" text="Hasła nie są identyczne! Spróbuj jeszcze raz...." textFill="#ec0202" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="wymagania" layoutX="24.0" layoutY="338.0" textFill="#ff1c1c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="896.0" layoutY="28.0" mnemonicParsing="false" onAction="#reset" prefHeight="27.2" prefWidth="75.2" style="-fx-background-color: #c91616f0; -fx-border-color: #f06565f0;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="811.0" layoutY="28.0" mnemonicParsing="false" onAction="#powrot" prefHeight="27.2" prefWidth="75.2" style="-fx-background-color: #c91616f0; -fx-border-color: #f06565f0;" text="Powrot" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
