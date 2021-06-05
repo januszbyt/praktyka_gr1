@@ -122,7 +122,7 @@ public class UWybor_miejscaController<Intreger> {
                     ComboBox tmp = ((ComboBox)e.getSource());
                     wybraneMiejsca.forEach((tab) -> {
                        if(tab.numer.equals(tmp.getId())){
-                            tab.znika = (String) tmp.getValue();
+                            tab.znizka = (String) tmp.getValue();
                             //System.out.println(tab.zwroc_znizke());
                        }
                     });
@@ -130,8 +130,8 @@ public class UWybor_miejscaController<Intreger> {
             };
             a.setOnAction(event);
             wybraneMiejsca.forEach((tab) -> {
-                       if(a.getId().equals(tab.numer) && tab.znika != null){
-                           a.setValue(tab.znika);
+                       if(a.getId().equals(tab.numer) && tab.znizka != null){
+                           a.setValue(tab.znizka);
                        }
             });
          znizki.getChildren().add(a);
@@ -143,6 +143,7 @@ public class UWybor_miejscaController<Intreger> {
 
     public void dalej(){
         this.main.bilet.setWybraneMiejsca(this.wybraneMiejsca);
-        this.main.ViewController.changeBody("UWybor_dodatkow");
+        this.main.ViewController.changeBody("UPodsumowanie");
+      //  this.main.ViewController.changeBody("UWybor_dodatkow");
     }
 }

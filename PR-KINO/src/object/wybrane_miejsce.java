@@ -2,10 +2,10 @@ package object;
 
 public class wybrane_miejsce {
     public String numer;
-    public String znika;
+    public String znizka = null;
 
-    public int zwroc_znizke(){
-        switch (znika){
+    public float zwroc_znizke(){
+        switch (znizka){
             case"Student":
                 return 20;
             case"Uczeń":
@@ -19,10 +19,8 @@ public class wybrane_miejsce {
             case"Grupa min 10 osób":
                 return 10;
             case"< 2 lata":
-                System.out.println(30);
                 return 60;
             case"< 14 lat":
-                System.out.println(15);
                 return 10;
             default:
                 return 0;

@@ -19,6 +19,12 @@ public class Bilet {
     public void setWybraneMiejsca(List<wybrane_miejsce> lista){
         this.wybraneMiejsca = lista;
     }
+    public List <wybrane_miejsce> getWybraneMiejsca(){
+            return wybraneMiejsca;
+    }
+
+
+
     public String WypiszImie(){
         return Imie_kupujacego;
     }
