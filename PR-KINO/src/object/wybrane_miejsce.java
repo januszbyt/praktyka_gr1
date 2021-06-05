@@ -2,7 +2,7 @@ package object;
 
 public class wybrane_miejsce {
     public String numer;
-    public String znizka = null;
+    public String znizka = "Brak";
 
     public float zwroc_znizke(){
         switch (znizka){
