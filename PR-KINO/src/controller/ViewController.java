@@ -103,7 +103,12 @@ public class ViewController {
                    this.main.UWybur_seansuController=loader.getController();
                    this.main.UWybur_seansuController.init(main);
                    break;
-
+               case"UPodsumowanie":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UPodsumowanie.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   this.main.UPodsumowanieController=loader.getController();
+                   this.main.UPodsumowanieController.init(main);
+                   break;
 
                default:
                    System.err.println("Bład wyboru okna, Nazwa: '"+name+"' nie jest znana");
