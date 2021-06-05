@@ -123,7 +123,6 @@ public class UWybor_miejscaController<Intreger> {
                     wybraneMiejsca.forEach((tab) -> {
                        if(tab.numer.equals(tmp.getId())){
                             tab.znizka = (String) tmp.getValue();
-                            //System.out.println(tab.zwroc_znizke());
                        }
                     });
                 }
