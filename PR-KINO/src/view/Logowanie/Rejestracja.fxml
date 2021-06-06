@@ -11,7 +11,7 @@
 <AnchorPane onKeyPressed="#wlogin" onMouseClicked="#wlogin" prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Logowanie.RejestracjaController">
    <children>
       <TextField fx:id="nazwisko" layoutX="230.0" layoutY="215.0" onKeyPressed="#wnazwisko" onMouseClicked="#wnazwisko" prefHeight="10.0" prefWidth="220.0" />
-      <Label layoutX="406.0" layoutY="26.0" style="-fx-text-fill: #fff;" text="Rejestracja" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="406.0" layoutY="20.0" style="-fx-text-fill: #fff;" text="Rejestracja" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="40.0" />
          </font>

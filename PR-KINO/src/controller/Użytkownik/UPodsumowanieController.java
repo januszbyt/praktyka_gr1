@@ -41,8 +41,9 @@ public class UPodsumowanieController {
 
              for ( int i=0; i<main.bilet.getWybraneMiejsca().size(); i++){
                  Label a = new Label();
-                 a.setLayoutY(0 + (20 * i));
-                 a.setLayoutX(0);
+                 a.setStyle("-fx-text-fill: white; -fx-font-size: 15px;");
+                 a.setLayoutY(5 + (20 * i));
+                 a.setLayoutX(5);
                  a.setText("Wybrane miejsce " + main.bilet.getWybraneMiejsca().get(i).numer+ " - " + main.bilet.getWybraneMiejsca().get(i).znizka);
                  wybrane_miejsca.getChildren().add(a);
 
@@ -50,7 +51,7 @@ public class UPodsumowanieController {
              }
 
 
-            cena_za_bilet.setText(suma_za_miejsca+"");
+            cena_za_bilet.setText(suma_za_miejsca+" zł");
 
 
 
