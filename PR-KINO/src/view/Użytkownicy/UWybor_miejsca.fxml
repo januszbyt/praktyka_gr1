@@ -39,7 +39,7 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Button layoutX="688.0" layoutY="567.0" mnemonicParsing="false" onAction="#dalej" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: #2f6307; -fx-font-weight: bolder; -fx-border-color: white; -fx-text-fill: #000;" text="Przejdz dalej" textFill="WHITE">
+      <Button layoutX="688.0" layoutY="567.0" mnemonicParsing="false" onAction="#dalej" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: #187810; -fx-font-weight: bolder; -fx-border-color: white; -fx-text-fill: #000;" text="Przejdz dalej" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
