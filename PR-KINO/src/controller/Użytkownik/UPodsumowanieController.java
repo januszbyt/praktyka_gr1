@@ -81,9 +81,12 @@ public class UPodsumowanieController {
             for (int i = 0; i < main.bilet.dodatki.size(); i++)
             {
                 if(main.bilet.dodatki.get(i).ile!=0){
-                    String sql2 = "insert into zajete_miejsca (`id_miejsca`,`id_biletu`,`znizka`) values ('"+main.bilet.getWybraneMiejsca().get(i).numer+"','"+this.main.bilet.dataBaseID+"','"+main.bilet.getWybraneMiejsca().get(i).znizka+"')";
-                    System.out.println(sql2);
-                    this.main.stmt.execute(sql2);
+                    String sql3 = "insert into bilety_dodatki (`id_dodatku`,`id_biletu`,`ilosc`) values ('"+main.bilet.dodatki.get(i).getId()+"','"+this.main.bilet.dataBaseID+"','"+main.bilet.dodatki.get(i).ile+"')";
+                    System.out.println(sql3);
+                    this.main.stmt.execute(sql3);
+                    String sql4 = "update dodatki set ilosc = ilosc - "+main.bilet.dodatki.get(i).ile + " where id='"+main.bilet.dodatki.get(i).getId()+"'";
+                    System.out.println(sql4);
+                    this.main.stmt.execute(sql4);
                 }
             }
 
