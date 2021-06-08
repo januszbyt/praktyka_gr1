@@ -37,6 +37,16 @@ public class LogowanieController {
             rsA.next();
             int dostepA = rsA.getInt("ile");
             if (dostepU == 1) {
+                String SGL_id= "select id,pesel from uzytkownicy where login='" + Login + "' and haslo='" + Haslo + "'";
+                ResultSet rs_id = this.main.stmt.executeQuery(SGL_id);
+                rs_id.next();
+                this.main.bilet.WpiszId(rs_id.getInt("id"));
+                this.main.bilet.WpiszPesel(rs_id.getString("pesel"));
+
+
+                System.out.println(  this.main.bilet.WypiszId());
+                System.out.println(  this.main.bilet.WypiszPesel());
+
                 main.ViewController.changeBody("WyborOkienekUzyt");
             }
             else if ( dostepA == 1){

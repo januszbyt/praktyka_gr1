@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Bilet {
     private String Imie_kupujacego;
+    private String Pesel;
+    private Integer id;
     private Integer idbilet;
     private Double cena;
     private String typplatnosci;
@@ -24,6 +26,20 @@ public class Bilet {
             return wybraneMiejsca;
     }
 
+    public Integer WypiszId(){
+        return id;
+    }
+    public void WpiszId(Integer a){
+        id = a;
+    }
+
+
+    public String WypiszPesel(){
+        return Pesel;
+    }
+    public void WpiszPesel(String a){
+        Pesel = a;
+    }
 
 
     public String WypiszImie(){
