@@ -1,12 +1,13 @@
 package controller.Użytkownik;
-
 import controller.MainController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
+import javafx.geometry.VPos;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Border;
@@ -29,6 +30,7 @@ public class UWybor_filmuController<topBtn> {
         int[] idF = new int[47];
         String[] nazwaF = new String[47];
         String[] urlF = new String[47];
+        Double[] srednia = new Double[47];
         int i = 0;
         int id;
 
@@ -38,6 +40,7 @@ public class UWybor_filmuController<topBtn> {
                 idF[i] = rs.getInt(1);
                 nazwaF[i] = rs.getString(2);
                 urlF[i] = rs.getString(10);
+                srednia[i] = rs.getDouble(12);
                // System.out.println(idF[i] + nazwaF[i] + urlF[i]);
                 i++;
             }
@@ -59,20 +62,29 @@ public class UWybor_filmuController<topBtn> {
                     else if(nazwaF[k]!=null){
                         String url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Brak_obrazka.svg/1024px-Brak_obrazka.svg.png";
                         Image image = new Image(url, 100, 100, false, true);
-                        
+
                         button_grid.add(new ImageView(image), l, j);
 
 
 
                     }
                     if (nazwaF[k]!=null) {
+                        Label lbl = new Label(Double.toString(srednia[k]));
+                        Label lblN = new Label(nazwaF[k]);
                         Hyperlink btn = new Hyperlink();
                         btn.setMinSize(140, 190);
                         btn.setVisible(true);
                         GridPane.setHalignment(btn,HPos.LEFT);
+                        GridPane.setHalignment(lbl,HPos.CENTER);
+                        GridPane.setValignment(lbl, VPos.BOTTOM);
+                        GridPane.setHalignment(lblN,HPos.CENTER);
+                        GridPane.setValignment(lblN, VPos.TOP);
                         btn.setBorder(Border.EMPTY);
                         btn.setStyle("-fx-border-color: cf2c26 ;-fx-border-width: 6;-fx-border-radius: 3;");
+                        lbl.setStyle("-fx-text-fill: #fdc837;-fx-font-size: 20px;-fx-background-color: rgba(0,0,0,0.24);");
+                        lblN.setStyle("-fx-padding:6;-fx-text-fill: #fdc837;-fx-font-size: 20px;-fx-background-color: rgba(0,0,0,0.65);");
                         btn.setAlignment(Pos.CENTER_RIGHT);
+                        lbl.setAlignment(Pos.CENTER_RIGHT);
 
                         /*btn.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -83,6 +95,8 @@ public class UWybor_filmuController<topBtn> {
 
                                             }
                                         }*/
+                        button_grid.add(lblN, l, j);
+                        button_grid.add(lbl, l, j);
                         button_grid.add(btn, l, j);
                         int finalK = k;
                         btn.setOnAction(new EventHandler<ActionEvent>() {
