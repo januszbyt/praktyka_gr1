@@ -13,6 +13,17 @@
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/OpenJFX/lib/javafx.media.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/OpenJFX/lib/javafx.swing.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/OpenJFX/lib/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/zxing-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/core-3.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/banner-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/javase-3.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/commons-lang3-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/jcommander-1.72.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/jai-imageio-core-1.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/JavaLib/text-ui-0.0.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

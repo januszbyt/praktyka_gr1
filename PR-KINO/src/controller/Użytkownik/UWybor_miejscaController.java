@@ -102,7 +102,9 @@ public class UWybor_miejscaController<Intreger> {
         }
     }
 
-
+public void przejscie_do_znizek(){
+        main.ViewController.changeBody("UZnizki");
+}
     public void setznizki(){
         znizki.getChildren().clear();
         ileMiejsc.setText(wybraneMiejsca.size()+"");
@@ -142,7 +144,7 @@ public class UWybor_miejscaController<Intreger> {
 
     public void dalej(){
         this.main.bilet.setWybraneMiejsca(this.wybraneMiejsca);
-        this.main.ViewController.changeBody("UPodsumowanie");
-      //  this.main.ViewController.changeBody("UWybor_dodatkow");
+
+        this.main.ViewController.changeBody("UWybor_dodatkow");
     }
 }
