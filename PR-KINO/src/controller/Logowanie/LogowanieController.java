@@ -26,6 +26,7 @@ public class LogowanieController {
     @FXML public void zaloguj() throws SQLException {
         try {
             String Login = login.getText();
+            this.main.bilet.WpiszImie(Login);
             String Haslo = haslo.getText();
             String SGL_A= "select count(*) as ile from administracja where login='" + Login + "' and haslo='" + Haslo + "'";
             String SGL_U = "select count(*) as ile from uzytkownicy where login='" + Login + "' and haslo='" + Haslo + "' and potwierdzony_email='true'";
