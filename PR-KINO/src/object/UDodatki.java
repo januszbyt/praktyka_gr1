@@ -24,6 +24,7 @@ public class UDodatki {
     private Button plus;
     private Button minus;
     private Label iloscLabel;
+    private Label cena_label;
     public int ile = 0;
     private int x;
     private int y;
@@ -67,6 +68,11 @@ public class UDodatki {
         minusek.setText("-");
         this.controller.anchor.getChildren().add(minusek);
 
+        cena_label = new Label();
+        cena_label.setLayoutY(y+60);
+        cena_label.setLayoutX(x+40);
+        cena_label.setStyle("-fx-text-fill: white; -fx-font-size: 10px;");
+        cena_label.setText(cena+"zł");
 
         iloscLabel = new Label();
         iloscLabel.setLayoutY(y+50);
@@ -74,6 +80,11 @@ public class UDodatki {
         iloscLabel.setStyle("-fx-text-fill: white; -fx-font-size: 10px;");
         iloscLabel.setText("0");
         this.controller.anchor.getChildren().add(iloscLabel);
+
+
+
+
+
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
                 iloscLabel.setText(String.valueOf(++ile));

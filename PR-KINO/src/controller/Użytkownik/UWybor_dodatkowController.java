@@ -33,7 +33,7 @@ public class UWybor_dodatkowController<topBtn> {
                 double cena = rs.getDouble("cena");
                 String typ = rs.getString("typ");
                 String url = rs.getString("url");
-                UDodatki uDodatki = new UDodatki(id, nazwa, cena, ilosc, typ, url,0 + (190 * x),0 + (120 * y),this);
+                UDodatki uDodatki = new UDodatki(id, nazwa, cena, ilosc, typ, url,0 + (190 * x),0 + (150 * y),this);
                 dodatki.add(uDodatki);
                 x++;
                 if(x > 4){
