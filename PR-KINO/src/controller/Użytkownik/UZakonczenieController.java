@@ -81,7 +81,7 @@ public class UZakonczenieController {
         }
     }
 public void zakoncz(){
-
+this.main.ViewController.changeBody("WyborOkienekUzyt");
 }
 
 }
