@@ -23,12 +23,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="195.0" layoutY="250.0" prefHeight="46.0" prefWidth="240.0" text="Wybrane miejsca:" textFill="WHITE">
+      <Label layoutX="25.0" layoutY="204.0" prefHeight="46.0" prefWidth="240.0" text="Wybrane miejsca:" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="145.0" layoutY="300.0" prefHeight="200.0" prefWidth="348.0" style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: blue;">
+      <ScrollPane layoutX="25.0" layoutY="250.0" prefHeight="200.0" prefWidth="348.0" style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: blue;">
         <content>
           <AnchorPane fx:id="wybrane_miejsca" minHeight="150.0" minWidth="339.0" />
         </content>
@@ -51,20 +51,50 @@
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label layoutX="520.0" layoutY="350.0" prefHeight="40.0" prefWidth="185.0" text="Cena za bilet: " textFill="#3c7bc9">
+      <Label layoutX="25.0" layoutY="463.0" prefHeight="40.0" prefWidth="185.0" text="Cena za bilet: " textFill="#3c7bc9">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="cena_za_bilet" layoutX="720.0" layoutY="350.0" prefHeight="46.0" prefWidth="74.0" text="Label" textFill="RED">
+      <Label fx:id="cena_za_bilet" layoutX="225.0" layoutY="462.0" prefHeight="46.0" prefWidth="122.0" text="Label" textFill="RED">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button onAction="#ocenic" layoutX="794.0" layoutY="561.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="162.0" text="Kontunuuj">
+      <Button layoutX="794.0" layoutY="561.0" mnemonicParsing="false" onAction="#ocenic" prefHeight="38.0" prefWidth="162.0" text="Kontunuuj">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
+      <Label layoutX="541.0" layoutY="204.0" prefHeight="46.0" prefWidth="240.0" text="Wybrane dodatki:" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="487.0" layoutY="250.0" prefHeight="200.0" prefWidth="348.0" style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: blue;">
+         <content>
+            <AnchorPane fx:id="wybrane_dodatki" minHeight="150.0" minWidth="339.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="475.0" layoutY="471.0" prefHeight="46.0" prefWidth="231.0" text="Cena za dodatki: " textFill="#3c7bc9">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="cena_za_dodatki" layoutX="704.0" layoutY="471.0" prefHeight="46.0" prefWidth="122.0" text="Label" textFill="RED">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="538.0" prefHeight="40.0" prefWidth="185.0" text="Cena ogólna:" textFill="#3c7bc9">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="cena_ogolna" layoutX="447.0" layoutY="537.0" prefHeight="46.0" prefWidth="122.0" text="Label" textFill="RED">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
