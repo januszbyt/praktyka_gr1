@@ -3,15 +3,11 @@ package controller.Użytkownik;
 import controller.MainController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import object.UDodatki;
-import object.wybrane_miejsce;
-
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class UWybor_dodatkowController<topBtn> {
@@ -28,6 +24,10 @@ public class UWybor_dodatkowController<topBtn> {
     }
     public void a() {
             String PESEL = this.main.bilet.WypiszPesel();
+            if(PESEL == null){
+                PESEL = "50210381213";
+                System.out.println("Domyślny pesel !!!");
+            }
             int birthDay =  Integer.parseInt(PESEL.charAt(4) +""+ PESEL.charAt(5) + "");
             int birthYear =   Integer.parseInt(PESEL.charAt(0) +""+ PESEL.charAt(1)+ "");
             int birthMonth =   Integer.parseInt(PESEL.charAt(2)  +""+ PESEL.charAt(3)+ "");
@@ -51,12 +51,10 @@ public class UWybor_dodatkowController<topBtn> {
 
 
     int rok = Calendar.getInstance().get(Calendar.YEAR) - birthYear;
-System.out.println(rok);
         try {
             ResultSet rs = main.stmt.executeQuery("SELECT id,nazwa,cena,ilosc,typ,url,pelnoletni from dodatki ");
             int x = 0,y = 0;
             while (rs.next()) {
-                System.out.println(rs.getString("nazwa") +"   " +(rok >= 18));
                 if(rs.getInt("pelnoletni") == 0 || (rs.getInt("pelnoletni") == 1 && rok >= 18)){
                 int id = rs.getInt("id");
                 String nazwa = rs.getString("nazwa");
