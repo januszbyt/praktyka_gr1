@@ -9,17 +9,17 @@
 <AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UWybor_miejscaController">
     <children>
       <AnchorPane fx:id="buttonsPanel" layoutX="22.0" layoutY="140.0" prefHeight="474.0" prefWidth="446.0" style="-fx-background-color: #343333;" />
-      <Label layoutX="302.0" layoutY="22.0" text="Wybór miejsca" textFill="#cf2c26">
+      <Label layoutX="380.0" layoutY="10.0" text="Wybór miejsca" textFill="WHITE">
          <font>
-            <Font size="49.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="194.0" layoutY="93.0" text="Dostępne miejsca:" textFill="WHITE">
+      <Label layoutX="125.0" layoutY="95.0" text="Dostępne miejsca:" textFill="#ff3535">
          <font>
-            <Font size="27.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="759.0" layoutY="93.0" text="Zniżki:" textAlignment="CENTER" textFill="WHITE">
+      <Label contentDisplay="CENTER" layoutX="759.0" layoutY="95.0" text="Zniżki:" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font>
@@ -39,11 +39,14 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Button defaultButton="true" layoutX="608.0" layoutY="562.0" mnemonicParsing="false" onAction="#dalej" prefHeight="71.0" prefWidth="377.0" style="-fx-background-color: #2f6307; -fx-font-weight: bolder; -fx-border-color: #7f7e7e; -fx-text-fill: #000;" text="Przejdz dalej">
+      <Button layoutX="688.0" layoutY="567.0" mnemonicParsing="false" onAction="#dalej" prefHeight="40.0" prefWidth="280.0" style="-fx-background-color: #187810; -fx-font-weight: bolder; -fx-border-color: white; -fx-text-fill: #000;" text="Przejdz dalej" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="26.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="839.0" layoutY="31.0" mnemonicParsing="false" onAction="#przejscie_do_znizek" prefHeight="26.0" prefWidth="113.0" text="Zobacz zniżki" />
+      <Button layoutX="896.0" layoutY="28.0" minHeight="27.2" mnemonicParsing="false" onAction="#przejscie_do_znizek" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #c91616f0; -fx-border-color: #f06565f0;" text="Zobacz zniżki" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
     </children>
 </AnchorPane>
