@@ -12,6 +12,7 @@ public class Bilet {
     private Integer idmiejsce;
     private Integer idseansu;
     private Integer idFilmu=5;
+    public List<UDodatki> dodatki = new ArrayList<UDodatki>();
     private List<wybrane_miejsce> wybraneMiejsca = new ArrayList<wybrane_miejsce>();
     public Bilet(){
     }
