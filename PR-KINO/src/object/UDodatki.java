@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
+import javax.swing.*;
 
 
 public class UDodatki {
@@ -88,8 +89,13 @@ public class UDodatki {
 
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
+                if(ile < ilosc){
+
                 iloscLabel.setText(String.valueOf(++ile));
                 controller.obliczSume();
+                } else{
+                    JOptionPane.showMessageDialog(null, "Nie można zamówić większej ilości tego dodatku");
+                }
             }
 
         };

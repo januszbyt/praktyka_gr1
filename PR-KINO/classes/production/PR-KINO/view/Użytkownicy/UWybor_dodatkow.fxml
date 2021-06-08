@@ -12,7 +12,7 @@
             <font>
                 <Font size="36.0" />
             </font></Label>
-        <Button defaultButton="true" layoutX="608.0" layoutY="562.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="377.0" style="-fx-background-color: #2f6307; -fx-font-weight: bolder; -fx-border-color: #7f7e7e; -fx-text-fill: #000;" text="Przejdz dalej">
+        <Button defaultButton="true" layoutX="608.0" layoutY="562.0" mnemonicParsing="false" onAction="#dalej" prefHeight="71.0" prefWidth="377.0" style="-fx-background-color: #2f6307; -fx-font-weight: bolder; -fx-border-color: #7f7e7e; -fx-text-fill: #000;" text="Przejdz dalej">
             <font>
                 <Font name="System Bold" size="26.0" />
             </font>
