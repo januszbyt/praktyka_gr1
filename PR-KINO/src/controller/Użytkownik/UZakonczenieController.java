@@ -66,14 +66,14 @@ public class UZakonczenieController {
         hashMap.put(EncodeHintType.ERROR_CORRECTION,
                 ErrorCorrectionLevel.L);
         try{
-            createQR("teset test test tests tset", "c:\\Windows\\Temp\\qr.png", "utf-8", hashMap, 200, 200);
+            createQR("teset test test tests tset", "c:\\Windows\\Temp\\qr.png", "utf-8", hashMap, 400, 400);
             System.out.println("QR Code Generated!!! ");
             File file = new File("c:\\Windows\\Temp\\qr.png");
-            Image image = new Image(file.toURI().toString(), 230, 230, false, true);
+            Image image = new Image(file.toURI().toString(), 400, 400, false, true);
             ImageView imageView = new ImageView();
             imageView.setImage(image);
-            imageView.setX(300);
-            imageView.setY(300);
+            imageView.setX(170);
+            imageView.setY(140);
             anchor.getChildren().add(imageView);
             //System.out.println(readQR("C:\\Windows\\Temp\\qr.png","utf-8",hashMap));
         } catch (Exception e){
