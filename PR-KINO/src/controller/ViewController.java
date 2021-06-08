@@ -115,6 +115,12 @@ public class ViewController {
                    this.main.UZakonczenieController=loader.getController();
                    this.main.UZakonczenieController.init(main);
                    break;
+               case"UZnizki":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UZnizki.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   this.main.UZnizkiController=loader.getController();
+                   this.main.UZnizkiController.init(main);
+                   break;
                default:
                    System.err.println("Bład wyboru okna, Nazwa: '"+name+"' nie jest znana");
                    work = false;

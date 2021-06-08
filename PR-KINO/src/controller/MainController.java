@@ -40,6 +40,7 @@ public class MainController {
 	@FXML public URecenzjaController URecenzjaController;
 	@FXML public UWybor_filmuController UWybor_filmuController;
 	@FXML public UWybor_miejscaController UWybor_miejscaController;
+	@FXML public UZnizkiController UZnizkiController;
 	@FXML public UWybor_dodatkowController UWybor_dodatkowController;
 	@FXML public UZakonczenieController UZakonczenieController;
 	@FXML public UPodsumowanieController UPodsumowanieController;
@@ -52,7 +53,7 @@ public class MainController {
 		this.PolaczZBazaDanych();
 		ViewController.init(this);
 		System.out.println("MainController init");
-		WyborFilmu.getItems().addAll("UZakonczenie","logowanie", "Rejestracja", "WyborOkienekUzyt","WyborOkienekAdmin", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
+		WyborFilmu.getItems().addAll("UZnizki","UZakonczenie","logowanie", "Rejestracja", "WyborOkienekUzyt","WyborOkienekAdmin", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
 		,"UWybor_miejsca","UWybor_dodatkow","USeansu","ASeansu","UPodsumowanie");
 		ViewController.changeBody("logowanie");
 
