@@ -76,7 +76,7 @@ public class UPodsumowanieController {
     }
 
     public void ocenic(){
-        main.ViewController.changeBody("URecenzja");
+        main.ViewController.changeBody("WyborOkienekUzyt");
 
         };
 
