@@ -20,8 +20,6 @@ import java.sql.Statement;
 public class MainController {
 
 	public Bilet bilet  = new Bilet();
-	public String PeselUzytkownika = "123456789012"; // tymczosowo dla testów można sobie zmieniać żeby nie  musieć się logować
-
 
 	public Connection con;
 	public Statement stmt;
