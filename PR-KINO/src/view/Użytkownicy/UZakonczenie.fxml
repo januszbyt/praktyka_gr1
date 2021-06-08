@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UZakonczenieController">
+<AnchorPane fx:id="anchor" prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UZakonczenieController">
    <children>
       <Label layoutX="197.0" layoutY="27.0" prefHeight="58.0" prefWidth="574.0" text="Twój bilet został wygenerowany" textFill="WHITE">
          <font>
