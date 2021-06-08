@@ -142,7 +142,7 @@ public class UWybor_miejscaController<Intreger> {
 
     public void dalej(){
         this.main.bilet.setWybraneMiejsca(this.wybraneMiejsca);
-        this.main.ViewController.changeBody("UPodsumowanie");
-      //  this.main.ViewController.changeBody("UWybor_dodatkow");
+
+        this.main.ViewController.changeBody("UWybor_dodatkow");
     }
 }

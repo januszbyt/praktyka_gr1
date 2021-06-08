@@ -55,19 +55,15 @@ public class URecenzjaController {
         textRecenzja.clear();
     };
     public void dodajDoBazy(){
-
+        int id_uzytkownika = 0;
         int id_filmu = 0;
         String recenzja = textRecenzja.getText();
         double ocena = rating.getRating();
         int id = ThreadLocalRandom.current().nextInt(1, 1001);
-        String id_uzytkownika_query = "SELECT MAX(id) from uzytkownicy";
-
 
         try {
-            ResultSet rsU = this.main.stmt.executeQuery(id_uzytkownika_query);
-            rsU.next();
-            int id_uzytkownika = rsU.getInt(1);
 
+            id_uzytkownika = this.main.bilet.WypiszId();
             id_filmu = this.main.bilet.getIdFilm();
 
             String query = "INSERT INTO `recencje` (`id`, `id_uzytkownika`, `id_filmu`, `ocena`, `opis`) VALUES ('" + id + "','" + id_uzytkownika + "','" + id_filmu + "','" + ocena + "','" + recenzja + "')";

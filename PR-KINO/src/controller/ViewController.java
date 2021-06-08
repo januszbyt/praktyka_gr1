@@ -109,7 +109,12 @@ public class ViewController {
                    this.main.UPodsumowanieController=loader.getController();
                    this.main.UPodsumowanieController.init(main);
                    break;
-
+               case"UZakonczenie":
+                   loader =  new FXMLLoader(getClass().getClassLoader().getResource("./view/Użytkownicy/UZakonczenie.fxml"));
+                   panel = (AnchorPane)loader.load();
+                   this.main.UZakonczenieController=loader.getController();
+                   this.main.UZakonczenieController.init(main);
+                   break;
                default:
                    System.err.println("Bład wyboru okna, Nazwa: '"+name+"' nie jest znana");
                    work = false;
