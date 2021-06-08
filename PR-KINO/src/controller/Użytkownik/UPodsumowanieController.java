@@ -2,11 +2,15 @@ package controller.Użytkownik;
 
 import controller.MainController;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
+import javax.swing.*;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class UPodsumowanieController {
@@ -66,9 +70,19 @@ public class UPodsumowanieController {
     System.out.println(e);
         }
 
+
+
+
+    }
+
+    public void ocenic(){
+        main.ViewController.changeBody("URecenzja");
+
+        };
+
     }
 
 
 
 
-}
+
