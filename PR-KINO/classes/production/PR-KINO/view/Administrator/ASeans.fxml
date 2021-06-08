@@ -10,48 +10,48 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator.ASeansuController">
    <children>
-      <Label layoutX="99.0" layoutY="163.0" text="ID" textFill="WHITE">
+      <Label layoutX="30.0" layoutY="120.0" text="Id" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="200.0" text="Data" textFill="WHITE">
+      <Label layoutX="30.0" layoutY="160.0" text="Data" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="236.0" text="Wersja" textFill="WHITE">
+      <Label layoutX="30.0" layoutY="200.0" text="Wersja" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="280.0" text="Typ" textFill="WHITE">
+      <Label layoutX="30.0" layoutY="240.0" text="Typ" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="329.0" text="idSali" textFill="WHITE">
+      <Label layoutX="30.0" layoutY="280.0" text="IdSali" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="96.0" layoutY="373.0" text="idFilmu" textFill="WHITE">
+      <Label layoutX="30.0" layoutY="320.0" text="IdFilmu" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="386.0" layoutY="57.0" text="Modyfikacja seansów" textFill="WHITE">
+      <Label layoutX="380.0" layoutY="10.0" text="Modyfikacja seansów" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="tid" layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="63.0" promptText="wpisz id" />
-      <TextField fx:id="t1" layoutX="163.0" layoutY="200.0" promptText="RRRR-MM-DD  gg:mm:ss" />
-      <TextField fx:id="t2" layoutX="163.0" layoutY="236.0" promptText="wpisz wersje" />
-      <TextField fx:id="t3" layoutX="163.0" layoutY="280.0" promptText="wpisz typ" />
-      <TextField fx:id="t4" layoutX="163.0" layoutY="329.0" promptText="wpisz idsali" />
-      <TextField fx:id="t5" layoutX="163.0" layoutY="373.0" promptText="wpisz idfilmu" />
-      <TableView fx:id="tableViewS" layoutX="424.0" layoutY="155.0" prefHeight="213.0" prefWidth="501.0">
+      <TextField fx:id="tid" layoutX="95.0" layoutY="120.0" prefHeight="25.0" prefWidth="63.0" promptText="wpisz id" />
+      <TextField fx:id="t1" layoutX="95.0" layoutY="160.0" promptText="RRRR-MM-DD  gg:mm:ss" />
+      <TextField fx:id="t2" layoutX="95.0" layoutY="200.0" promptText="wpisz wersje" />
+      <TextField fx:id="t3" layoutX="95.0" layoutY="240.0" promptText="wpisz typ" />
+      <TextField fx:id="t4" layoutX="95.0" layoutY="280.0" promptText="wpisz idsali" />
+      <TextField fx:id="t5" layoutX="95.0" layoutY="320.0" promptText="wpisz idfilmu" />
+      <TableView fx:id="tableViewS" layoutX="430.0" layoutY="100.0" prefHeight="213.0" prefWidth="501.0" style="-fx-background-color: #d1cdcd;">
         <columns>
           <TableColumn fx:id="idColumn1" prefWidth="42.0" text="id" />
           <TableColumn fx:id="startColumn" prefWidth="148.0" text="start" />
@@ -61,39 +61,39 @@
             <TableColumn fx:id="id_filmuColumn" prefWidth="67.0" text="id_filmu" />
         </columns>
       </TableView>
-      <Button layoutX="72.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajSeans" style="-fx-border-color: white; -fx-background-color: #187810;" text="Dodaj seans" textFill="WHITE">
+      <Button layoutX="28.0" layoutY="509.0" mnemonicParsing="false" onAction="#dodajSeans" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: white; -fx-background-color: #187810;" text="Dodaj seans" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="166.0" layoutY="479.0" mnemonicParsing="false" onAction="#edytuj" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Edytuj seans" textFill="WHITE">
+      <Button layoutX="147.0" layoutY="548.0" mnemonicParsing="false" onAction="#edytuj" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Edytuj seans" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="272.0" layoutY="462.0" mnemonicParsing="false" onAction="#wyczysc" prefHeight="35.0" prefWidth="81.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Wyczyść" textFill="WHITE">
+      <Button layoutX="28.0" layoutY="548.0" mnemonicParsing="false" onAction="#wyczysc" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Wyczyść" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button fx:id="powrot" layoutX="814.0" layoutY="32.0" mnemonicParsing="false" onAction="#powrotButton" style="-fx-background-color: #b00c17; -fx-border-color: white;" text="Powrót" textFill="WHITE">
+      <Button fx:id="powrot" layoutX="896.0" layoutY="28.0" mnemonicParsing="false" onAction="#powrotButton" prefHeight="27.2" prefWidth="75.2" style="-fx-background-color: #b00c17; -fx-border-color: #f06565f0;" text="Powrót" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="166.0" layoutY="442.0" mnemonicParsing="false" onAction="#wyswietl" prefHeight="25.0" prefWidth="81.0" style="-fx-border-color: white; -fx-background-color: #165be4;" text="Wyświetl" textFill="WHITE">
+      <Button layoutX="147.0" layoutY="509.0" mnemonicParsing="false" onAction="#wyswietl" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: white; -fx-background-color: #165be4;" text="Wyświetl" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <TableView fx:id="tableView" layoutX="500.0" layoutY="426.0" prefHeight="200.0" prefWidth="398.0">
+      <TableView fx:id="tableView" layoutX="512.0" layoutY="409.0" prefHeight="200.0" prefWidth="398.0" style="-fx-background-color: #d1cdcd;">
         <columns>
           <TableColumn fx:id="idColumn" prefWidth="63.0" text="id filmu" />
           <TableColumn fx:id="tytulColumn" prefWidth="265.0" text="tytul" />
             <TableColumn fx:id="dlugosc" prefWidth="69.0" text="czas [min]" />
         </columns>
       </TableView>
-      <Label layoutX="668.0" layoutY="386.0" text="Filmy" textFill="WHITE">
+      <Label layoutX="673.0" layoutY="346.0" text="Filmy" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="70.0" layoutY="479.0" mnemonicParsing="false" onAction="#usunzBazy" prefHeight="25.0" prefWidth="82.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Usuń seans" textFill="WHITE">
+      <Button layoutX="268.0" layoutY="525.0" mnemonicParsing="false" onAction="#usunzBazy" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: white; -fx-background-color: #b00c17;" text="Usuń seans" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
