@@ -66,7 +66,7 @@ public class UZakonczenieController {
         hashMap.put(EncodeHintType.ERROR_CORRECTION,
                 ErrorCorrectionLevel.L);
         try{
-            createQR("teset test test tests tset", "c:\\Windows\\Temp\\qr.png", "utf-8", hashMap, 400, 400);
+            createQR("Bilet do kina o id: "+this.main.bilet.dataBaseID, "c:\\Windows\\Temp\\qr.png", "utf-8", hashMap, 400, 400);
             System.out.println("QR Code Generated!!! ");
             File file = new File("c:\\Windows\\Temp\\qr.png");
             Image image = new Image(file.toURI().toString(), 400, 400, false, true);
