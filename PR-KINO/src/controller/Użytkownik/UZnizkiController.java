@@ -7,4 +7,8 @@ public class UZnizkiController {
     public void init(MainController main) {
         this.main = main;
     }
+    public void wroc(){
+        main.ViewController.changeBody("UWybor_miejsca");
+    }
 }
+

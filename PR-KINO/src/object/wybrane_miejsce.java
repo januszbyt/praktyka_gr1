@@ -11,17 +11,17 @@ public class wybrane_miejsce {
             case"Uczeń":
                 return 20;
             case"Senior":
-                return 20;
+                return 50;
             case"Niepełnosprawny":
-                return 30;
+                return 45;
             case"Nauczyciel":
-                return 15;
+                return 25;
             case"Grupa min 10 osób":
                 return 10;
             case"< 2 lata":
-                return 60;
+                return 95;
             case"< 14 lat":
-                return 10;
+                return 25;
             default:
                 return 0;
         }

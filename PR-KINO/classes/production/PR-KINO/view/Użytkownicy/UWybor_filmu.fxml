@@ -9,9 +9,9 @@
 
 <AnchorPane fx:id="UWybor_filmuAP" prefHeight="640.0" prefWidth="995.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UWybor_filmuController">
     <children>
-        <Label layoutX="437.0" prefHeight="32.0" prefWidth="91.0" text="Filmy" textFill="#cf2c26">
+        <Label layoutX="400.0" prefHeight="46.0" prefWidth="180.0" text="Wybierz film:" textFill="WHITE">
          <font>
-            <Font size="36.0" />
+            <Font size="30.0" />
          </font></Label>
       <GridPane fx:id="button_grid" layoutX="16.0" layoutY="56.0" prefHeight="572.0" prefWidth="962.0" style="-fx-grid-lines-visible: faulse; -fx-vgap: 15; -fx-hgap: 15;">
         <columnConstraints>
