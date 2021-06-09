@@ -4,6 +4,7 @@ import controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.controlsfx.control.Rating;
@@ -11,7 +12,6 @@ import org.controlsfx.control.Rating;
 import javax.swing.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.concurrent.ThreadLocalRandom;
 
 
 
@@ -23,23 +23,25 @@ public class URecenzjaController {
     @FXML
     public Label film;
 
-
+    @FXML
+    public ComboBox<String> comboBox;
+    final ObservableList options = FXCollections.observableArrayList();
     private MainController main;
 
     String tytul_filmu=" ";
 
     public void init(MainController main){
         this.main = main;
-        //String id_uzytkownika_query = "SELECT id from uzytkownicy where login = " + this.main.bilet.WypiszImie();
-
-
-        String tytul_query = "SELECT tytul FROM filmy where id = " + this.main.bilet.getIdFilm();
+        String film_query = "SELECT tytul FROM filmy";
+        String selected_text = " ";
 
         try {
-            ResultSet rsU = this.main.stmt.executeQuery(tytul_query);
-            rsU.next();
-            tytul_filmu = rsU.getString(1);
-            film.setText(tytul_filmu);
+
+            ResultSet rs = this.main.stmt.executeQuery(film_query);
+            while (rs.next()){
+                options.add(rs.getString("tytul"));
+            }
+            comboBox.setItems(options);
 
         }
         catch (SQLException throwables) {
@@ -56,19 +58,28 @@ public class URecenzjaController {
     };
     public void dodajDoBazy(){
         int id_uzytkownika = 0;
-        int id_filmu = 0;
         String recenzja = textRecenzja.getText();
         double ocena = rating.getRating();
-        int id = ThreadLocalRandom.current().nextInt(1, 1001);
+        String id_query = "SELECT MAX(id) from recencje";
+        String id_filmu_query = "SELECT id FROM filmy WHERE tytul = '" + comboBox.getValue() + "'";
+        System.out.println(comboBox.getValue());
+
 
         try {
+            ResultSet rs = this.main.stmt.executeQuery(id_query);
+            rs.next();
+            int id = rs.getInt(1)+1;
 
             id_uzytkownika = this.main.bilet.WypiszId();
-            id_filmu = this.main.bilet.getIdFilm();
+
+            ResultSet rsF = this.main.stmt.executeQuery(id_filmu_query);
+            rsF.next();
+            int id_filmu = rsF.getInt(1);
+            System.out.println(id_filmu);
 
             String query = "INSERT INTO `recencje` (`id`, `id_uzytkownika`, `id_filmu`, `ocena`, `opis`) VALUES ('" + id + "','" + id_uzytkownika + "','" + id_filmu + "','" + ocena + "','" + recenzja + "')";
             this.main.stmt.executeUpdate(query);
-            JOptionPane.showMessageDialog(null, "Użytkownik " + id_uzytkownika + " dodał recenzje: '" + recenzja + "' z oceną " + ocena + " o id " + id  + ", i tytulem filmu: " + tytul_filmu);
+            JOptionPane.showMessageDialog(null, "Użytkownik " + id_uzytkownika + " dodał recenzje: '" + recenzja + "' z oceną " + ocena + " o id " + id  + ", i tytulem filmu: " + comboBox.getValue());
             textRecenzja.clear();
 
         }
