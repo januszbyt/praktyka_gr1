@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UWybur_seansuController">
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" style="-fx-background-color: #242323;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Użytkownik.UWybur_seansuController">
    <children>
-      <TableView fx:id="tableViewSeans" layoutX="259.0" layoutY="138.0" prefHeight="182.0" prefWidth="465.0">
+      <TableView fx:id="tableViewSeans" layoutX="240.0" layoutY="80.0" minHeight="350.0" minWidth="500.0" prefHeight="182.0" prefWidth="465.0" style="-fx-background-color: #d1cdcd;">
         <columns>
           <TableColumn fx:id="startCol" prefWidth="179.0" text="start" />
             <TableColumn fx:id="wersjaCol" prefWidth="148.0" text="wersja" />
@@ -19,12 +19,12 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Label layoutX="425.0" layoutY="67.0" prefHeight="30.0" prefWidth="133.0" text="Wybor seansu">
+      <Label layoutX="380.0" layoutY="10.0" prefHeight="36.0" prefWidth="170.0" text="Wybor seansu" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="440.0" layoutY="369.0" mnemonicParsing="false" onAction="#wybierzSeans" prefHeight="38.0" prefWidth="90.0" text="Wybierz">
+      <Button layoutX="754.0" layoutY="454.0" mnemonicParsing="false" onAction="#wybierzSeans" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #187810; -fx-border-color: white;" text="Wybierz" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

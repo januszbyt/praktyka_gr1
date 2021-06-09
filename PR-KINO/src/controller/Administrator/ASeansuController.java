@@ -161,7 +161,7 @@ public class ASeansuController extends AFilmyController{
             t2.setText(String.valueOf(wersjaColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
             t3.setText(typColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem()));
             t4.setText(String.valueOf(id_saliColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem())));
-            t5.setText(String.valueOf(idColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem().getId()+2))); // nie moze pobrac id filmu z innej klasy
+            t5.setText(String.valueOf(idColumn.getCellData(tableViewS.getSelectionModel().getSelectedItem().getIdfilm()-1))); // nie moze pobrac id filmu z innej klasy
         }
 
     }

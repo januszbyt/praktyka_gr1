@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
+import javax.swing.*;
 
 
 public class UDodatki {
@@ -41,17 +42,17 @@ public class UDodatki {
         this.x = y;
         this.y = y;
         if(url != null) {
-            Image image = new Image(url, 50, 50, false, true);
+            Image image = new Image(url, 80, 80, false, true);
             ImageView imageView = new ImageView();
             imageView.setImage(image);
-            imageView.setX(x + 20);
-            imageView.setY(y - 20);
+            imageView.setX(x + 0);
+            imageView.setY(y - 60);
             this.controller.anchor.getChildren().add(imageView);
         }
         Label napis = new Label();
-        napis.setLayoutY(y+30);
+        napis.setLayoutY(y+22);
         napis.setLayoutX(x);
-        napis.setStyle("-fx-text-fill: white; -fx-font-size: 10px;");
+        napis.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
         napis.setText(nazwa);
         this.controller.anchor.getChildren().add(napis);
 
@@ -69,15 +70,16 @@ public class UDodatki {
         this.controller.anchor.getChildren().add(minusek);
 
         cena_label = new Label();
-        cena_label.setLayoutY(y+60);
-        cena_label.setLayoutX(x+40);
-        cena_label.setStyle("-fx-text-fill: white; -fx-font-size: 10px;");
-        cena_label.setText(cena+"zł");
+        cena_label.setLayoutY(y+75);
+        cena_label.setLayoutX(x);
+        cena_label.setStyle("-fx-text-fill: white; -fx-font-size: 15px;");
+        cena_label.setText(cena+"zł za 1szt");
+        this.controller.anchor.getChildren().add(cena_label);
 
         iloscLabel = new Label();
         iloscLabel.setLayoutY(y+50);
         iloscLabel.setLayoutX(x+40);
-        iloscLabel.setStyle("-fx-text-fill: white; -fx-font-size: 10px;");
+        iloscLabel.setStyle("-fx-text-fill: white; -fx-font-size: 14px;");
         iloscLabel.setText("0");
         this.controller.anchor.getChildren().add(iloscLabel);
 
@@ -87,8 +89,15 @@ public class UDodatki {
 
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
+                if(ile < ilosc){
+
                 iloscLabel.setText(String.valueOf(++ile));
+                controller.obliczSume();
+                } else{
+                    JOptionPane.showMessageDialog(null, "Nie można zamówić większej ilości tego dodatku");
+                }
             }
+
         };
         plusek.setOnAction(event);
 
@@ -98,12 +107,12 @@ public class UDodatki {
             public void handle(ActionEvent e) {
                 if(ile >= 1){
                 iloscLabel.setText(String.valueOf(--ile));
+                controller.obliczSume();
                 }
             }
         };
         minusek.setOnAction(event2);
     }
-
     public int getId() {
         return id;
     }
