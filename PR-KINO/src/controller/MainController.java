@@ -51,8 +51,8 @@ public class MainController {
 		this.PolaczZBazaDanych();
 		ViewController.init(this);
 		System.out.println("MainController init");
-		WyborFilmu.getItems().addAll("UZnizki","UZakonczenie","logowanie", "Rejestracja", "WyborOkienekUzyt","WyborOkienekAdmin", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
-		,"UWybor_miejsca","UWybor_dodatkow","USeansu","ASeansu","UPodsumowanie");
+		//WyborFilmu.getItems().addAll("UZnizki","UZakonczenie","logowanie", "Rejestracja", "WyborOkienekUzyt","WyborOkienekAdmin", "ADodatki", "AUzytkownicy","AFilmy","URecenzja","UWybor_filmu"
+		//,"UWybor_miejsca","UWybor_dodatkow","USeansu","ASeansu","UPodsumowanie");
 		ViewController.changeBody("logowanie");
 
 	}
