@@ -61,6 +61,7 @@ public class URecenzjaController {
         String recenzja = textRecenzja.getText();
         double ocena = rating.getRating();
         String id_query = "SELECT MAX(id) from recencje";
+        //z ComboBox
         String id_filmu_query = "SELECT id FROM filmy WHERE tytul = '" + comboBox.getValue() + "'";
         System.out.println(comboBox.getValue());
 
